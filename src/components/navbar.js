@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
-import "materialize-css/dist/css/materialize.css";
 import M from "materialize-css";
 import "./navbar.css";
 
@@ -35,11 +34,11 @@ function Navbar() {
           <i className="material-icons">menu</i>
         </a>
         <ul id="nav-mobile" className="left hide-on-med-and-down">
-          <li className="active">
-            <a href="home.html">Accueil</a>
+          <li >
+          <Link to="/">Accueil</Link>
           </li>
           <li>
-            <a href="games.html">Jeux</a>
+          <Link to="/Games">Jeux</Link>
           </li>
           <li>
             <a href="softwares.html">Logiciels</a>

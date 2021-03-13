@@ -6,6 +6,8 @@ import Home from "./components/pages/Home";
 import Games from "./components/pages/Games";
 import NoMatch from "./components/pages/404";
 import About from "./components/pages/About";
+import './materialize.css'
+import WR from "./components/pages/WR";
 
 function App() {
   return (
@@ -14,10 +16,10 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/Games" component={Games} />
-
+          <Route path="/WR" component={WR} />
           <Route path="/about" component={About} />
           <Route path="*" component={NoMatch} />
+          <Route path="/profile"  />
         </Switch>
       </Router>
     </>

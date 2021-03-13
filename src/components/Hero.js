@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import { Button } from "./Button";
-import "materialize-css/dist/css/materialize.css";
 import M from "materialize-css";
 import "./Hero.css";
 import ReactAudioPlayer from "react-audio-player";
