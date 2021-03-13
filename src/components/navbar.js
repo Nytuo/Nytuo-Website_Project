@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import "materialize-css/dist/css/materialize.css";
-import M from 'materialize-css';
-import './navbar.css'
+import M from "materialize-css";
+import "./navbar.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
