@@ -6,7 +6,7 @@ import Home from "./components/pages/Home";
 import Games from "./components/pages/Games";
 import NoMatch from "./components/pages/404";
 import About from "./components/pages/About";
-import './materialize.css'
+import "./materialize.css";
 import WR from "./components/pages/WR";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Route path="/WR" component={WR} />
           <Route path="/about" component={About} />
           <Route path="*" component={NoMatch} />
-          <Route path="/profile"  />
+          <Route path="/profile" />
         </Switch>
       </Router>
     </>
