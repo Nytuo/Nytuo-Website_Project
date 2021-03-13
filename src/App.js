@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./components/pages/Home";
 import Games from "./components/pages/Games";
 import NoMatch from "./components/pages/404";
+import About from "./components/pages/About";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/Games" component={Games} />
+
+          <Route path="/about" component={About} />
           <Route path="*" component={NoMatch} />
         </Switch>
       </Router>

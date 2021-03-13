@@ -51,7 +51,7 @@ function Navbar() {
             <a href="feedback.html">FeedBack</a>
           </li>
           <li>
-            <a href="about.html">A Propos</a>
+            <Link to="/about">A Propos</Link>
           </li>
         </ul>
       </div>
@@ -72,7 +72,7 @@ function Navbar() {
           <a href="feedback.html">FeedBack</a>
         </li>
         <li>
-          <a href="about.html">A Propos</a>
+          <Link to="/about">A Propos</Link>
         </li>
       </ul>
     </nav>
