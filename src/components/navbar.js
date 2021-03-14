@@ -34,11 +34,11 @@ function Navbar() {
           <i className="material-icons">menu</i>
         </a>
         <ul id="nav-mobile" className="left hide-on-med-and-down">
-          <li >
-          <Link to="/">Accueil</Link>
+          <li>
+            <Link to="/">Accueil</Link>
           </li>
           <li>
-          <Link to="/games">Jeux</Link>
+            <Link to="/games">Jeux</Link>
           </li>
           <li>
             <a href="/softwares">Logiciels</a>

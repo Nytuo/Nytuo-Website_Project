@@ -16,7 +16,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
-          
+
           <Route path="/about" component={About} />
           <Route path="/games/winrun" component={WR} />
           <Route path="/games" component={GamesPage} />
