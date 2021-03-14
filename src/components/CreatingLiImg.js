@@ -6,7 +6,7 @@ export const SSD = ({ rm, src }) => {
   }else{
       return (
       <li>
-        <img src={"./images/" + src + ".png"} />
+        <img src={"../images/" + src + ".png"} />
       </li>
     );
   }

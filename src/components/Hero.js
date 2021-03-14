@@ -16,12 +16,13 @@ function SelectMusic(rdnb) {
 function Hero() {
   return (
     <div className="hero-container">
-      <video src="/videos/V4.mp4" autoPlay loop muted></video>
-      <ReactAudioPlayer src={SelectMusic(randomNumber(0, 11))} autoPlay loop />
+      <video src="/videos/V7.mp4" autoPlay loop muted></video>
+      <ReactAudioPlayer src={SelectMusic(randomNumber(0, 7))} autoPlay loop />
 
       <h1 className="blanc">Welcome to a new Universe</h1>
+      <h1 className="blanc"> (Under construction)</h1>
       <div className="hero-btns">
-        <Button link="/Games" colori="white" bgcolor="dodgerblue">
+        <Button link="/games" colori="white" bgcolor="dodgerblue">
           Go to the page
         </Button>
       </div>

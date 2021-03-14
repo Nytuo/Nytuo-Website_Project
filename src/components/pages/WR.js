@@ -1,16 +1,14 @@
 import React from "react";
-import Games from "./Games";
+import Games_template from "./Games_template";
 
 function WR() {
   return (
     <div>
-      <Games
+      <Games_template
         nGame="WinRun"
         advTxt="Ce jeu peut-être considerer comme un virus dû au composant NW.JS.Ce jeu n’est pas un virus, vous pouvez l’analyser avec VirusTotal."
         desc="Ce jeu est un test, il ne doit pas être considérer comme un jeu a part entière.Dans celui-ci vous contrôler une voiture et votre bute est d’arriver premier."
-        info="plateformes : Windows (x86 et x64), macOS (x64), Linux (x86 et x64)<br />Contrôleur : Clavier<br />Langue : Français
-        <br />Créé avec : Construct 2<br />Auteur : Nytuo<br /> Genre : Racing<br />Statut : Prototype
-        <br />Version : 1.0.0.0<br />Multijoueur : Non<br />"
+        info={"Plateformes : Windows (x86 et x64), macOS (x64), Linux (x86 et x64) \n Contrôleur : Clavier \n Langue : Français\nCréé avec : Construct 2\nAuteur : Nytuo\n Genre : Racing\nStatut : Prototype\nVersion : 1.0.0.0\nMultijoueur : Non"}
         Name="wr"
         itch="https://nytuo.itch.io/winrun"
         gamejolt="https://gamejolt.com/games/winrun/325039"

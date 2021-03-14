@@ -3,10 +3,10 @@ import React from "react";
 const NoMatch = () => {
   return (
     <div style={{ textAlign: "center" }}>
-      <p>
+      <h1>
         Il n'y rien ici, passe ton chemin... ou tu peux jouer à ce jeu exclusif
         !
-      </p>
+      </h1>
       <iframe
         frameborder="0"
         src="https://itch.io/embed-upload/1967107?color=333333"

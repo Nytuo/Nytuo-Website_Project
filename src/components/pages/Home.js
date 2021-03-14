@@ -4,9 +4,9 @@ import Hero from "../Hero";
 
 function Home() {
   return (
-    <>
-      <Hero />
-    </>
+    <div>
+        <Hero />
+    </div>
   );
 }
 export default Home;

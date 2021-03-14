@@ -1,5 +1,8 @@
 import React from "react";
 
 export const ShowTxt = ({ txt }) => {
-  return <p>{txt}</p>;
+  const text = txt;
+  const newText = text.split('\n').map(str => <p>{str}</p>);
+  
+  return newText;
 };

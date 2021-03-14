@@ -25,7 +25,7 @@ function Navbar() {
       <div className="nav-wrapper">
         <a href="#" className="brand-logo center">
           <img
-            src="./images/logo.png"
+            src="../images/logo.png"
             className="logonav"
             title="Logo de Nytuo"
           />
@@ -38,16 +38,16 @@ function Navbar() {
           <Link to="/">Accueil</Link>
           </li>
           <li>
-          <Link to="/Games">Jeux</Link>
+          <Link to="/games">Jeux</Link>
           </li>
           <li>
-            <a href="softwares.html">Logiciels</a>
+            <a href="/softwares">Logiciels</a>
           </li>
           <li>
             <a href="/php/profile.php">Profile</a>
           </li>
           <li>
-            <a href="feedback.html">FeedBack</a>
+            <a href="/feedback">FeedBack</a>
           </li>
           <li>
             <Link to="/about">A Propos</Link>
