@@ -1,11 +1,7 @@
 name: Prettier Code
 
 # This action works with pull requests and pushes
-on:
-  pull_request:
-  push:
-    branches:
-    - master
+on: [workflow_dispatch,push]
 
 jobs:
   prettier:
