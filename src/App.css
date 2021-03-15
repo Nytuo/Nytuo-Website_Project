@@ -37,3 +37,33 @@ h1 {
     color: white;
 
 }
+a{
+    margin: 5px
+}
+.spaceX2 {
+
+    margin-top: 150px;
+
+    text-align: center;
+
+}
+.cards-list {
+
+    z-index: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+
+}
+.homeresize {
+
+    width: 25%;
+
+    margin-right: 5px
+
+}

@@ -8,6 +8,7 @@ import About from "./components/pages/About";
 import "./materialize.css";
 import WR from "./components/pages/WR";
 import GamesPage from "./components/pages/GamesPage";
+import Feedback from "./components/pages/feedback";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/games/winrun" component={WR} />
           <Route path="/games" component={GamesPage} />
+          <Route path="/feedback" component={Feedback}/>
           <Route path="/profile" />
           <Route path="*" component={NoMatch} />
         </Switch>

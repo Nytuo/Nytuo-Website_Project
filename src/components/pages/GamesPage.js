@@ -9,7 +9,7 @@ function GamesPage() {
 
         <div class="cards-list">
           <div class="homeresize">
-            <a href="sfo.html">
+            <a href="games/shootFigherOrigins">
               <div class="card">
                 <div class="card-image">
                   <img src="../images/IMGSFO2.png" />
@@ -23,7 +23,7 @@ function GamesPage() {
           </div>
 
           <div class="homeresize">
-            <a href="laatim.html">
+            <a href="games/legendAdventureAndTheInfernalMaze">
               <div class="card">
                 <div class="card-image">
                   <img src="../images/IMGLAATIM.png" />
@@ -42,7 +42,7 @@ function GamesPage() {
           </div>
 
           <div class="homeresize">
-            <a href="sgb.html">
+            <a href="games/SuperGeoffreyBros">
               <div class="card">
                 <div class="card-image">
                   <img src="../images/SGB2.png" />
@@ -58,7 +58,7 @@ function GamesPage() {
           </div>
 
           <div class="homeresize">
-            <a href="sf.html">
+            <a href="games/shootFighter">
               <div class="card">
                 <div class="card-image">
                   <img src="../images/IMGSF.png" />
@@ -72,7 +72,7 @@ function GamesPage() {
           </div>
 
           <div class="homeresize">
-            <a href="la.html">
+            <a href="games/lutinAdventure">
               <div class="card">
                 <div class="card-image">
                   <img src="../images/IMGLA.png" />
@@ -86,7 +86,7 @@ function GamesPage() {
           </div>
 
           <div class="homeresize">
-            <a href="vitf.html">
+            <a href="games/vincentInTheForest">
               <div class="card">
                 <div class="card-image">
                   <img src="../images/IMGVITF.png" />
@@ -100,7 +100,7 @@ function GamesPage() {
           </div>
 
           <div class="homeresize">
-            <a href="ttd.html">
+            <a href="games/theTardisDefender">
               <div class="card">
                 <div class="card-image">
                   <img src="../images/IMGTTD.png" />
@@ -114,7 +114,7 @@ function GamesPage() {
           </div>
 
           <div class="homeresize">
-            <a href="fwd.html">
+            <a href="games/fireWallDefender">
               <div class="card">
                 <div class="card-image">
                   <img src="../images/IMGFWD.png" />
@@ -131,7 +131,7 @@ function GamesPage() {
           </div>
 
           <div class="homeresize">
-            <a href="tb.html">
+            <a href="games/tanksBattle">
               <div class="card">
                 <div class="card-image">
                   <img src="../images/IMGTB.png" />
@@ -145,7 +145,7 @@ function GamesPage() {
           </div>
 
           <div class="homeresize">
-            <a href="wr.html">
+            <a href="games/winrun">
               <div class="card">
                 <div class="card-image">
                   <img src="../images/IMGWR.png" />
@@ -159,7 +159,7 @@ function GamesPage() {
           </div>
 
           <div class="homeresize">
-            <a href="ae.html">
+            <a href="games/asteroidEscape">
               <div class="card">
                 <div class="card-image">
                   <img src="../images/IMGAE.png" />
@@ -176,7 +176,7 @@ function GamesPage() {
           </div>
 
           <div class="homeresize">
-            <a href="sn.html">
+            <a href="games/sansNomReedition">
               <div class="card">
                 <div class="card-image">
                   <img src="../images/IMGSN.png" />
