@@ -17,7 +17,7 @@ const NoMatch = () => {
       >
         <a href="https://nytuo.itch.io/error404">Play Error404 on itch.io</a>
       </iframe>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

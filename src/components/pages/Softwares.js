@@ -1,13 +1,13 @@
-import Footer from "../Footer"
+import Footer from "../Footer";
 
-import React from 'react'
+import React from "react";
 
 function Softwares() {
-    return (
-        <div>
-            <Footer></Footer>
-        </div>
-    )
+  return (
+    <div>
+      <Footer></Footer>
+    </div>
+  );
 }
 
-export default Softwares
+export default Softwares;

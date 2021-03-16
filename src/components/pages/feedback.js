@@ -26,7 +26,7 @@ function Feedback() {
           msallowfullscreen
         ></iframe>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

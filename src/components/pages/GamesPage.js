@@ -191,7 +191,7 @@ function GamesPage() {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
