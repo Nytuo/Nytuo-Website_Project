@@ -5,6 +5,7 @@ import { ShowTxt } from "../ShowTxt";
 import M from "materialize-css";
 import ScreenShotsDisplayer from "../ScreenShotsDisplayer";
 import { ButtonA } from "../ButtonA";
+import Footer from "../Footer";
 
 function Games_template(props) {
   useEffect(() => {
@@ -86,6 +87,7 @@ function Games_template(props) {
           Ouvrir le jeu avec le Nytuo Launcher
         </ButtonA>
       </div>
+      <Footer></Footer>
     </>
   );
 }

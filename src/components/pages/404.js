@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Footer";
 
 const NoMatch = () => {
   return (
@@ -16,6 +17,7 @@ const NoMatch = () => {
       >
         <a href="https://nytuo.itch.io/error404">Play Error404 on itch.io</a>
       </iframe>
+      <Footer/>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import "../../App.css";
+import Footer from "../Footer";
 
 function About() {
   return (
@@ -16,6 +17,7 @@ function About() {
         <br />
         Je suis fan d’High-Tech, de MARVEL, de Doctor Who et plus encore…
       </p>
+      <Footer></Footer>
     </div>
   );
 }

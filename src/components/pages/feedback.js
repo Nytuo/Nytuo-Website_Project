@@ -1,5 +1,6 @@
 import React from "react";
 import "../../App.css";
+import Footer from "../Footer";
 
 function Feedback() {
   return (
@@ -25,6 +26,7 @@ function Feedback() {
           msallowfullscreen
         ></iframe>
       </div>
+      <Footer/>
     </div>
   );
 }
