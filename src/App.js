@@ -21,7 +21,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/games/winrun" component={WR} />
           <Route path="/games" component={GamesPage} />
-          <Route path="/feedback" component={Feedback}/>
+          <Route path="/feedback" component={Feedback} />
           <Route path="/profile" />
           <Route path="*" component={NoMatch} />
         </Switch>

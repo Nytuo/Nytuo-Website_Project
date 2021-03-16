@@ -10,7 +10,7 @@ function Feedback() {
         Tu peux envoyer ton feedback sur mes créations avec Microsoft forms ou
         Discord !
       </p>
-      <div style={{textAlign: "center"}}>
+      <div style={{ textAlign: "center" }}>
         <iframe
           width="1280px"
           height="720px"
@@ -18,13 +18,12 @@ function Feedback() {
           frameborder="0"
           marginwidth="0"
           marginheight="0"
-          style={{border: "none",maxWidth:"100%", maxHeight:"100vh"}}
+          style={{ border: "none", maxWidth: "100%", maxHeight: "100vh" }}
           allowfullscreen
           webkitallowfullscreen
           mozallowfullscreen
           msallowfullscreen
-        >
-        </iframe>
+        ></iframe>
       </div>
     </div>
   );
