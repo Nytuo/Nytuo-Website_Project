@@ -34,12 +34,11 @@ import FirebaseConnexion from "./FirebaseConnexion";
 import store from "./components/pages/store";
 
 function App() {
-  
   return (
     <>
       <Router>
         <Navbar />
-    <FirebaseConnexion/>
+        <FirebaseConnexion />
         <Switch>
           <Route path="/" exact component={Home} />
 
@@ -63,7 +62,7 @@ function App() {
           <Route path="/superGeoffreyBros" component={SGB} />
           <Route path="/sansNomReedition" component={SNRE} />
           <Route path="/tanksBattle" component={TB} />
-          <Route path="/store" component={store}/>
+          <Route path="/store" component={store} />
           <Route path="/profile" component={Profile} />
           <Route path="*" component={NoMatch} />
         </Switch>

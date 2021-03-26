@@ -7,7 +7,9 @@ function SNRE() {
       <Games_template
         nGame="SansNom Réédition"
         advTxt="Ce jeu peut-être considerer comme un virus dû au composant NW.JS.Ce jeu n’est pas un virus, vous pouvez l’analyser avec VirusTotal."
-        desc={"Un jeu de plateforme basique juste pour le fun.\nMon premier jeu !\n Ce jeu a était refait entièrement, rien de bien nouveau mais compatible sur plus de plateformes."}
+        desc={
+          "Un jeu de plateforme basique juste pour le fun.\nMon premier jeu !\n Ce jeu a était refait entièrement, rien de bien nouveau mais compatible sur plus de plateformes."
+        }
         info={
           "Plateforme : Windows (x86 et x64), Linux (x86 et x64), MacOSX (x64), HTML5, Android.\nContrôleurs : Clavier, tactile, manettes (auto-detecter)\nLangue : Français\nCréé avec : Construct 2\nAuteur : Nytuo\nGenre : Plateformer\nStatut : Stable\nVersion : 1.0.1.0"
         }

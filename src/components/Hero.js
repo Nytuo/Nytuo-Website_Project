@@ -31,8 +31,9 @@ function Hero() {
         nytuo.yo.fr) va passer sous ReactJS et va être herbergé chez Google
         FireBase.
         <br /> L'ancien domaine (nytuo.yo.fr) continuera de servir quelques
-        temps pour les comptes et le launcher avant de passer eux aussi sous FireBase (avec authentification par Google de prévu), l'ancienne adresse redirigera vers la nouvelle
-        adresse du site principale.
+        temps pour les comptes et le launcher avant de passer eux aussi sous
+        FireBase (avec authentification par Google de prévu), l'ancienne adresse
+        redirigera vers la nouvelle adresse du site principale.
         <br />
         Le projet de l'ancienne et nouveau site se trouvent sur GitHub{" "}
       </p>
@@ -41,7 +42,6 @@ function Hero() {
           Go to the games page
         </Button>
       </div>
-
     </div>
   );
 }

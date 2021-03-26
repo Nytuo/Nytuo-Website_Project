@@ -47,10 +47,10 @@ function FirebaseConnexion() {
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then((credentials) => {
-        var dbco1 = db.ref('users')
-          dbco1.child(credentials.user.uid).set({
-            games:""
-          });
+        var dbco1 = db.ref("users");
+        dbco1.child(credentials.user.uid).set({
+          games: "",
+        });
         return credentials.user.updateProfile({
           displayName: pseudo,
         });
@@ -95,17 +95,15 @@ function FirebaseConnexion() {
         var token = credential.accessToken;
         // The signed-in user info.
         var user = result.user;
-        if (!db.ref('users/'+user.uid+"/games")){
-          var dbco1 = db.ref('users')
+        if (!db.ref("users/" + user.uid + "/games")) {
+          var dbco1 = db.ref("users");
           dbco1.child(user.uid).set({
-            games:""
+            games: "",
           });
         }
-          
 
-/*           var dbco2 = db.ref('users/'+user.uid)
+        /*           var dbco2 = db.ref('users/'+user.uid)
           dbco2.child("games") */
-        
       })
       .catch((error) => {
         // Handle Errors here.
@@ -139,9 +137,8 @@ function FirebaseConnexion() {
       {User && (
         <div className="spaceX2">
           <p>Vous êtes connecté avec l'adresse mail : {User.email}</p>
-          <div >
-
-          <img className="NcircleimgC" src={User.photoURL}/>
+          <div>
+            <img className="NcircleimgC" src={User.photoURL} />
           </div>
           <p>Bienvenue, {User.displayName}</p>
         </div>
@@ -177,7 +174,14 @@ function FirebaseConnexion() {
               style={{ margin: "5px" }}
               onClick={GoogleAuth}
             >
-              <div className="left"><img width="20px" style={{marginTop: "7px",marginRight:"8px"}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" /></div>Se connecter avec le dieu Google
+              <div className="left">
+                <img
+                  width="20px"
+                  style={{ marginTop: "7px", marginRight: "8px" }}
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+                />
+              </div>
+              Se connecter avec le dieu Google
             </button>
             <button
               className="btn waves-effect waves-light"

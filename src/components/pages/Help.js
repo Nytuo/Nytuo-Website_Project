@@ -1,16 +1,14 @@
-import React,{ useEffect} from "react";
+import React, { useEffect } from "react";
 import M from "materialize-css";
 import Footer from "../Footer";
 
-
-
 function Help() {
-    useEffect(() => {
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.collapsible');
-            var instances = M.Collapsible.init(elems,[]);
-        });
-    },[])
+  useEffect(() => {
+    document.addEventListener("DOMContentLoaded", function () {
+      var elems = document.querySelectorAll(".collapsible");
+      var instances = M.Collapsible.init(elems, []);
+    });
+  }, []);
   return (
     <div>
       <h1>Page d'aide Nytuo (Site, Jeux, Launcher) :</h1>
@@ -354,7 +352,7 @@ function Help() {
       </ul>
       <h1>Questionnements :</h1>
       <p>Visiter la section "FeedBack" du site</p>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

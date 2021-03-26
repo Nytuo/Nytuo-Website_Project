@@ -29,23 +29,25 @@ function Login(props) {
             onChange={(e) => setEmail(e.target.value)}
           />
           <label for="mail">E-Mail</label>
-          
         </div>
       </div>
-      {hasAccount ?(""):(
+      {hasAccount ? (
+        ""
+      ) : (
         <div className="row">
-        <div className="input-field col s12">
-          <input
-            type="text"
-            id="pseudo"
-            className="validate"
-            require
-            value={pseudo}
-            onChange={(e) => setPseudo(e.target.value)}
-          />
-          <label for="pseudo">Pseudo</label>
+          <div className="input-field col s12">
+            <input
+              type="text"
+              id="pseudo"
+              className="validate"
+              require
+              value={pseudo}
+              onChange={(e) => setPseudo(e.target.value)}
+            />
+            <label for="pseudo">Pseudo</label>
+          </div>
         </div>
-      </div>)}
+      )}
       <div className="row">
         <div className="input-field col s12">
           <input
@@ -57,15 +59,13 @@ function Login(props) {
             onChange={(e) => setPassword(e.target.value)}
           />
           <label for="pwd">Mot de passe</label>
-
-          
         </div>
       </div>
       <div>
         {hasAccount ? (
           <div style={{ textAlign: "center" }}>
             <p>{emailError}</p>
-          <p>{passwordError}</p>
+            <p>{passwordError}</p>
             <button
               className="btn waves-effect waves-light"
               onClick={handleLogin}

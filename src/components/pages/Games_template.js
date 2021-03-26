@@ -19,7 +19,7 @@ function Games_template(props) {
       document.getElementById("videodiv").style.display = "None";
       document.getElementById("videoiframe").style.display = "None";
     }
-    if (props.sn === ""){
+    if (props.sn === "") {
       document.getElementById("SNC").style.display = "None";
     }
   }, []);
@@ -74,9 +74,13 @@ function Games_template(props) {
       <h1>Téléchargements :</h1>
       <div id="SNC">
         <h2>SansNom Classic:</h2>
-        <div style={{textAlign: "center"}}>
-          <ButtonA link="http://uploads.ungrounded.net/alternate/1035000/1035158_alternate_39079_r3.zip/?f1478359414">Jouer sur Newgrounds</ButtonA>
-          <ButtonA link="http://www.kongregate.com/games/Nytuo/sansnom-alpha-2">Jouer sur Kongregate</ButtonA>
+        <div style={{ textAlign: "center" }}>
+          <ButtonA link="http://uploads.ungrounded.net/alternate/1035000/1035158_alternate_39079_r3.zip/?f1478359414">
+            Jouer sur Newgrounds
+          </ButtonA>
+          <ButtonA link="http://www.kongregate.com/games/Nytuo/sansnom-alpha-2">
+            Jouer sur Kongregate
+          </ButtonA>
         </div>
         <h2>SansNom Réédition:</h2>
       </div>

@@ -24,7 +24,7 @@ function Footer() {
             Voir les jeux sur Itch.io
           </a>
         </div>
-        
+
         <div className="column">
           <h2>Liens Rapides :</h2>
           <a style={{ color: "whitesmoke" }} href="help">
@@ -53,7 +53,7 @@ function Footer() {
           <a style={{ color: "whitesmoke" }} href="privacy">
             Privacy
           </a>
-          <br/>
+          <br />
           <a style={{ color: "whitesmoke" }} href="TAC">
             Terms And Conditions
           </a>

@@ -11,7 +11,7 @@ function TermsAndConditions() {
         of Nytuo's Website.
       </p>
       <br />
-      <span style={{textTransform: "capitalize"}}> Nytuo</span> is located at:
+      <span style={{ textTransform: "capitalize" }}> Nytuo</span> is located at:
       <br />
       <address>
         Saint-Raphaël <br />
@@ -57,14 +57,19 @@ function TermsAndConditions() {
         Unless otherwise stated, Nytuo and/or it's licensors own the
         intellectual property rights for all material on Nytuo. All intellectual
         property rights are reserved. You may view and/or print pages from
-        https://nytuowebsite.web.app for your own personal use subject to restrictions
-        set in these terms and conditions.
+        https://nytuowebsite.web.app for your own personal use subject to
+        restrictions set in these terms and conditions.
       </p>
       <p>You must not:</p>
       <ol>
         <li>Republish material from https://nytuowebsite.web.app</li>
-        <li>Sell, rent or sub-license material from https://nytuowebsite.web.app</li>
-        <li>Reproduce, duplicate or copy material from https://nytuowebsite.web.app</li>
+        <li>
+          Sell, rent or sub-license material from https://nytuowebsite.web.app
+        </li>
+        <li>
+          Reproduce, duplicate or copy material from
+          https://nytuowebsite.web.app
+        </li>
       </ol>
       <p>
         Redistribute content from Nytuo (unless content is specifically made for
