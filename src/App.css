@@ -13,6 +13,10 @@ body {
     animation: fadeIn 0.5s;
 
 }
+button{
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
 p {
 
     font-family: 'Roboto Condensed', sans-serif;
@@ -37,9 +41,7 @@ h1 {
     color: white;
 
 }
-a{
-    margin: 5px
-}
+
 .spaceX2 {
 
     margin-top: 150px;
@@ -65,5 +67,212 @@ a{
     width: 25%;
 
     margin-right: 5px
+
+}
+.spaceX {
+
+    margin: 10px;
+
+}.row::after {
+
+    content: "";
+
+    clear: both;
+
+    display: table;
+
+    text-align: center;
+
+}.column {
+
+    float: left;
+
+    width: 50%;
+
+    padding: 8px;
+
+}.txtfoot {
+
+    font-size: 15px;
+
+}h2 {
+
+    text-align: center;
+
+    font-size: 34px;
+
+    font-family: 'Oswald', sans-serif;
+
+    color: white;
+
+}
+.updated {
+
+    cursor: default;
+
+    color: #ffc107;
+
+    font-weight: 600;
+
+    font-size: 18px;
+
+    padding-left: 0.9375rem;
+
+    padding-top: 0.4375rem;
+
+    padding-right: 0.9375rem;
+
+    padding-bottom: 0.4375rem;
+
+    background-color: rgba(255, 193, 7, 0.1);
+
+    ;
+
+    border-color: transparent;
+
+    border-radius: 0.5rem;
+
+    display: inline-block;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    line-height: 1.5;
+
+    margin-right: 10px;
+
+}
+
+
+
+.new {
+
+    cursor: default;
+
+    color: #377dff;
+
+    font-weight: 600;
+
+    font-size: 18px;
+
+    padding-left: 0.9375rem;
+
+    padding-top: 0.4375rem;
+
+    padding-right: 0.9375rem;
+
+    padding-bottom: 0.4375rem;
+
+    background-color: rgba(55, 125, 255, 0.1);
+
+    border-color: transparent;
+
+    border-radius: 0.5rem;
+
+    display: inline-block;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    line-height: 1.5;
+
+    margin-right: 10px;
+
+}
+
+
+
+.fixed {
+
+    cursor: default;
+
+    color: #de4437;
+
+    font-weight: 600;
+
+    font-size: 18px;
+
+    padding-left: 0.9375rem;
+
+    padding-top: 0.4375rem;
+
+    padding-right: 0.9375rem;
+
+    padding-bottom: 0.4375rem;
+
+    background-color: rgba(222, 68, 55, 0.1);
+
+    border-color: tranrgba(160, 73, 65, 0.1);
+
+    border-radius: 0.5rem;
+
+    display: inline-block;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    line-height: 1.5;
+
+    margin-right: 10px;
+
+}
+
+
+
+.enhanced {
+
+    cursor: default;
+
+    color: #00c9a7;
+
+    font-weight: 600;
+
+    font-size: 18px;
+
+    padding-left: 0.9375rem;
+
+    padding-top: 0.4375rem;
+
+    padding-right: 0.9375rem;
+
+    padding-bottom: 0.4375rem;
+
+    background-color: rgba(0, 201, 167, 0.1);
+
+    border-color: transparent;
+
+    border-radius: 0.5rem;
+
+    display: inline-block;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    line-height: 1.5;
+
+    margin-right: 10px;
+
+}
+.NCircle {
+
+    
+
+    
+
+
+}
+
+
+
+.NcircleimgC {
+object-fit: cover;
+    width: 150px;
+
+    height: 150px;
+    border-radius: 5%;
 
 }

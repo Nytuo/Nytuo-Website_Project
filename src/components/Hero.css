@@ -4,6 +4,7 @@ video{
     height: 100%;
     position: fixed;
     z-index: -1;
+    
 }
 .hero-container{
     /*background : url(/images/sgbFeat.png) center  center/cover no-repeat;*/
@@ -12,6 +13,5 @@ video{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: inset 0 0 0 100% rgba(0,0,0,0.2);
     object-fit: contain;
 }

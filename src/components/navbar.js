@@ -23,7 +23,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-wrapper">
-        <a href="#" className="brand-logo center">
+        <a href="/" className="brand-logo center">
           <img
             src="../images/logo.png"
             className="logonav"
@@ -44,7 +44,13 @@ function Navbar() {
             <a href="/softwares">Logiciels</a>
           </li>
           <li>
-            <a href="/php/profile.php">Profile</a>
+            <a href="https://github.com/Nytuo">GitHub</a>
+          </li>
+          <li>
+            <a href="/profile">Profile</a>
+          </li>
+          <li>
+            <a href="/store">Boutique</a>
           </li>
           <li>
             <a href="/feedback">FeedBack</a>
@@ -56,19 +62,19 @@ function Navbar() {
       </div>
       <ul className="sidenav" id="mobile-demo">
         <li className="active">
-          <a href="home.html">Accueil</a>
+          <a href="/">Accueil</a>
         </li>
         <li>
-          <a href="games.html">Jeux</a>
+          <a href="/games">Jeux</a>
         </li>
         <li>
-          <a href="softwares.html">Logiciels</a>
+          <a href="/softwares">Logiciels</a>
         </li>
         <li>
-          <a href="profile.php">Profile</a>
+          <a href="/profile">Profile</a>
         </li>
         <li>
-          <a href="feedback.html">FeedBack</a>
+          <a href="/feedback">FeedBack</a>
         </li>
         <li>
           <Link to="/about">A Propos</Link>

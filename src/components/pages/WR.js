@@ -35,6 +35,8 @@ function WR() {
         rm8="t"
         rm9="t"
         rm10="t"
+        video=""
+        sn=""
       />
     </div>
   );

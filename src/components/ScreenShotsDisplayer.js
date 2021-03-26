@@ -6,14 +6,13 @@ export default class ScreenShotsDisplayer extends Component {
   componentDidMount() {
     document.addEventListener("DOMContentLoaded", function () {
       var elems = document.querySelectorAll(".slider");
-      var instances = M.Slider.init(elems, { height: 600 });
+      var instances = M.Slider.init(elems, { height: 650 });
     });
   }
 
   render() {
-    return (
-      <div>
-        <div className="slider">
+    return (        
+      <div className="slider">
           <ul className="slides">
             <SSD rm={this.props.rm1} src={this.props.i1}></SSD>
             <SSD rm={this.props.rm2} src={this.props.i2}></SSD>
@@ -27,7 +26,6 @@ export default class ScreenShotsDisplayer extends Component {
             <SSD rm={this.props.rm10} src={this.props.i10}></SSD>
           </ul>
         </div>
-      </div>
     );
   }
 }

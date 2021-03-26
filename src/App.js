@@ -8,21 +8,63 @@ import About from "./components/pages/About";
 import "./materialize.css";
 import WR from "./components/pages/WR";
 import GamesPage from "./components/pages/GamesPage";
-import Feedback from "./components/pages/feedback";
+import Feedback from "./components/pages/Feedback";
+import Softwares from "./components/pages/Softwares";
+import NytuoLauncher from "./components/pages/NytuoLauncher";
+import TermsAndConditions from "./components/pages/TermsAndConditions";
+import VITF from "./components/pages/VITF";
+import Privacy from "./components/pages/Privacy";
+import Help from "./components/pages/Help";
+import TTD from "./components/pages/TTD";
+import AE from "./components/pages/AE";
+import FWD from "./components/pages/FWD";
+import LA from "./components/pages/LA";
+import LAATIM from "./components/pages/LAATIM";
+import SF from "./components/pages/SF";
+import SFO from "./components/pages/SFO";
+import SGB from "./components/pages/SGB";
+import SNRE from "./components/pages/SN";
+import TB from "./components/pages/TB";
+import React, { useState, useEffect, Link } from "react";
+/* import fire from "./fire";
+ */ import Login from "./components/Login";
+// Add the Firebase products that you want to use
+import Profile from "./components/pages/Profile";
+import FirebaseConnexion from "./FirebaseConnexion";
+import store from "./components/pages/store";
 
 function App() {
+  
   return (
     <>
       <Router>
         <Navbar />
+    <FirebaseConnexion/>
         <Switch>
           <Route path="/" exact component={Home} />
 
           <Route path="/about" component={About} />
-          <Route path="/games/winrun" component={WR} />
+          <Route path="/winrun" component={WR} />
+          <Route path="/vincentInTheForest" component={VITF} />
           <Route path="/games" component={GamesPage} />
           <Route path="/feedback" component={Feedback} />
-          <Route path="/profile" />
+          <Route path="/softwares" component={Softwares} />
+          <Route path="/nytuo-launcher" component={NytuoLauncher} />
+          <Route path="/TAC" component={TermsAndConditions} />
+          <Route path="/privacy" component={Privacy} />
+          <Route path="/help" component={Help} />
+          <Route path="/theTardisDefender" component={TTD} />
+          <Route path="/asteroidEscape" component={AE} />
+          <Route path="/fireWallDefender" component={FWD} />
+          <Route path="/lutinAdventure" component={LA} />
+          <Route path="/legendAdventureAndTheInfernalMaze" component={LAATIM} />
+          <Route path="/shootFighter" component={SF} />
+          <Route path="/shootFighterOrigins" component={SFO} />
+          <Route path="/superGeoffreyBros" component={SGB} />
+          <Route path="/sansNomReedition" component={SNRE} />
+          <Route path="/tanksBattle" component={TB} />
+          <Route path="/store" component={store}/>
+          <Route path="/profile" component={Profile} />
           <Route path="*" component={NoMatch} />
         </Switch>
       </Router>

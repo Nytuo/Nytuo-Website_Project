@@ -8593,7 +8593,8 @@ input[type=range]::-ms-thumb {
 .slider {
     position: relative;
     height: 400px;
-    width: 100%;
+    width: 60%;
+    margin: auto
 }
 
 .slider.fullscreen {

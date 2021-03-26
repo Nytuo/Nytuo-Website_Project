@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <div className="spaceX"></div>
 
       <div className="row">
@@ -14,7 +14,7 @@ function Footer() {
           <br />
           <br />
 
-          <a style={{ color: "whitesmoke" }} href="home.html">
+          <a style={{ color: "whitesmoke" }} href="/">
             Aller à l'accueil
           </a>
           <br />
@@ -24,15 +24,10 @@ function Footer() {
             Voir les jeux sur Itch.io
           </a>
         </div>
-        <div className="column">
-          <h2>Outils :</h2>
-          <div id="google_translate_element"></div>
-          <br />
-          <br />
-        </div>
+        
         <div className="column">
           <h2>Liens Rapides :</h2>
-          <a style={{ color: "whitesmoke" }} href="aide.html">
+          <a style={{ color: "whitesmoke" }} href="help">
             Aide
           </a>
           <br />
@@ -43,24 +38,24 @@ function Footer() {
             GitHub
           </a>
           <br />
-          <a style={{ color: "whitesmoke" }} href="nytuo_launcher.html">
+          <a style={{ color: "whitesmoke" }} href="nytuo-launcher">
             Nytuo Launcher
           </a>
           <br />
-          <a style={{ color: "whitesmoke" }} href="sn.html">
+          <a style={{ color: "whitesmoke" }} href="sansNomReedition">
             Sans Nom Réédition
           </a>
           <br />
-          <a style={{ color: "whitesmoke" }} href="sgb.html">
+          <a style={{ color: "whitesmoke" }} href="superGeoffreyBros">
             Super Geoffrey Bros
           </a>
           <br />
-          <a style={{ color: "whitesmoke" }} href="nlcl.html">
-            Changes-Logs du Nytuo Launcher
-          </a>
-          <br />
-          <a style={{ color: "whitesmoke" }} href="privacy.html">
+          <a style={{ color: "whitesmoke" }} href="privacy">
             Privacy
+          </a>
+          <br/>
+          <a style={{ color: "whitesmoke" }} href="TAC">
+            Terms And Conditions
           </a>
           <br />
         </div>

@@ -12,11 +12,26 @@ function Games_template(props) {
     if (props.android === "") {
       document.getElementById("androidDiv").style.display = "None";
     }
+    if (props.advTxt === "") {
+      document.getElementById("advDiv").style.display = "None";
+    }
+    if (props.video === "") {
+      document.getElementById("videodiv").style.display = "None";
+      document.getElementById("videoiframe").style.display = "None";
+    }
+    if (props.sn === ""){
+      document.getElementById("SNC").style.display = "None";
+    }
   }, []);
 
   return (
     <>
-      <h1>Avertissement :</h1>
+      <div className="spaceX2"></div>
+      <div style={{ textAlign: "center" }}>
+        <img src={"../images/Logo" + props.Name.toUpperCase() + ".png"} />
+      </div>
+      <h1>{props.nGame}</h1>
+      <h1 id="advDiv">Avertissement :</h1>
       <ShowTxt txt={props.advTxt} />
       <h1>Description :</h1>
       <ShowTxt txt={props.desc} />
@@ -45,12 +60,31 @@ function Games_template(props) {
         rm9={props.rm9}
         rm10={props.rm10}
       />
+      <h1 id="videodiv">Vidéo :</h1>
+      <div id="videoiframe" style={{ textAlign: "center" }}>
+        <iframe
+          width="850px"
+          height="500px"
+          src={props.video}
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
       <h1>Téléchargements :</h1>
+      <div id="SNC">
+        <h2>SansNom Classic:</h2>
+        <div style={{textAlign: "center"}}>
+          <ButtonA link="http://uploads.ungrounded.net/alternate/1035000/1035158_alternate_39079_r3.zip/?f1478359414">Jouer sur Newgrounds</ButtonA>
+          <ButtonA link="http://www.kongregate.com/games/Nytuo/sansnom-alpha-2">Jouer sur Kongregate</ButtonA>
+        </div>
+        <h2>SansNom Réédition:</h2>
+      </div>
       <div style={{ textAlign: "center" }}>
         <a href={props.itch}>
           <img src="../images/itchio_badge.png" style={{ width: "20%" }} />
         </a>
-        <a href="nytuo_launcher.html">
+        <a href="nytuo-launcher">
           <img src="../images/available.png" style={{ width: "20%" }} />
         </a>
         <a href={props.gamejolt}>
@@ -79,7 +113,6 @@ function Games_template(props) {
       <p>
         Intéressés ?<a href="nytuo_launcher.html"> Voyez en plus ici.</a>
       </p>
-
       <ShowTxt txt="Vous avez déjà le Nytuo Launcher ou le jeu d'installer ? Aller plus vite:" />
       <div style={{ textAlign: "center" }}>
         <ButtonA link="nytuo://">Ouvrir le Nytuo Launcher</ButtonA>

@@ -5,7 +5,7 @@ import Footer from "../Footer";
 function About() {
   return (
     <div>
-      <br />
+      <div className="spaceX2"></div>
       <h1>A Propos :</h1>
       <p>
         Je suis Nytuo (Arnaud BEUX), j’ai 17 ans et je créé des jeux pour
