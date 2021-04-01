@@ -126,7 +126,6 @@ function FirebaseConnexion() {
   }, []);
   return (
     <div>
-      
       <Modal
         f={GoogleAuth}
         id="1"

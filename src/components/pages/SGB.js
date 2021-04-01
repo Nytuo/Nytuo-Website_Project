@@ -6,7 +6,6 @@ function SGB() {
     <div>
       <meta name="robots" content="noindex"></meta>
       <GamesTemplate
-
         nGame="Super Geoffrey Bros"
         advTxt="Ce jeu peut-être considerer comme un virus dû au composant NW.JS.Ce jeu n’est pas un virus, vous pouvez l’analyser avec VirusTotal."
         desc="Un jeu mario-like a travers différents mondes, créé pour le mariage de mon cousin : Geoffrey"
@@ -40,7 +39,6 @@ function SGB() {
         video="https://www.youtube.com/embed/b8-8I-9k0WY?list=PLQiR1OKspG4sK4tD_fmeaknBDTnOC6GyV"
         sn=""
         GitHub="https://github.com/Nytuo/SGB/releases"
-
       />
     </div>
   );

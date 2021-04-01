@@ -39,7 +39,6 @@ function SF() {
         video=""
         sn=""
         GitHub="https://github.com/Nytuo/SF/releases"
-
       />
     </div>
   );

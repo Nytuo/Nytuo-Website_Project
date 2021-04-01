@@ -39,7 +39,6 @@ function TB() {
         video=""
         sn=""
         GitHub="https://github.com/Nytuo/TB/releases"
-
       />
     </div>
   );

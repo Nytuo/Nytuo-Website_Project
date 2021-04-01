@@ -41,7 +41,6 @@ function SNRE() {
         video=""
         sn="true"
         GitHub="https://github.com/Nytuo/SN/releases"
-
       />
     </div>
   );

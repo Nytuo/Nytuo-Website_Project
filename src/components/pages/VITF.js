@@ -39,7 +39,6 @@ function VITF() {
         video="https://www.youtube.com/embed/videoseries?list=PLQiR1OKspG4uxnbS5QfOgDQWsrl_gujXI"
         sn=""
         GitHub="https://github.com/Nytuo/VITF/releases"
-
       />
     </div>
   );

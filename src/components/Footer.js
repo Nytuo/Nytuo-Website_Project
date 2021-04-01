@@ -63,9 +63,9 @@ function Footer() {
 
       <p className="txtfoot">
         Website of Nytuo, Host by PlanetHoster WorldLite. Made with React{" "}
-        {React.version}. Created by Nytuo (BEUX Arnaud) using 
-        <a href="https://materializecss.com"> Materialize-Css</a> components. All
-        Rights Reserved. &#169; 2021
+        {React.version}. Created by Nytuo (BEUX Arnaud) using
+        <a href="https://materializecss.com"> Materialize-Css</a> components.
+        All Rights Reserved. &#169; 2021
       </p>
     </div>
   );

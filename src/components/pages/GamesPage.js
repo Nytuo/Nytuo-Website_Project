@@ -5,9 +5,9 @@ import Footer from "../Footer";
 function GamesPage() {
   return (
     <>
-    <meta name="robots" content="noindex"></meta>
+      <meta name="robots" content="noindex"></meta>
       <div class="spaceX2">
-        <img alt="" src="../images/Nytuo games.png" style={{width: "20%" }} />
+        <img alt="" src="../images/Nytuo games.png" style={{ width: "20%" }} />
         <h1>Mes jeux :</h1>
 
         <div class="cards-list">

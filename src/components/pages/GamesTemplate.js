@@ -28,10 +28,13 @@ function GamesTemplate(props) {
 
   return (
     <>
-    <meta name="robots" content="noindex"></meta>
+      <meta name="robots" content="noindex"></meta>
       <div className="spaceX2"></div>
       <div style={{ textAlign: "center" }}>
-        <img alt="" src={"../images/Logo" + props.Name.toUpperCase() + ".png"} />
+        <img
+          alt=""
+          src={"../images/Logo" + props.Name.toUpperCase() + ".png"}
+        />
       </div>
       <h1>{props.nGame}</h1>
       <h1 id="advDiv">Avertissement :</h1>
@@ -64,26 +67,25 @@ function GamesTemplate(props) {
         rm10={props.rm10}
       />
       <h1 id="videodiv">Vidéo :</h1>
-          <div
-            id="videoiframe"
-            className="video-container"
-          >
-            <iframe
-              src={props.video}
-              title="video from YT"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;"
-              allowfullscreen
-            ></iframe>
-          </div>
+      <div id="videoiframe" className="video-container">
+        <iframe
+          src={props.video}
+          title="video from YT"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;"
+          allowfullscreen
+        ></iframe>
+      </div>
       <h1>Téléchargements :</h1>
       <div id="SNC">
         <h2>SansNom Classic:</h2>
         <div style={{ textAlign: "center" }}>
-          <ButtonA link="http://uploads.ungrounded.net/alternate/1035000/1035158_alternate_39079_r3.zip/?f1478359414"><i class="material-icons right">launch</i>
+          <ButtonA link="http://uploads.ungrounded.net/alternate/1035000/1035158_alternate_39079_r3.zip/?f1478359414">
+            <i class="material-icons right">launch</i>
             Jouer sur Newgrounds
           </ButtonA>
-          <ButtonA link="http://www.kongregate.com/games/Nytuo/sansnom-alpha-2"><i class="material-icons right">launch</i>
+          <ButtonA link="http://www.kongregate.com/games/Nytuo/sansnom-alpha-2">
+            <i class="material-icons right">launch</i>
             Jouer sur Kongregate
           </ButtonA>
         </div>
@@ -93,18 +95,27 @@ function GamesTemplate(props) {
         <div class="row">
           <div class="column2" id="itchdiv">
             <a href={props.itch}>
-              <img alt="" src="../images/itchio_badge.png" style={{ width: "100%" }} />
+              <img
+                alt=""
+                src="../images/itchio_badge.png"
+                style={{ width: "100%" }}
+              />
             </a>
           </div>
           <div class="column2" id="nldiv">
             <a href="nytuo-launcher">
-              <img alt="" src="../images/available.png" style={{ width: "100%" }} />
+              <img
+                alt=""
+                src="../images/available.png"
+                style={{ width: "100%" }}
+              />
             </a>
           </div>
           <div class="column2" id="gamejoltdiv">
             <a href={props.gamejolt}>
               <img
-                alt="" src="../images/Game-jolt-logo.svg.png"
+                alt=""
+                src="../images/Game-jolt-logo.svg.png"
                 style={{ width: "100%" }}
               />
             </a>
@@ -112,7 +123,8 @@ function GamesTemplate(props) {
           <div class="column2" id="githubdiv">
             <a href={props.GitHub}>
               <img
-                alt="" src="../images/available_github.png"
+                alt=""
+                src="../images/available_github.png"
                 style={{ width: "100%" }}
               />
             </a>
@@ -120,7 +132,8 @@ function GamesTemplate(props) {
           <div class="column2" id="androidDiv">
             <a href={props.android}>
               <img
-                alt="" src="../images/fr_badge_web_generic.png"
+                alt=""
+                src="../images/fr_badge_web_generic.png"
                 style={{ width: "100%" }}
               />
             </a>
@@ -141,8 +154,11 @@ function GamesTemplate(props) {
       </p>
       <ShowTxt txt="Vous avez déjà le Nytuo Launcher ou le jeu d'installer ? Aller plus vite:" />
       <div style={{ textAlign: "center" }}>
-        <ButtonA link="nytuo://"><i class="material-icons right">launch</i>Ouvrir le Nytuo Launcher</ButtonA>
-        <ButtonA link={"nytuo://launchid/" + props.Name}><i class="material-icons right">launch</i>
+        <ButtonA link="nytuo://">
+          <i class="material-icons right">launch</i>Ouvrir le Nytuo Launcher
+        </ButtonA>
+        <ButtonA link={"nytuo://launchid/" + props.Name}>
+          <i class="material-icons right">launch</i>
           Ouvrir le jeu avec le Nytuo Launcher
         </ButtonA>
       </div>

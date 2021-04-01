@@ -16,12 +16,17 @@ function Hero() {
         gérer facilement les connexions avec Google qui est plus rapide pour
         vous, utilisateurs.
         <br />
-        Le domaine nytuo.yo.fr continuera d'exister mais redirigera à cette adresse.
-        <br/>
-        Pour le launcher, une reconstruction de ce dernier avec React et la base de données Firebase est prévue. Elle prendra un peu de temps pour sortir. Pour les éventuelles nouveaux utilisateurs, veuillez-vous connecter directement par l'interface du launcher qui reste fonctionnelle.
-        <br/>
+        Le domaine nytuo.yo.fr continuera d'exister mais redirigera à cette
+        adresse.
+        <br />
+        Pour le launcher, une reconstruction de ce dernier avec React et la base
+        de données Firebase est prévue. Elle prendra un peu de temps pour
+        sortir. Pour les éventuelles nouveaux utilisateurs, veuillez-vous
+        connecter directement par l'interface du launcher qui reste
+        fonctionnelle.
+        <br />
         Ce site est dorénavant, le domaine principal.
-        <br/>
+        <br />
         -Merci, Nytuo, Arnaud BEUX
       </h2>
       <p>

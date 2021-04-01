@@ -39,7 +39,6 @@ function LA() {
         video="https://www.youtube.com/embed/videoseries?list=PLQiR1OKspG4tl2eCTdJ5n2qcco1gZKYHa"
         sn=""
         GitHub="https://github.com/Nytuo/LA/releases"
-
       />
     </div>
   );

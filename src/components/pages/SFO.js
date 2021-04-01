@@ -40,7 +40,6 @@ function SFO() {
         video="https://www.youtube.com/embed/whmTClTdBxs"
         sn=""
         GitHub="https://github.com/Nytuo/SFO/releases"
-
       />
     </div>
   );

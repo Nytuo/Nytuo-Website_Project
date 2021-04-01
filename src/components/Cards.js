@@ -13,7 +13,6 @@ function Cards(props) {
         </a>
         <div class="card-content">
           <ButtonA link={"nytuo://launchid/" + props.link}>Jouer</ButtonA>
-          
         </div>
       </div>
     </div>

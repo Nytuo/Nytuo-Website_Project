@@ -39,7 +39,6 @@ function TTD() {
         video=""
         sn=""
         GitHub="https://github.com/Nytuo/TTD/releases"
-
       />
     </div>
   );

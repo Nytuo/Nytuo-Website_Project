@@ -6,7 +6,6 @@ function LAATIM() {
     <div>
       <meta name="robots" content="noindex"></meta>
       <GamesTemplate
-      
         nGame="Legend Adventure And The Infernal Maze"
         advTxt=""
         desc={
@@ -42,7 +41,6 @@ function LAATIM() {
         video="https://www.youtube.com/embed/9JP4bXCtbrc"
         sn=""
         GitHub="https://github.com/Nytuo/LAATIM/releases"
-
       />
     </div>
   );

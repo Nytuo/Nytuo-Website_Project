@@ -4,7 +4,6 @@ import Footer from "../Footer";
 
 function About() {
   return (
-    
     <div>
       <meta name="robots" content="noindex"></meta>
       <div className="spaceX2"></div>

@@ -6,7 +6,6 @@ function Home() {
   return (
     <div className="HeroShadow">
       <Hero />
-
     </div>
   );
 }

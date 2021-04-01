@@ -39,7 +39,6 @@ function FWD() {
         video=""
         sn=""
         GitHub="https://github.com/Nytuo/FWD/releases"
-
       />
     </div>
   );

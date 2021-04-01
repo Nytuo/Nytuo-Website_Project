@@ -69,7 +69,8 @@ function Login(props) {
             <button
               className="btn waves-effect waves-light"
               onClick={handleLogin}
-            ><i class="material-icons left">login</i>
+            >
+              <i class="material-icons left">login</i>
               Se connecter
             </button>
             <p>
@@ -87,7 +88,8 @@ function Login(props) {
             <button
               className="btn waves-effect waves-light"
               onClick={handleSignUp}
-            ><i class="material-icons left">login</i>
+            >
+              <i class="material-icons left">login</i>
               S'inscrire
             </button>
             <p>
@@ -102,7 +104,7 @@ function Login(props) {
           </div>
         )}
       </div>
-      </>
+    </>
   );
 }
 

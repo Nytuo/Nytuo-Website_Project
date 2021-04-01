@@ -4,8 +4,7 @@ import GamesTemplate from "./GamesTemplate";
 function WR() {
   return (
     <div>
-
-<meta name="robots" content="noindex"></meta>
+      <meta name="robots" content="noindex"></meta>
       <GamesTemplate
         nGame="WinRun"
         advTxt="Ce jeu peut-être considerer comme un virus dû au composant NW.JS.Ce jeu n’est pas un virus, vous pouvez l’analyser avec VirusTotal."
@@ -40,7 +39,6 @@ function WR() {
         video=""
         sn=""
         GitHub="https://github.com/Nytuo/WR/releases"
-
       />
     </div>
   );

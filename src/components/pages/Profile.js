@@ -56,9 +56,7 @@ class Profile extends Component {
     });
   };
   handleUploadPP = () => {
-    storage
-      .ref(`images/${this.state.User.uid}`)
-      .put(this.state.image);
+    storage.ref(`images/${this.state.User.uid}`).put(this.state.image);
     this.state.User.updateProfile({
       photoURL:
         "https://firebasestorage.googleapis.com/v0/b/nytuowebsite.appspot.com/o/images%2F" +
@@ -80,7 +78,11 @@ class Profile extends Component {
                 Vous êtes connecté avec l'adresse mail : {this.state.User.email}
               </p>
               <div>
-                <img alt="" className="NcircleimgC" src={this.state.User.photoURL} />
+                <img
+                  alt=""
+                  className="NcircleimgC"
+                  src={this.state.User.photoURL}
+                />
               </div>
               <p>Bienvenue, {this.state.User.displayName}</p>
             </div>
@@ -89,58 +91,59 @@ class Profile extends Component {
                 return (
                   <div style={{ textAlign: "center" }}>
                     <div class="row" style={{ textAlign: "center" }}>
-                        <p>Changer le nom d'utilisateur</p>
-                        <input
-                          type="text"
-                          id="pseudo"
-                          className="validate"
-                          require
-                          placeholder={this.state.Pseudo}
-                          onChange={(e) =>
-                            this.setState({ Pseudo: e.target.value })
-                          }
-                        />
-                        <button
-                          className="btn waves-effect waves-light"
-                          onClick={this.changePseudo}
-                        ><i class="material-icons right">cloud_upload</i>
-                          Envoyer
-                        </button>
-                      </div>
-                    
-                      <div class="row" style={{ textAlign: "center" }}>
-
-                    <p>Changer la photo de profile</p>
-                    <div class="file-field input-field">
-                      <div class="btn">
-                        <span>
-                          Choisir une image de profile (PNG,JPG,JPEG,GIF)
-                        </span>
-
-                        <input
-                          type="file"
-                          name="file"
-                          onChange={(e) =>
-                            this.setState({ image: e.target.files[0] })
-                          }
-                        />
-                      </div>
-
-                      <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" />
-                      </div>
+                      <p>Changer le nom d'utilisateur</p>
+                      <input
+                        type="text"
+                        id="pseudo"
+                        className="validate"
+                        require
+                        placeholder={this.state.Pseudo}
+                        onChange={(e) =>
+                          this.setState({ Pseudo: e.target.value })
+                        }
+                      />
+                      <button
+                        className="btn waves-effect waves-light"
+                        onClick={this.changePseudo}
+                      >
+                        <i class="material-icons right">cloud_upload</i>
+                        Envoyer
+                      </button>
                     </div>
-                    <button
-                      class="btn waves-effect waves-light"
-                      onClick={this.handleUploadPP}
-                    >
-                      Envoyer
-                      <i class="material-icons right">cloud_upload</i>
-                    </button></div>
+
+                    <div class="row" style={{ textAlign: "center" }}>
+                      <p>Changer la photo de profile</p>
+                      <div class="file-field input-field">
+                        <div class="btn">
+                          <span>
+                            Choisir une image de profile (PNG,JPG,JPEG,GIF)
+                          </span>
+
+                          <input
+                            type="file"
+                            name="file"
+                            onChange={(e) =>
+                              this.setState({ image: e.target.files[0] })
+                            }
+                          />
+                        </div>
+
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text" />
+                        </div>
+                      </div>
+                      <button
+                        class="btn waves-effect waves-light"
+                        onClick={this.handleUploadPP}
+                      >
+                        Envoyer
+                        <i class="material-icons right">cloud_upload</i>
+                      </button>
+                    </div>
                   </div>
                 );
-              }else{
-                return ""
+              } else {
+                return "";
               }
             })}
 
@@ -163,7 +166,8 @@ class Profile extends Component {
                             </div>
                           </a>
                           <div class="card-content">
-                            <ButtonA link={"nytuo://launchid/sgb"}><i class="material-icons left">play_arrow</i>
+                            <ButtonA link={"nytuo://launchid/sgb"}>
+                              <i class="material-icons left">play_arrow</i>
                               Jouer
                             </ButtonA>
                             <ButtonOC
@@ -175,7 +179,8 @@ class Profile extends Component {
                                   }
                                 );
                               }}
-                            ><i class="material-icons left">delete</i>
+                            >
+                              <i class="material-icons left">delete</i>
                               Retirer de la bibliothèque
                             </ButtonOC>
                           </div>
@@ -195,7 +200,8 @@ class Profile extends Component {
                             </div>
                           </a>
                           <div class="card-content">
-                            <ButtonA link={"nytuo://launchid/sfo"}><i class="material-icons left">play_arrow</i>
+                            <ButtonA link={"nytuo://launchid/sfo"}>
+                              <i class="material-icons left">play_arrow</i>
                               Jouer
                             </ButtonA>
                             <ButtonOC
@@ -207,7 +213,8 @@ class Profile extends Component {
                                   }
                                 );
                               }}
-                            ><i class="material-icons left">delete</i>
+                            >
+                              <i class="material-icons left">delete</i>
                               Retirer de la bibliothèque
                             </ButtonOC>
                           </div>
@@ -225,7 +232,8 @@ class Profile extends Component {
                             </div>
                           </a>
                           <div class="card-content">
-                            <ButtonA link={"nytuo://launchid/sf"}><i class="material-icons left">play_arrow</i>
+                            <ButtonA link={"nytuo://launchid/sf"}>
+                              <i class="material-icons left">play_arrow</i>
                               Jouer
                             </ButtonA>
                             <ButtonOC
@@ -237,7 +245,8 @@ class Profile extends Component {
                                   }
                                 );
                               }}
-                            ><i class="material-icons left">delete</i>
+                            >
+                              <i class="material-icons left">delete</i>
                               Retirer de la bibliothèque
                             </ButtonOC>
                           </div>
@@ -255,7 +264,8 @@ class Profile extends Component {
                             </div>
                           </a>
                           <div class="card-content">
-                            <ButtonA link={"nytuo://launchid/ae"}><i class="material-icons left">play_arrow</i>
+                            <ButtonA link={"nytuo://launchid/ae"}>
+                              <i class="material-icons left">play_arrow</i>
                               Jouer
                             </ButtonA>
                             <ButtonOC
@@ -267,7 +277,8 @@ class Profile extends Component {
                                   }
                                 );
                               }}
-                            ><i class="material-icons left">delete</i>
+                            >
+                              <i class="material-icons left">delete</i>
                               Retirer de la bibliothèque
                             </ButtonOC>
                           </div>
@@ -285,7 +296,8 @@ class Profile extends Component {
                             </div>
                           </a>
                           <div class="card-content">
-                            <ButtonA link={"nytuo://launchid/fwd"}><i class="material-icons left">play_arrow</i>
+                            <ButtonA link={"nytuo://launchid/fwd"}>
+                              <i class="material-icons left">play_arrow</i>
                               Jouer
                             </ButtonA>
                             <ButtonOC
@@ -297,7 +309,8 @@ class Profile extends Component {
                                   }
                                 );
                               }}
-                            ><i class="material-icons left">delete</i>
+                            >
+                              <i class="material-icons left">delete</i>
                               Retirer de la bibliothèque
                             </ButtonOC>
                           </div>
@@ -315,7 +328,8 @@ class Profile extends Component {
                             </div>
                           </a>
                           <div class="card-content">
-                            <ButtonA link={"nytuo://launchid/la"}><i class="material-icons left">play_arrow</i>
+                            <ButtonA link={"nytuo://launchid/la"}>
+                              <i class="material-icons left">play_arrow</i>
                               Jouer
                             </ButtonA>
                             <ButtonOC
@@ -327,7 +341,8 @@ class Profile extends Component {
                                   }
                                 );
                               }}
-                            ><i class="material-icons left">delete</i>
+                            >
+                              <i class="material-icons left">delete</i>
                               Retirer de la bibliothèque
                             </ButtonOC>
                           </div>
@@ -347,7 +362,8 @@ class Profile extends Component {
                             </div>
                           </a>
                           <div class="card-content">
-                            <ButtonA link={"nytuo://launchid/laatim"}><i class="material-icons left">play_arrow</i>
+                            <ButtonA link={"nytuo://launchid/laatim"}>
+                              <i class="material-icons left">play_arrow</i>
                               Jouer
                             </ButtonA>
                             <ButtonOC
@@ -359,7 +375,8 @@ class Profile extends Component {
                                   }
                                 );
                               }}
-                            ><i class="material-icons left">delete</i>
+                            >
+                              <i class="material-icons left">delete</i>
                               Retirer de la bibliothèque
                             </ButtonOC>
                           </div>
@@ -377,7 +394,8 @@ class Profile extends Component {
                             </div>
                           </a>
                           <div class="card-content">
-                            <ButtonA link={"nytuo://launchid/sn"}><i class="material-icons left">play_arrow</i>
+                            <ButtonA link={"nytuo://launchid/sn"}>
+                              <i class="material-icons left">play_arrow</i>
                               Jouer
                             </ButtonA>
                             <ButtonOC
@@ -389,7 +407,8 @@ class Profile extends Component {
                                   }
                                 );
                               }}
-                            ><i class="material-icons left">delete</i>
+                            >
+                              <i class="material-icons left">delete</i>
                               Retirer de la bibliothèque
                             </ButtonOC>
                           </div>
@@ -407,7 +426,8 @@ class Profile extends Component {
                             </div>
                           </a>
                           <div class="card-content">
-                            <ButtonA link={"nytuo://launchid/tb"}><i class="material-icons left">play_arrow</i>
+                            <ButtonA link={"nytuo://launchid/tb"}>
+                              <i class="material-icons left">play_arrow</i>
                               Jouer
                             </ButtonA>
                             <ButtonOC
@@ -419,7 +439,8 @@ class Profile extends Component {
                                   }
                                 );
                               }}
-                            ><i class="material-icons left">delete</i>
+                            >
+                              <i class="material-icons left">delete</i>
                               Retirer de la bibliothèque
                             </ButtonOC>
                           </div>
@@ -439,7 +460,8 @@ class Profile extends Component {
                             </div>
                           </a>
                           <div class="card-content">
-                            <ButtonA link={"nytuo://launchid/ttd"}><i class="material-icons left">play_arrow</i>
+                            <ButtonA link={"nytuo://launchid/ttd"}>
+                              <i class="material-icons left">play_arrow</i>
                               Jouer
                             </ButtonA>
                             <ButtonOC
@@ -451,7 +473,8 @@ class Profile extends Component {
                                   }
                                 );
                               }}
-                            ><i class="material-icons left">delete</i>
+                            >
+                              <i class="material-icons left">delete</i>
                               Retirer de la bibliothèque
                             </ButtonOC>
                           </div>
@@ -471,7 +494,8 @@ class Profile extends Component {
                             </div>
                           </a>
                           <div class="card-content">
-                            <ButtonA link={"nytuo://launchid/vitf"}><i class="material-icons left">play_arrow</i>
+                            <ButtonA link={"nytuo://launchid/vitf"}>
+                              <i class="material-icons left">play_arrow</i>
                               Jouer
                             </ButtonA>
                             <ButtonOC
@@ -483,7 +507,8 @@ class Profile extends Component {
                                   }
                                 );
                               }}
-                            ><i class="material-icons left">delete</i>
+                            >
+                              <i class="material-icons left">delete</i>
                               Retirer de la bibliothèque
                             </ButtonOC>
                           </div>
@@ -501,7 +526,8 @@ class Profile extends Component {
                             </div>
                           </a>
                           <div class="card-content">
-                            <ButtonA link={"nytuo://launchid/wr"}><i class="material-icons left">play_arrow</i>
+                            <ButtonA link={"nytuo://launchid/wr"}>
+                              <i class="material-icons left">play_arrow</i>
                               Jouer
                             </ButtonA>
                             <ButtonOC
@@ -513,7 +539,8 @@ class Profile extends Component {
                                   }
                                 );
                               }}
-                            ><i class="material-icons left">delete</i>
+                            >
+                              <i class="material-icons left">delete</i>
                               Retirer de la bibliothèque
                             </ButtonOC>
                           </div>

@@ -7,7 +7,11 @@ function Softwares() {
     <div>
       <meta name="robots" content="noindex"></meta>
       <div className="spaceX2">
-      <img alt="" src="../images/Nytuo softwares.png" style={{width: "20%" }} />
+        <img
+          alt=""
+          src="../images/Nytuo softwares.png"
+          style={{ width: "20%" }}
+        />
 
         <h1>Mes Logiciels :</h1>
         <div className="cards-list">

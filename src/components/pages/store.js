@@ -38,7 +38,7 @@ class Profile extends Component {
   handleClickBtn = () => {
     const db = firebase.database();
     console.log(this.state.gamestring);
-    var NewList = ""
+    var NewList = "";
     if (this.state.gamestring === "") {
       NewList = this.state.gamestring + this.state.currentclickedbtn;
     } else {
@@ -77,10 +77,18 @@ class Profile extends Component {
                 Vous êtes connecté avec l'adresse mail : {this.state.User.email}
               </p>
               <div>
-                <img className="NcircleimgC" alt="profile" src={this.state.User.photoURL} />
+                <img
+                  className="NcircleimgC"
+                  alt="profile"
+                  src={this.state.User.photoURL}
+                />
               </div>
               <p>Bienvenue, {this.state.User.displayName}</p>
-              <img src="../images/Nytuo Store.png" alt="Nytuo Store Logo" style={{width: "20%" }} />
+              <img
+                src="../images/Nytuo Store.png"
+                alt="Nytuo Store Logo"
+                style={{ width: "20%" }}
+              />
 
               <h1>Boutique: (gratuite mais boutique quand même)</h1>
               <div class="cards-list">
@@ -106,8 +114,8 @@ class Profile extends Component {
                                 Déverrouiller
                               </ButtonStore>
                             );
-                          }else{
-                            return ""
+                          } else {
+                            return "";
                           }
                         })}
                         {SFOO === false && (
@@ -152,8 +160,8 @@ class Profile extends Component {
                                 Déverrouiller
                               </ButtonStore>
                             );
-                          }else{
-                            return""
+                          } else {
+                            return "";
                           }
                         })}
                         {LAATIMO === false && (
@@ -196,8 +204,8 @@ class Profile extends Component {
                                 Déverrouiller
                               </ButtonStore>
                             );
-                          }else{
-                            return""
+                          } else {
+                            return "";
                           }
                         })}
                         {SGBO === false && (
@@ -240,8 +248,8 @@ class Profile extends Component {
                                 Déverrouiller
                               </ButtonStore>
                             );
-                          }else{
-                            return""
+                          } else {
+                            return "";
                           }
                         })}
                         {SFO === false && (
@@ -284,8 +292,8 @@ class Profile extends Component {
                                 Déverrouiller
                               </ButtonStore>
                             );
-                          }else{
-                            return""
+                          } else {
+                            return "";
                           }
                         })}
                         {LAO === false && (
@@ -329,8 +337,8 @@ class Profile extends Component {
                                 Déverrouiller
                               </ButtonStore>
                             );
-                          }else{
-                            return""
+                          } else {
+                            return "";
                           }
                         })}
                         {VITFO === false && (
@@ -373,8 +381,8 @@ class Profile extends Component {
                                 Déverrouiller
                               </ButtonStore>
                             );
-                          }else{
-                            return""
+                          } else {
+                            return "";
                           }
                         })}
                         {TTDO === false && (
@@ -418,8 +426,8 @@ class Profile extends Component {
                                 Déverrouiller
                               </ButtonStore>
                             );
-                          }else{
-                            return""
+                          } else {
+                            return "";
                           }
                         })}
                         {FWDO === false && (
@@ -462,8 +470,8 @@ class Profile extends Component {
                                 Déverrouiller
                               </ButtonStore>
                             );
-                          }else{
-                            return""
+                          } else {
+                            return "";
                           }
                         })}
                         {TBO === false && (
@@ -506,8 +514,8 @@ class Profile extends Component {
                                 Déverrouiller
                               </ButtonStore>
                             );
-                          }else{
-                            return""
+                          } else {
+                            return "";
                           }
                         })}
                         {WRO === false && (
@@ -550,8 +558,8 @@ class Profile extends Component {
                                 Déverrouiller
                               </ButtonStore>
                             );
-                          }else{
-                            return""
+                          } else {
+                            return "";
                           }
                         })}
                         {AEO === false && (
@@ -594,8 +602,8 @@ class Profile extends Component {
                                 Déverrouiller
                               </ButtonStore>
                             );
-                          }else{
-                            return""
+                          } else {
+                            return "";
                           }
                         })}
                         {SNREO === false && (
