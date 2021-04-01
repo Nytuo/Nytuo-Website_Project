@@ -1,16 +1,18 @@
 import React, { useEffect } from "react";
 import "../../App.css";
-import { Button } from "../Button";
 import { ShowTxt } from "../ShowTxt";
-import M from "materialize-css";
 import ScreenShotsDisplayer from "../ScreenShotsDisplayer";
 import { ButtonA } from "../ButtonA";
 import Footer from "../Footer";
 
-function Games_template(props) {
+function GamesTemplate(props) {
   useEffect(() => {
     if (props.android === "") {
       document.getElementById("androidDiv").style.display = "None";
+      document.getElementById("githubdiv").className = "column";
+      document.getElementById("itchdiv").className = "column";
+      document.getElementById("gamejoltdiv").className = "column";
+      document.getElementById("nldiv").className = "column";
     }
     if (props.advTxt === "") {
       document.getElementById("advDiv").style.display = "None";
@@ -26,9 +28,10 @@ function Games_template(props) {
 
   return (
     <>
+    <meta name="robots" content="noindex"></meta>
       <div className="spaceX2"></div>
       <div style={{ textAlign: "center" }}>
-        <img src={"../images/Logo" + props.Name.toUpperCase() + ".png"} />
+        <img alt="" src={"../images/Logo" + props.Name.toUpperCase() + ".png"} />
       </div>
       <h1>{props.nGame}</h1>
       <h1 id="advDiv">Avertissement :</h1>
@@ -61,49 +64,68 @@ function Games_template(props) {
         rm10={props.rm10}
       />
       <h1 id="videodiv">Vidéo :</h1>
-      <div id="videoiframe" style={{ textAlign: "center" }}>
-        <iframe
-          width="850px"
-          height="500px"
-          src={props.video}
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
+          <div
+            id="videoiframe"
+            className="video-container"
+          >
+            <iframe
+              src={props.video}
+              title="video from YT"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;"
+              allowfullscreen
+            ></iframe>
+          </div>
       <h1>Téléchargements :</h1>
       <div id="SNC">
         <h2>SansNom Classic:</h2>
         <div style={{ textAlign: "center" }}>
-          <ButtonA link="http://uploads.ungrounded.net/alternate/1035000/1035158_alternate_39079_r3.zip/?f1478359414">
+          <ButtonA link="http://uploads.ungrounded.net/alternate/1035000/1035158_alternate_39079_r3.zip/?f1478359414"><i class="material-icons right">launch</i>
             Jouer sur Newgrounds
           </ButtonA>
-          <ButtonA link="http://www.kongregate.com/games/Nytuo/sansnom-alpha-2">
+          <ButtonA link="http://www.kongregate.com/games/Nytuo/sansnom-alpha-2"><i class="material-icons right">launch</i>
             Jouer sur Kongregate
           </ButtonA>
         </div>
         <h2>SansNom Réédition:</h2>
       </div>
       <div style={{ textAlign: "center" }}>
-        <a href={props.itch}>
-          <img src="../images/itchio_badge.png" style={{ width: "20%" }} />
-        </a>
-        <a href="nytuo-launcher">
-          <img src="../images/available.png" style={{ width: "20%" }} />
-        </a>
-        <a href={props.gamejolt}>
-          <img
-            src="../images/Game-jolt-logo.svg.png"
-            style={{ width: "20%" }}
-          />
-        </a>
-
-        <a id="androidDiv" href={props.android}>
-          <img
-            src="../images/fr_badge_web_generic.png"
-            style={{ width: "20%" }}
-          />
-        </a>
+        <div class="row">
+          <div class="column2" id="itchdiv">
+            <a href={props.itch}>
+              <img alt="" src="../images/itchio_badge.png" style={{ width: "100%" }} />
+            </a>
+          </div>
+          <div class="column2" id="nldiv">
+            <a href="nytuo-launcher">
+              <img alt="" src="../images/available.png" style={{ width: "100%" }} />
+            </a>
+          </div>
+          <div class="column2" id="gamejoltdiv">
+            <a href={props.gamejolt}>
+              <img
+                alt="" src="../images/Game-jolt-logo.svg.png"
+                style={{ width: "100%" }}
+              />
+            </a>
+          </div>
+          <div class="column2" id="githubdiv">
+            <a href={props.GitHub}>
+              <img
+                alt="" src="../images/available_github.png"
+                style={{ width: "100%" }}
+              />
+            </a>
+          </div>
+          <div class="column2" id="androidDiv">
+            <a href={props.android}>
+              <img
+                alt="" src="../images/fr_badge_web_generic.png"
+                style={{ width: "100%" }}
+              />
+            </a>
+          </div>
+        </div>
       </div>
       <ShowTxt txt="Le Nytuo Launcher est un lanceur pour les jeux de Nytuo. Il est fait maison. Il permet de télécharger, mettre à jour, lancer et supprimer les jeux de Nytuo." />
       <ShowTxt
@@ -119,8 +141,8 @@ function Games_template(props) {
       </p>
       <ShowTxt txt="Vous avez déjà le Nytuo Launcher ou le jeu d'installer ? Aller plus vite:" />
       <div style={{ textAlign: "center" }}>
-        <ButtonA link="nytuo://">Ouvrir le Nytuo Launcher</ButtonA>
-        <ButtonA link={"nytuo://" + props.Name}>
+        <ButtonA link="nytuo://"><i class="material-icons right">launch</i>Ouvrir le Nytuo Launcher</ButtonA>
+        <ButtonA link={"nytuo://launchid/" + props.Name}><i class="material-icons right">launch</i>
           Ouvrir le jeu avec le Nytuo Launcher
         </ButtonA>
       </div>
@@ -128,4 +150,4 @@ function Games_template(props) {
     </>
   );
 }
-export default Games_template;
+export default GamesTemplate;

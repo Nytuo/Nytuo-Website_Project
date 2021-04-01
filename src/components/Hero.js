@@ -1,46 +1,116 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../App.css";
-import { Button } from "./Button";
-import M from "materialize-css";
-import "./Hero.css";
-import ReactAudioPlayer from "react-audio-player";
-
-function randomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-function SelectMusic(rdnb) {
-  return "/music/" + rdnb + ".mp3";
-}
 
 function Hero() {
   return (
     <div className="hero-container">
+      <div className="spaceX2"></div>
       <h1 className="blanc">Welcome to a new Universe</h1>
-      <iframe
-        width="0"
-        height="0"
-        src="https://www.youtube.com/embed/aDzLWGldWG8?controls=0;&autoplay=1;&loop=1"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-      <h1 className="blanc"> (Under construction)</h1>
-      <p>
-        Que va ce passe t-il ?<br /> Le site principal (anciennement
-        nytuo.yo.fr) va passer sous ReactJS et va être herbergé chez Google
-        FireBase.
-        <br /> L'ancien domaine (nytuo.yo.fr) continuera de servir quelques
-        temps pour les comptes et le launcher avant de passer eux aussi sous
-        FireBase (avec authentification par Google de prévu), l'ancienne adresse
-        redirigera vers la nouvelle adresse du site principale.
+      <h2>
+        Important : Le site internet vient de changer de domaine !<br />
+        Avant Nytuo.yo.fr était le domaine officiel, il passe désormais à
+        nytuowebsite.web.app ou nytuowebsite.firebase.com (c'est le même) hoster
+        par Google Firebase. Ce changement est dû à ReactJS qui me permet de
+        faire cette nouvelle version du site mais il m'est impossible de
+        l'heberger sur mon domaine précédent... Deplus Firebase me permet de
+        gérer facilement les connexions avec Google qui est plus rapide pour
+        vous, utilisateurs.
         <br />
-        Le projet de l'ancienne et nouveau site se trouvent sur GitHub{" "}
+        Le domaine nytuo.yo.fr continuera d'exister mais redirigera à cette adresse.
+        <br/>
+        Pour le launcher, une reconstruction de ce dernier avec React et la base de données Firebase est prévue. Elle prendra un peu de temps pour sortir. Pour les éventuelles nouveaux utilisateurs, veuillez-vous connecter directement par l'interface du launcher qui reste fonctionnelle.
+        <br/>
+        Ce site est dorénavant, le domaine principal.
+        <br/>
+        -Merci, Nytuo, Arnaud BEUX
+      </h2>
+      <p>
+        Domaines faisant parties de l'Univers Nytuo : nytuo.yo.fr |
+        Beta.nytuo.yo.fr | launcher.nytuo.yo.fr | nytuowebsite.wep.app |
+        nytuo-launcher.web.app | nytuo.github.io
       </p>
-      <div className="hero-btns">
-        <Button link="/games" colori="white" bgcolor="dodgerblue">
-          Go to the games page
-        </Button>
+
+      <div class="cards-list">
+        <div class="homeresize">
+          <a href="/games">
+            <div class="card">
+              <div class="card-image">
+                <img alt="" src="../images/Nytuo games.png" />
+                <span class="card-title">Jeux</span>
+              </div>
+              <div class="card-content">
+                <p>Aller à la page des jeux</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="homeresize">
+          <a href="/softwares">
+            <div class="card">
+              <div class="card-image">
+                <img alt="" src="../images/Nytuo softwares.png" />
+                <span class="card-title">Logiciels</span>
+              </div>
+              <div class="card-content">
+                <p>Aller à la page des Logiciels</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="homeresize">
+          <a href="/nytuo-launcher">
+            <div class="card">
+              <div class="card-image">
+                <img alt="" src="../images/LogoLauncher.png" />
+                <span class="card-title">Nytuo Launcher</span>
+              </div>
+              <div class="card-content">
+                <p>Aller à la page du Nytuo Launcher</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="homeresize">
+          <a href="/shootFighterOrigins">
+            <div class="card">
+              <div class="card-image">
+                <img alt="" src="../images/IMGSFO2.png" />
+                <span class="card-title">ShootFighter Origins</span>
+              </div>
+              <div class="card-content">
+                <p>Aller à la page du dernier jeu en date</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="homeresize">
+          <a href="/legendAdventureAndTheInfernalMaze">
+            <div class="card">
+              <div class="card-image">
+                <img alt="" src="../images/IMGLAATIM.png" />
+                <span class="card-title">Meilleur jeu</span>
+              </div>
+              <div class="card-content">
+                <p>
+                  Aller à la page du meilleur jeu (selon Itch.io et Gamejolt)
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="homeresize">
+          <a href="/superGeoffreyBros">
+            <div class="card">
+              <div class="card-image">
+                <img alt="" src="../images/SGB2.png" />
+                <span class="card-title">Selection de l'éditeur</span>
+              </div>
+              <div class="card-content">
+                <p>Aller à la page du jeu selectionner par l'editeur (moi)</p>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -1,10 +1,11 @@
 import React from "react";
-import Games_template from "./Games_template";
+import GamesTemplate from "./GamesTemplate";
 
 function SNRE() {
   return (
     <div>
-      <Games_template
+      <meta name="robots" content="noindex"></meta>
+      <GamesTemplate
         nGame="SansNom Réédition"
         advTxt="Ce jeu peut-être considerer comme un virus dû au composant NW.JS.Ce jeu n’est pas un virus, vous pouvez l’analyser avec VirusTotal."
         desc={
@@ -39,6 +40,8 @@ function SNRE() {
         rm10="t"
         video=""
         sn="true"
+        GitHub="https://github.com/Nytuo/SN/releases"
+
       />
     </div>
   );

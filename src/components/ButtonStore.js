@@ -8,7 +8,7 @@ export const ButtonStore = ({
   ico,
   disabled,
 }) => {
-  if (disabled == "disabled") {
+  if (disabled === "disabled") {
     return (
       <a
         onClick={link}

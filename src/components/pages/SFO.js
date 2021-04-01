@@ -1,10 +1,11 @@
 import React from "react";
-import Games_template from "./Games_template";
+import GamesTemplate from "./GamesTemplate";
 
 function SFO() {
   return (
     <div>
-      <Games_template
+      <meta name="robots" content="noindex"></meta>
+      <GamesTemplate
         nGame="ShootFighter Origins"
         advTxt="Ce jeu peut-être considerer comme un virus dû au composant NW.JS.Ce jeu n’est pas un virus, vous pouvez
         l’analyser avec VirusTotal."
@@ -38,6 +39,8 @@ function SFO() {
         rm10=""
         video="https://www.youtube.com/embed/whmTClTdBxs"
         sn=""
+        GitHub="https://github.com/Nytuo/SFO/releases"
+
       />
     </div>
   );

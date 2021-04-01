@@ -6,14 +6,14 @@ export default class ScreenShotsDisplayer extends Component {
   componentDidMount() {
     document.addEventListener("DOMContentLoaded", function () {
       var elems = document.querySelectorAll(".slider");
-      var instances = M.Slider.init(elems, { height: 650 });
+      M.Slider.init(elems, { height: 650 });
     });
   }
 
   render() {
     return (
-      <div className="slider">
-        <ul className="slides">
+      <div className="slider ">
+        <ul className="slides responsive-img">
           <SSD rm={this.props.rm1} src={this.props.i1}></SSD>
           <SSD rm={this.props.rm2} src={this.props.i2}></SSD>
           <SSD rm={this.props.rm3} src={this.props.i3}></SSD>

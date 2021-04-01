@@ -16,7 +16,7 @@ function Login(props) {
     setPseudo,
   } = props;
   return (
-    <div className="spaceX2">
+    <>
       <div className="row">
         <div className="input-field col s12">
           <input
@@ -69,7 +69,7 @@ function Login(props) {
             <button
               className="btn waves-effect waves-light"
               onClick={handleLogin}
-            >
+            ><i class="material-icons left">login</i>
               Se connecter
             </button>
             <p>
@@ -87,7 +87,7 @@ function Login(props) {
             <button
               className="btn waves-effect waves-light"
               onClick={handleSignUp}
-            >
+            ><i class="material-icons left">login</i>
               S'inscrire
             </button>
             <p>
@@ -102,7 +102,7 @@ function Login(props) {
           </div>
         )}
       </div>
-    </div>
+      </>
   );
 }
 

@@ -6,7 +6,7 @@ function Footer() {
       <div className="spaceX"></div>
 
       <div className="row">
-        <div className="column">
+        <div className="columnDown">
           <h2>Liens utiles :</h2>
           <a style={{ color: "whitesmoke" }} href="https://gamejolt.com/@Nytuo">
             Voir les jeux sur Gamejolt
@@ -25,7 +25,7 @@ function Footer() {
           </a>
         </div>
 
-        <div className="column">
+        <div className="columnDown">
           <h2>Liens Rapides :</h2>
           <a style={{ color: "whitesmoke" }} href="help">
             Aide
@@ -63,8 +63,8 @@ function Footer() {
 
       <p className="txtfoot">
         Website of Nytuo, Host by PlanetHoster WorldLite. Made with React{" "}
-        {React.version}. Created by Nytuo (BEUX Arnaud) using
-        <a href="https://materializecss.com">Materialize-Css</a> components. All
+        {React.version}. Created by Nytuo (BEUX Arnaud) using 
+        <a href="https://materializecss.com"> Materialize-Css</a> components. All
         Rights Reserved. &#169; 2021
       </p>
     </div>

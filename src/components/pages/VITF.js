@@ -1,10 +1,11 @@
 import React from "react";
-import Games_template from "./Games_template";
+import GamesTemplate from "./GamesTemplate";
 
 function VITF() {
   return (
     <div>
-      <Games_template
+      <meta name="robots" content="noindex"></meta>
+      <GamesTemplate
         nGame="Vincent In The Forest"
         advTxt=""
         desc="Vincent est coincé dans la foret avec un homme mystérieux.Trouve les différents éléments pour sortir de celle-ci (1er jeu sur Unreal Engine tiré du tutoriel KawaiiSlender)"
@@ -37,6 +38,8 @@ function VITF() {
         rm10="t"
         video="https://www.youtube.com/embed/videoseries?list=PLQiR1OKspG4uxnbS5QfOgDQWsrl_gujXI"
         sn=""
+        GitHub="https://github.com/Nytuo/VITF/releases"
+
       />
     </div>
   );

@@ -1,10 +1,11 @@
 import React from "react";
-import Games_template from "./Games_template";
+import GamesTemplate from "./GamesTemplate";
 
 function FWD() {
   return (
     <div>
-      <Games_template
+      <meta name="robots" content="noindex"></meta>
+      <GamesTemplate
         nGame="FireWallDefender"
         advTxt="Ce jeu peut-être considerer comme un virus dû au composant NW.JS.Ce jeu n’est pas un virus, vous pouvez l’analyser avec VirusTotal."
         desc="Ce jeu est un jeu de stratégie, placer les tourelles sur les murs pour empêcher les virus d’atteindre le processeur."
@@ -37,6 +38,8 @@ function FWD() {
         rm10="t"
         video=""
         sn=""
+        GitHub="https://github.com/Nytuo/FWD/releases"
+
       />
     </div>
   );

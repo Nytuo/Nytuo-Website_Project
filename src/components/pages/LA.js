@@ -1,10 +1,11 @@
 import React from "react";
-import Games_template from "./Games_template";
+import GamesTemplate from "./GamesTemplate";
 
 function LA() {
   return (
     <div>
-      <Games_template
+      <meta name="robots" content="noindex"></meta>
+      <GamesTemplate
         nGame="Lutin Adventure"
         advTxt=""
         desc="Vous incarnez un lutin et vous devez ramasser toutes les pièces du niveau pour gagner.Jeu de plateformes 3D classique.Tiré du cours de NICO."
@@ -37,6 +38,8 @@ function LA() {
         rm10="t"
         video="https://www.youtube.com/embed/videoseries?list=PLQiR1OKspG4tl2eCTdJ5n2qcco1gZKYHa"
         sn=""
+        GitHub="https://github.com/Nytuo/LA/releases"
+
       />
     </div>
   );

@@ -1,10 +1,11 @@
 import React from "react";
-import Games_template from "./Games_template";
+import GamesTemplate from "./GamesTemplate";
 
 function AE() {
   return (
     <div>
-      <Games_template
+      <meta name="robots" content="noindex"></meta>
+      <GamesTemplate
         nGame="AsteroidEscape"
         advTxt=""
         desc="Détruit tous les astéroids et survie en tirant dessus.Fais le meilleur scores possible."
@@ -37,6 +38,7 @@ function AE() {
         rm10="t"
         video=""
         sn=""
+        GitHub="https://github.com/Nytuo/AE/releases"
       />
     </div>
   );

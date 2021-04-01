@@ -1,10 +1,11 @@
 import React from "react";
-import Games_template from "./Games_template";
+import GamesTemplate from "./GamesTemplate";
 
 function TB() {
   return (
     <div>
-      <Games_template
+      <meta name="robots" content="noindex"></meta>
+      <GamesTemplate
         nGame="TanksBattle"
         advTxt="Ce jeu peut-être considérer comme un virus dû au composant NW.JS. Ce jeu n’est pas un virus, vous pouvez l’analyser avec VirusTotal."
         desc="Ce jeu permet de vous battre entre amis sur le même réseau local ou sur le même ordinateur avec des tanks"
@@ -37,6 +38,8 @@ function TB() {
         rm10="t"
         video=""
         sn=""
+        GitHub="https://github.com/Nytuo/TB/releases"
+
       />
     </div>
   );

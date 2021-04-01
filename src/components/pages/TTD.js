@@ -1,10 +1,11 @@
 import React from "react";
-import Games_template from "./Games_template";
+import GamesTemplate from "./GamesTemplate";
 
 function TTD() {
   return (
     <div>
-      <Games_template
+      <meta name="robots" content="noindex"></meta>
+      <GamesTemplate
         nGame="The Tardis Defender"
         advTxt="Ce jeu peut-être considerer comme un virus dû au composant NW.JS.Ce jeu n’est pas un virus, vous pouvez l’analyser avec VirusTotal."
         desc="Le Doctor est partie chercher Clara, en son absence il te confie la mission de protéger son TARDIS."
@@ -37,6 +38,8 @@ function TTD() {
         rm10="t"
         video=""
         sn=""
+        GitHub="https://github.com/Nytuo/TTD/releases"
+
       />
     </div>
   );

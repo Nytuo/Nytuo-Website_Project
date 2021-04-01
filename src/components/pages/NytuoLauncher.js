@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
+import React, { Component } from "react";
 import Footer from "../Footer";
 import M from "materialize-css";
 import ScreenShotsDisplayer from "../ScreenShotsDisplayer";
 import { ButtonA } from "../ButtonA";
 
-function NytuoLauncher() {
-  useEffect(() => {
-    document.addEventListener("DOMContentLoaded", function () {
-      var elem = document.querySelector(".collapsible.expandable");
-      var instance = M.Collapsible.init(elem, { accordion: false });
-    });
-  }, []);
+export default class NytuoLauncher extends Component {
+
+  componentDidMount() {
+    M.Collapsible.init(this.collapsible,[])
+  }
+  render() {
   return (
     <div>
+      <meta name="robots" content="noindex"></meta>
       <div style={{ textAlign: "center", paddingTop: "100px" }}>
         <img src="../images/LogoLauncher.png" alt="" />
       </div>
@@ -108,7 +108,7 @@ function NytuoLauncher() {
         anglais
       </p>
       <br />
-      <ul class="collapsible expandable">
+      <ul class="collapsible expandable" ref={collapsible=>{this.collapsible = collapsible;}}>
         <li>
           <div class="collapsible-header">2021.02.06</div>
           <div class="collapsible-body">
@@ -1051,6 +1051,4 @@ function NytuoLauncher() {
       <Footer />
     </div>
   );
-}
-
-export default NytuoLauncher;
+}}

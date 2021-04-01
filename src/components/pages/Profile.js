@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import firebase, { storage } from "../../Firebase";
-import Cards from "../Cards";
-
+import { ButtonA } from "../ButtonA";
+import { ButtonOC } from "../ButtonOC";
 //set key for activate game
 //get games from DB
 //set games to DB
@@ -13,6 +13,7 @@ class Profile extends Component {
       User: firebase.auth().currentUser,
       image: null,
       Pseudo: "",
+      currentclickedbtn: "",
     };
     const db = firebase.database();
     this.Games = [];
@@ -39,9 +40,23 @@ class Profile extends Component {
       displayName: this.state.Pseudo,
     });
   };
-
+  handleDeleteGamefromDB = () => {
+    const db = firebase.database();
+    for (let i = 0; i < this.Games.length; i++) {
+      const game = this.Games[i];
+      if (game === this.state.currentclickedbtn) {
+        this.Games.splice(i, 1);
+      }
+    }
+    var NewList = this.Games.toString();
+    console.log(NewList);
+    var dbco1 = db.ref("users");
+    dbco1.child(this.state.User.uid).set({
+      games: NewList,
+    });
+  };
   handleUploadPP = () => {
-    const uploadTask = storage
+    storage
       .ref(`images/${this.state.User.uid}`)
       .put(this.state.image);
     this.state.User.updateProfile({
@@ -57,31 +72,45 @@ class Profile extends Component {
   render() {
     return (
       <div>
+        <meta name="robots" content="noindex"></meta>
         {this.state.User ? (
           <div>
+            <div className="spaceX2">
+              <p>
+                Vous êtes connecté avec l'adresse mail : {this.state.User.email}
+              </p>
+              <div>
+                <img alt="" className="NcircleimgC" src={this.state.User.photoURL} />
+              </div>
+              <p>Bienvenue, {this.state.User.displayName}</p>
+            </div>
             {firebase.auth().currentUser.providerData.map((userInfo) => {
-              if (userInfo.providerId != "google.com") {
+              if (userInfo.providerId !== "google.com") {
                 return (
-                  <>
-                    <p>Change UserName</p>
-                    <input
-                      type="text"
-                      id="pseudo"
-                      className="validate"
-                      require
-                      placeholder={this.state.Pseudo}
-                      onChange={(e) =>
-                        this.setState({ Pseudo: e.target.value })
-                      }
-                    />
-                    <button
-                      className="btn waves-effect waves-light"
-                      onClick={this.changePseudo}
-                    >
-                      Save
-                    </button>
+                  <div style={{ textAlign: "center" }}>
+                    <div class="row" style={{ textAlign: "center" }}>
+                        <p>Changer le nom d'utilisateur</p>
+                        <input
+                          type="text"
+                          id="pseudo"
+                          className="validate"
+                          require
+                          placeholder={this.state.Pseudo}
+                          onChange={(e) =>
+                            this.setState({ Pseudo: e.target.value })
+                          }
+                        />
+                        <button
+                          className="btn waves-effect waves-light"
+                          onClick={this.changePseudo}
+                        ><i class="material-icons right">cloud_upload</i>
+                          Envoyer
+                        </button>
+                      </div>
+                    
+                      <div class="row" style={{ textAlign: "center" }}>
 
-                    <p>Change profile picture</p>
+                    <p>Changer la photo de profile</p>
                     <div class="file-field input-field">
                       <div class="btn">
                         <span>
@@ -105,11 +134,13 @@ class Profile extends Component {
                       class="btn waves-effect waves-light"
                       onClick={this.handleUploadPP}
                     >
-                      Upload
+                      Envoyer
                       <i class="material-icons right">cloud_upload</i>
-                    </button>
-                  </>
+                    </button></div>
+                  </div>
                 );
+              }else{
+                return ""
               }
             })}
 
@@ -121,114 +152,373 @@ class Profile extends Component {
                 switch (game) {
                   case "SGB":
                     return (
-                      <Cards
-                        link="sgb"
-                        img="SGB2"
-                        Title="Super Geoffrey Bros"
-                        desc="Un jeu a la Mario pour le mariage de mon cousin Geoffrey"
-                      />
+                      <div class="homeresize">
+                        <div class="card">
+                          <a href="/superGeoffreyBros">
+                            <div class="card-image">
+                              <img alt="" src={"../images/SGB2.png"} />
+                              <span class="card-title">
+                                Super Geoffrey Bros
+                              </span>
+                            </div>
+                          </a>
+                          <div class="card-content">
+                            <ButtonA link={"nytuo://launchid/sgb"}><i class="material-icons left">play_arrow</i>
+                              Jouer
+                            </ButtonA>
+                            <ButtonOC
+                              link={() => {
+                                this.setState(
+                                  { currentclickedbtn: "SGB" },
+                                  function () {
+                                    this.handleDeleteGamefromDB();
+                                  }
+                                );
+                              }}
+                            ><i class="material-icons left">delete</i>
+                              Retirer de la bibliothèque
+                            </ButtonOC>
+                          </div>
+                        </div>
+                      </div>
                     );
                   case "SFO":
                     return (
-                      <Cards
-                        link="sfo"
-                        img="IMGSFO2"
-                        Title="ShootFighter Origins"
-                        desc="Survie a des vagues de Zombies en 2D"
-                      />
+                      <div class="homeresize">
+                        <div class="card">
+                          <a href="/shootFighterOrigins">
+                            <div class="card-image">
+                              <img alt="" src={"../images/IMGSFO2.png"} />
+                              <span class="card-title">
+                                ShootFighter Origins
+                              </span>
+                            </div>
+                          </a>
+                          <div class="card-content">
+                            <ButtonA link={"nytuo://launchid/sfo"}><i class="material-icons left">play_arrow</i>
+                              Jouer
+                            </ButtonA>
+                            <ButtonOC
+                              link={() => {
+                                this.setState(
+                                  { currentclickedbtn: "SFO" },
+                                  function () {
+                                    this.handleDeleteGamefromDB();
+                                  }
+                                );
+                              }}
+                            ><i class="material-icons left">delete</i>
+                              Retirer de la bibliothèque
+                            </ButtonOC>
+                          </div>
+                        </div>
+                      </div>
                     );
                   case "SF":
                     return (
-                      <Cards
-                        link="sf"
-                        img="IMGSF"
-                        Title="ShootFighter"
-                        desc="Survie a des vagues de Zombies en 3D"
-                      />
+                      <div class="homeresize">
+                        <div class="card">
+                          <a href="/shootFighter">
+                            <div class="card-image">
+                              <img alt="" src={"../images/IMGSF.png"} />
+                              <span class="card-title">ShootFighter</span>
+                            </div>
+                          </a>
+                          <div class="card-content">
+                            <ButtonA link={"nytuo://launchid/sf"}><i class="material-icons left">play_arrow</i>
+                              Jouer
+                            </ButtonA>
+                            <ButtonOC
+                              link={() => {
+                                this.setState(
+                                  { currentclickedbtn: "SF" },
+                                  function () {
+                                    this.handleDeleteGamefromDB();
+                                  }
+                                );
+                              }}
+                            ><i class="material-icons left">delete</i>
+                              Retirer de la bibliothèque
+                            </ButtonOC>
+                          </div>
+                        </div>
+                      </div>
                     );
                   case "AE":
                     return (
-                      <Cards
-                        link="ae"
-                        img="IMGAE"
-                        Title="AsteroidEscape"
-                        desc="Détruit tout les astéroids et essaye de marquer le plus de
-                  point"
-                      />
+                      <div class="homeresize">
+                        <div class="card">
+                          <a href="/asteroidEscape">
+                            <div class="card-image">
+                              <img alt="" src={"../images/IMGAE.png"} />
+                              <span class="card-title">AsteroidEscape</span>
+                            </div>
+                          </a>
+                          <div class="card-content">
+                            <ButtonA link={"nytuo://launchid/ae"}><i class="material-icons left">play_arrow</i>
+                              Jouer
+                            </ButtonA>
+                            <ButtonOC
+                              link={() => {
+                                this.setState(
+                                  { currentclickedbtn: "AE" },
+                                  function () {
+                                    this.handleDeleteGamefromDB();
+                                  }
+                                );
+                              }}
+                            ><i class="material-icons left">delete</i>
+                              Retirer de la bibliothèque
+                            </ButtonOC>
+                          </div>
+                        </div>
+                      </div>
                     );
                   case "FWD":
                     return (
-                      <Cards
-                        link="fwd"
-                        img="IMGFWD"
-                        Title="Firewall Defender"
-                        desc="Evite la destruction du processeur en plaçant des tourelles
-                  pour detruire les virus"
-                      />
+                      <div class="homeresize">
+                        <div class="card">
+                          <a href="/fireWallDefender">
+                            <div class="card-image">
+                              <img alt="" src={"../images/IMGFWD.png"} />
+                              <span class="card-title">FireWall Defender</span>
+                            </div>
+                          </a>
+                          <div class="card-content">
+                            <ButtonA link={"nytuo://launchid/fwd"}><i class="material-icons left">play_arrow</i>
+                              Jouer
+                            </ButtonA>
+                            <ButtonOC
+                              link={() => {
+                                this.setState(
+                                  { currentclickedbtn: "FWD" },
+                                  function () {
+                                    this.handleDeleteGamefromDB();
+                                  }
+                                );
+                              }}
+                            ><i class="material-icons left">delete</i>
+                              Retirer de la bibliothèque
+                            </ButtonOC>
+                          </div>
+                        </div>
+                      </div>
                     );
                   case "LA":
                     return (
-                      <Cards
-                        link="la"
-                        img="IMGLA"
-                        Title="Lutin Adventure"
-                        desc="Retrouve toutes les pièces et monte en haut de la tour"
-                      />
+                      <div class="homeresize">
+                        <div class="card">
+                          <a href="/lutinAdventure">
+                            <div class="card-image">
+                              <img alt="" src={"../images/IMGLA.png"} />
+                              <span class="card-title">Lutin Adventure</span>
+                            </div>
+                          </a>
+                          <div class="card-content">
+                            <ButtonA link={"nytuo://launchid/la"}><i class="material-icons left">play_arrow</i>
+                              Jouer
+                            </ButtonA>
+                            <ButtonOC
+                              link={() => {
+                                this.setState(
+                                  { currentclickedbtn: "LA" },
+                                  function () {
+                                    this.handleDeleteGamefromDB();
+                                  }
+                                );
+                              }}
+                            ><i class="material-icons left">delete</i>
+                              Retirer de la bibliothèque
+                            </ButtonOC>
+                          </div>
+                        </div>
+                      </div>
                     );
                   case "LAATIM":
                     return (
-                      <Cards
-                        link="laatim"
-                        img="IMGLAATIM"
-                        Title="Legend Adventure and the Infernal Maze"
-                        desc="Tu viens pour des vacances mais quelque chose va nuir a ton
-                  séjour"
-                      />
+                      <div class="homeresize">
+                        <div class="card">
+                          <a href="/legendAdventureAndTheInfernalMaze">
+                            <div class="card-image">
+                              <img alt="" src={"../images/IMGLAATIM.png"} />
+                              <span class="card-title">
+                                Legend Adventure And The Infernal Maze
+                              </span>
+                            </div>
+                          </a>
+                          <div class="card-content">
+                            <ButtonA link={"nytuo://launchid/laatim"}><i class="material-icons left">play_arrow</i>
+                              Jouer
+                            </ButtonA>
+                            <ButtonOC
+                              link={() => {
+                                this.setState(
+                                  { currentclickedbtn: "LAATIM" },
+                                  function () {
+                                    this.handleDeleteGamefromDB();
+                                  }
+                                );
+                              }}
+                            ><i class="material-icons left">delete</i>
+                              Retirer de la bibliothèque
+                            </ButtonOC>
+                          </div>
+                        </div>
+                      </div>
                     );
                   case "SNRE":
                     return (
-                      <Cards
-                        link="sn"
-                        img="IMGSN"
-                        Title="Sans Nom Réédition"
-                        desc="Un jeu juste pour le FUN."
-                      />
+                      <div class="homeresize">
+                        <div class="card">
+                          <a href="/sansNomReedition">
+                            <div class="card-image">
+                              <img alt="" src={"../images/IMGSN.png"} />
+                              <span class="card-title">Sans Nom Réédition</span>
+                            </div>
+                          </a>
+                          <div class="card-content">
+                            <ButtonA link={"nytuo://launchid/sn"}><i class="material-icons left">play_arrow</i>
+                              Jouer
+                            </ButtonA>
+                            <ButtonOC
+                              link={() => {
+                                this.setState(
+                                  { currentclickedbtn: "SNRE" },
+                                  function () {
+                                    this.handleDeleteGamefromDB();
+                                  }
+                                );
+                              }}
+                            ><i class="material-icons left">delete</i>
+                              Retirer de la bibliothèque
+                            </ButtonOC>
+                          </div>
+                        </div>
+                      </div>
                     );
                   case "TB":
                     return (
-                      <Cards
-                        link="tb"
-                        img="IMGTB"
-                        Title="TanksBattle"
-                        desc="Jeu de tanks a travers le LAN"
-                      />
+                      <div class="homeresize">
+                        <div class="card">
+                          <a href="/tanksBattle">
+                            <div class="card-image">
+                              <img alt="" src={"../images/IMGTB.png"} />
+                              <span class="card-title">TanksBattle</span>
+                            </div>
+                          </a>
+                          <div class="card-content">
+                            <ButtonA link={"nytuo://launchid/tb"}><i class="material-icons left">play_arrow</i>
+                              Jouer
+                            </ButtonA>
+                            <ButtonOC
+                              link={() => {
+                                this.setState(
+                                  { currentclickedbtn: "TB" },
+                                  function () {
+                                    this.handleDeleteGamefromDB();
+                                  }
+                                );
+                              }}
+                            ><i class="material-icons left">delete</i>
+                              Retirer de la bibliothèque
+                            </ButtonOC>
+                          </div>
+                        </div>
+                      </div>
                     );
                   case "TTD":
                     return (
-                      <Cards
-                        link="ttd"
-                        img="IMGTTD"
-                        Title="The TARDIS Defender"
-                        desc="Protège le TARDIS des Cybermans et des Daleks"
-                      />
+                      <div class="homeresize">
+                        <div class="card">
+                          <a href="/theTardisDefender">
+                            <div class="card-image">
+                              <img alt="" src={"../images/IMGTTD.png"} />
+                              <span class="card-title">
+                                The Tardis Defender
+                              </span>
+                            </div>
+                          </a>
+                          <div class="card-content">
+                            <ButtonA link={"nytuo://launchid/ttd"}><i class="material-icons left">play_arrow</i>
+                              Jouer
+                            </ButtonA>
+                            <ButtonOC
+                              link={() => {
+                                this.setState(
+                                  { currentclickedbtn: "TTD" },
+                                  function () {
+                                    this.handleDeleteGamefromDB();
+                                  }
+                                );
+                              }}
+                            ><i class="material-icons left">delete</i>
+                              Retirer de la bibliothèque
+                            </ButtonOC>
+                          </div>
+                        </div>
+                      </div>
                     );
                   case "VITF":
                     return (
-                      <Cards
-                        link="vitf"
-                        img="IMGVITF"
-                        Title="Vincent In The Forest"
-                        desc="Retrouve touts les composants pour quitter la foret"
-                      />
+                      <div class="homeresize">
+                        <div class="card">
+                          <a href="/vincentInTheForest">
+                            <div class="card-image">
+                              <img alt="" src={"../images/IMGVITF.png"} />
+                              <span class="card-title">
+                                Vincent In The Forest
+                              </span>
+                            </div>
+                          </a>
+                          <div class="card-content">
+                            <ButtonA link={"nytuo://launchid/vitf"}><i class="material-icons left">play_arrow</i>
+                              Jouer
+                            </ButtonA>
+                            <ButtonOC
+                              link={() => {
+                                this.setState(
+                                  { currentclickedbtn: "VITF" },
+                                  function () {
+                                    this.handleDeleteGamefromDB();
+                                  }
+                                );
+                              }}
+                            ><i class="material-icons left">delete</i>
+                              Retirer de la bibliothèque
+                            </ButtonOC>
+                          </div>
+                        </div>
+                      </div>
                     );
                   case "WR":
                     return (
-                      <Cards
-                        link="wr"
-                        img="IMGWR"
-                        Title="WinRun"
-                        desc="Jeu de course basic"
-                      />
+                      <div class="homeresize">
+                        <div class="card">
+                          <a href="/winRun">
+                            <div class="card-image">
+                              <img alt="" src={"../images/IMGWR.png"} />
+                              <span class="card-title">WinRun</span>
+                            </div>
+                          </a>
+                          <div class="card-content">
+                            <ButtonA link={"nytuo://launchid/wr"}><i class="material-icons left">play_arrow</i>
+                              Jouer
+                            </ButtonA>
+                            <ButtonOC
+                              link={() => {
+                                this.setState(
+                                  { currentclickedbtn: "WR" },
+                                  function () {
+                                    this.handleDeleteGamefromDB();
+                                  }
+                                );
+                              }}
+                            ><i class="material-icons left">delete</i>
+                              Retirer de la bibliothèque
+                            </ButtonOC>
+                          </div>
+                        </div>
+                      </div>
                     );
                   default:
                     return <p>Va dans la boutique pour activer des jeux !</p>;
@@ -237,7 +527,9 @@ class Profile extends Component {
             </div>
           </div>
         ) : (
-          <p>Connecte toi pour voir les jeux que tu possèdes !</p>
+          <div className="spaceX2">
+            <p>Connecte toi pour voir les jeux que tu possèdes !</p>
+          </div>
         )}
       </div>
     );

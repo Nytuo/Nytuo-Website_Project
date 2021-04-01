@@ -6,11 +6,12 @@ function Help() {
   useEffect(() => {
     document.addEventListener("DOMContentLoaded", function () {
       var elems = document.querySelectorAll(".collapsible");
-      var instances = M.Collapsible.init(elems, []);
+      M.Collapsible.init(elems, []);
     });
   }, []);
   return (
     <div>
+      <meta name="robots" content="noindex"></meta>
       <h1>Page d'aide Nytuo (Site, Jeux, Launcher) :</h1>
       <p>
         Cette page permet de vous aider en cas de problème avec le Nytuo

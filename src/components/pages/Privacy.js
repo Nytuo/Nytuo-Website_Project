@@ -3,6 +3,7 @@ import React from "react";
 function Privacy() {
   return (
     <div>
+      <meta name="robots" content="noindex"></meta>
       <h1>Privacy Policy for Nytuo</h1>
 
       <p>

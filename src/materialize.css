@@ -5082,10 +5082,13 @@ small {
 .card .card-content {
     padding: 24px;
     border-radius: 0 0 2px 2px;
+    text-align: center;
+
 }
 
 .card .card-content p {
-    margin: 0;
+    text-align: center;
+
 }
 
 .card .card-content .card-title {
@@ -5374,6 +5377,7 @@ small {
     text-transform: uppercase;
     vertical-align: middle;
     -webkit-tap-highlight-color: transparent;
+    font-family: Oswald,'sans-serif';
 }
 
 .btn.disabled,
@@ -5980,7 +5984,7 @@ body.keyboard-focused .dropdown-content li:focus {
     position: fixed;
     left: 0;
     right: 0;
-    background-color: #fafafa;
+    background-color: #292929;
     padding: 0;
     max-height: 70%;
     width: 55%;
@@ -6017,7 +6021,7 @@ body.keyboard-focused .dropdown-content li:focus {
 
 .modal .modal-footer {
     border-radius: 0 0 2px 2px;
-    background-color: #fafafa;
+    background-color: #292929;
     padding: 4px 6px;
     height: 56px;
     width: 100%;
@@ -6183,14 +6187,14 @@ body.keyboard-focused .dropdown-content li:focus {
 
 .chip {
     display: inline-block;
-    height: 32px;
+    height: 48px;
     font-size: 13px;
     font-weight: 500;
-    color: rgba(0, 0, 0, 0.6);
-    line-height: 32px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 48px;
     padding: 0 12px;
-    border-radius: 16px;
-    background-color: #e4e4e4;
+    border-radius: 28px;
+    background-color: #383838;
     margin-bottom: 5px;
     margin-right: 5px;
 }
@@ -6204,8 +6208,8 @@ body.keyboard-focused .dropdown-content li:focus {
 .chip>img {
     float: left;
     margin: 0 8px 0 -12px;
-    height: 32px;
-    width: 32px;
+    height: 48px;
+    width: 48px;
     border-radius: 50%;
 }
 
@@ -6425,7 +6429,7 @@ input[type=search]:not(.browser-default)[readonly="readonly"],
 textarea.materialize-textarea:disabled,
 textarea.materialize-textarea[readonly="readonly"] {
     color: rgba(0, 0, 0, 0.42);
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.42);
+    border-bottom: 1px dotted rgba(199, 199, 199, 0.42);
 }
 
 input:not([type]):disabled+label,
@@ -6454,7 +6458,7 @@ input[type=search]:not(.browser-default):disabled+label,
 input[type=search]:not(.browser-default)[readonly="readonly"]+label,
 textarea.materialize-textarea:disabled+label,
 textarea.materialize-textarea[readonly="readonly"]+label {
-    color: rgba(0, 0, 0, 0.42);
+    color: rgba(194, 194, 194, 0.42);
 }
 
 input:not([type]):focus:not([readonly]),

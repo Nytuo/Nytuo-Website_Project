@@ -5,6 +5,7 @@ import Footer from "../Footer";
 function Feedback() {
   return (
     <div>
+      <meta name="robots" content="noindex"></meta>
       <div class="spaceX2"></div>
       <h1>FeedBack</h1>
       <p>
@@ -24,7 +25,8 @@ function Feedback() {
           webkitallowfullscreen
           mozallowfullscreen
           msallowfullscreen
-        ></iframe>
+          title="FeedBack form"
+        />
       </div>
       <Footer />
     </div>

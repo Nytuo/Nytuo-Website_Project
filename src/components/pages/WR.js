@@ -1,10 +1,12 @@
 import React from "react";
-import Games_template from "./Games_template";
+import GamesTemplate from "./GamesTemplate";
 
 function WR() {
   return (
     <div>
-      <Games_template
+
+<meta name="robots" content="noindex"></meta>
+      <GamesTemplate
         nGame="WinRun"
         advTxt="Ce jeu peut-être considerer comme un virus dû au composant NW.JS.Ce jeu n’est pas un virus, vous pouvez l’analyser avec VirusTotal."
         desc="Ce jeu est un test, il ne doit pas être considérer comme un jeu a part entière.Dans celui-ci vous contrôler une voiture et votre bute est d’arriver premier."
@@ -37,6 +39,8 @@ function WR() {
         rm10="t"
         video=""
         sn=""
+        GitHub="https://github.com/Nytuo/WR/releases"
+
       />
     </div>
   );

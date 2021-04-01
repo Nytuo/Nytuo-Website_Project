@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import Navbar from "./components/navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
@@ -25,10 +24,7 @@ import SFO from "./components/pages/SFO";
 import SGB from "./components/pages/SGB";
 import SNRE from "./components/pages/SN";
 import TB from "./components/pages/TB";
-import React, { useState, useEffect, Link } from "react";
-/* import fire from "./fire";
- */ import Login from "./components/Login";
-// Add the Firebase products that you want to use
+import React from "react";
 import Profile from "./components/pages/Profile";
 import FirebaseConnexion from "./FirebaseConnexion";
 import store from "./components/pages/store";

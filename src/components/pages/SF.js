@@ -1,10 +1,11 @@
 import React from "react";
-import Games_template from "./Games_template";
+import GamesTemplate from "./GamesTemplate";
 
 function SF() {
   return (
     <div>
-      <Games_template
+      <meta name="robots" content="noindex"></meta>
+      <GamesTemplate
         nGame="ShootFighter"
         advTxt=""
         desc="Une apocalypse Zombies, un homme, une arme."
@@ -37,6 +38,8 @@ function SF() {
         rm10="t"
         video=""
         sn=""
+        GitHub="https://github.com/Nytuo/SF/releases"
+
       />
     </div>
   );

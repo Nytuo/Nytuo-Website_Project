@@ -5,6 +5,7 @@ import "../TAC.css";
 function TermsAndConditions() {
   return (
     <div>
+      <meta name="robots" content="noindex"></meta>
       <h2>Welcome to nytuowebsite.web.app</h2>
       <p>
         These terms and conditions outline the rules and regulations for the use

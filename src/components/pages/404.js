@@ -4,6 +4,7 @@ import Footer from "../Footer";
 const NoMatch = () => {
   return (
     <div style={{ textAlign: "center" }}>
+      <meta name="robots" content="noindex"></meta>
       <h1>
         Il n'y rien ici, passe ton chemin... ou tu peux jouer à ce jeu exclusif
         !
@@ -14,6 +15,7 @@ const NoMatch = () => {
         allowfullscreen=""
         width="1280"
         height="720"
+        title="Nytuo Games 404"
       >
         <a href="https://nytuo.itch.io/error404">Play Error404 on itch.io</a>
       </iframe>

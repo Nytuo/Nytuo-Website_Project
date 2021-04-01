@@ -5,7 +5,9 @@ import Footer from "../Footer";
 function GamesPage() {
   return (
     <>
+    <meta name="robots" content="noindex"></meta>
       <div class="spaceX2">
+        <img alt="" src="../images/Nytuo games.png" style={{width: "20%" }} />
         <h1>Mes jeux :</h1>
 
         <div class="cards-list">
@@ -13,7 +15,7 @@ function GamesPage() {
             <a href="/shootFighterOrigins">
               <div class="card">
                 <div class="card-image">
-                  <img src="../images/IMGSFO2.png" />
+                  <img alt="" src="../images/IMGSFO2.png" />
                   <span class="card-title">ShootFighter Origins</span>
                 </div>
                 <div class="card-content">
@@ -27,7 +29,7 @@ function GamesPage() {
             <a href="/legendAdventureAndTheInfernalMaze">
               <div class="card">
                 <div class="card-image">
-                  <img src="../images/IMGLAATIM.png" />
+                  <img alt="" src="../images/IMGLAATIM.png" />
                   <span class="card-title">
                     Legend Adventure and the Infernal Maze
                   </span>
@@ -46,7 +48,7 @@ function GamesPage() {
             <a href="/superGeoffreyBros">
               <div class="card">
                 <div class="card-image">
-                  <img src="../images/SGB2.png" />
+                  <img alt="" src="../images/SGB2.png" />
                   <span class="card-title">Super Geoffrey Bros</span>
                 </div>
                 <div class="card-content">
@@ -62,7 +64,7 @@ function GamesPage() {
             <a href="/shootFighter">
               <div class="card">
                 <div class="card-image">
-                  <img src="../images/IMGSF.png" />
+                  <img alt="" src="../images/IMGSF.png" />
                   <span class="card-title">ShootFighter</span>
                 </div>
                 <div class="card-content">
@@ -76,7 +78,7 @@ function GamesPage() {
             <a href="/lutinAdventure">
               <div class="card">
                 <div class="card-image">
-                  <img src="../images/IMGLA.png" />
+                  <img alt="" src="../images/IMGLA.png" />
                   <span class="card-title">Lutin Adventure</span>
                 </div>
                 <div class="card-content">
@@ -90,7 +92,7 @@ function GamesPage() {
             <a href="/vincentInTheForest">
               <div class="card">
                 <div class="card-image">
-                  <img src="../images/IMGVITF.png" />
+                  <img alt="" src="../images/IMGVITF.png" />
                   <span class="card-title">Vincent In The Forest</span>
                 </div>
                 <div class="card-content">
@@ -104,7 +106,7 @@ function GamesPage() {
             <a href="/theTardisDefender">
               <div class="card">
                 <div class="card-image">
-                  <img src="../images/IMGTTD.png" />
+                  <img alt="" src="../images/IMGTTD.png" />
                   <span class="card-title">The TARDIS Defender</span>
                 </div>
                 <div class="card-content">
@@ -118,7 +120,7 @@ function GamesPage() {
             <a href="/fireWallDefender">
               <div class="card">
                 <div class="card-image">
-                  <img src="../images/IMGFWD.png" />
+                  <img alt="" src="../images/IMGFWD.png" />
                   <span class="card-title">Firewall Defender</span>
                 </div>
                 <div class="card-content">
@@ -135,7 +137,7 @@ function GamesPage() {
             <a href="/tanksBattle">
               <div class="card">
                 <div class="card-image">
-                  <img src="../images/IMGTB.png" />
+                  <img alt="" src="../images/IMGTB.png" />
                   <span class="card-title">TanksBattle</span>
                 </div>
                 <div class="card-content">
@@ -149,7 +151,7 @@ function GamesPage() {
             <a href="/winrun">
               <div class="card">
                 <div class="card-image">
-                  <img src="../images/IMGWR.png" />
+                  <img alt="" src="../images/IMGWR.png" />
                   <span class="card-title">WinRun</span>
                 </div>
                 <div class="card-content">
@@ -163,7 +165,7 @@ function GamesPage() {
             <a href="/asteroidEscape">
               <div class="card">
                 <div class="card-image">
-                  <img src="../images/IMGAE.png" />
+                  <img alt="" src="../images/IMGAE.png" />
                   <span class="card-title">AsteroidEscape</span>
                 </div>
                 <div class="card-content">
@@ -180,7 +182,7 @@ function GamesPage() {
             <a href="/sansNomReedition">
               <div class="card">
                 <div class="card-image">
-                  <img src="../images/IMGSN.png" />
+                  <img alt="" src="../images/IMGSN.png" />
                   <span class="card-title">Sans Nom Réédition</span>
                 </div>
                 <div class="card-content">
