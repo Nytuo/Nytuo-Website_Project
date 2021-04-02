@@ -24,14 +24,17 @@ class Navbar extends Component {
     return (
       <nav className="navbar">
         <div className="nav-wrapper">
-          <a href="/" className="brand-logo center">
-            <img
-              alt=""
-              src="../images/Nytuo website.png"
-              className="logonav"
-              title="Logo de Nytuo"
-            />
-          </a>
+          <div className="logonav">
+            <a href="/" className="">
+              <img
+                alt=""
+                src="../images/256.png"
+                className="logonav"
+                title="Logo de Nytuo"
+              />
+            </a>
+          </div>
+
           <a data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">menu</i>
           </a>
@@ -82,7 +85,7 @@ class Navbar extends Component {
                 data-tooltip="Accueil"
                 href="/"
               >
-                <i class="material-icons">home</i>
+                <i class="material-icons left">home</i>Accueil
               </a>
             </li>
             <li>
@@ -92,7 +95,7 @@ class Navbar extends Component {
                 data-tooltip="Jeux"
                 href="/games"
               >
-                <i class="material-icons">sports_esports</i>
+                <i class="material-icons left">sports_esports</i>Jeux
               </a>
             </li>
             <li>
@@ -102,7 +105,7 @@ class Navbar extends Component {
                 data-tooltip="Logiciels"
                 href="/softwares"
               >
-                <i class="material-icons">wysiwyg</i>
+                <i class="material-icons left">wysiwyg</i>Logiciels
               </a>
             </li>
             <li>
@@ -112,7 +115,7 @@ class Navbar extends Component {
                 data-tooltip="Launch GitHub"
                 href="https://github.com/Nytuo"
               >
-                <i class="material-icons">launch</i>
+                GitHub
               </a>
             </li>
             <li>
@@ -122,7 +125,7 @@ class Navbar extends Component {
                 data-tooltip="Profile"
                 href="/profile"
               >
-                <i class="material-icons">contact_page</i>
+                <i class="material-icons left">contact_page</i>Profile
               </a>
             </li>
             <li>
@@ -132,7 +135,7 @@ class Navbar extends Component {
                 data-tooltip="Boutique"
                 href="/store"
               >
-                <i class="material-icons">local_grocery_store</i>
+                <i class="material-icons left">local_grocery_store</i>Boutique
               </a>
             </li>
             <li>
@@ -142,7 +145,7 @@ class Navbar extends Component {
                 data-tooltip="FeedBack"
                 href="/feedback"
               >
-                <i class="material-icons">feedback</i>
+                <i class="material-icons left">feedback</i>Feedback
               </a>
             </li>
             <li>
@@ -152,7 +155,7 @@ class Navbar extends Component {
                 data-tooltip="A propos"
                 href="/about"
               >
-                <i class="material-icons">info</i>
+                <i class="material-icons left">info</i>A propos
               </a>
             </li>
           </ul>

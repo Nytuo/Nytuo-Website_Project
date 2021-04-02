@@ -1,32 +1,21 @@
-import React from "react";
+import React, { Component, useEffect } from "react";
 import "../App.css";
+import M from "materialize-css";
 
-function Hero() {
-  return (
+export default class Hero extends Component {
+  componentDidMount() {
+    M.Slider.init(this.slider,{height:650})
+
+  }
+  render() {
+    return (
     <div className="hero-container">
-      <div className="spaceX2"></div>
       <h1 className="blanc">Welcome to a new Universe</h1>
       <h2>
-        Important : Le site internet vient de changer de domaine !<br />
-        Avant Nytuo.yo.fr était le domaine officiel, il passe désormais à
-        nytuowebsite.web.app ou nytuowebsite.firebase.com (c'est le même) hoster
-        par Google Firebase. Ce changement est dû à ReactJS qui me permet de
-        faire cette nouvelle version du site mais il m'est impossible de
-        l'heberger sur mon domaine précédent... Deplus Firebase me permet de
-        gérer facilement les connexions avec Google qui est plus rapide pour
-        vous, utilisateurs.
-        <br />
-        Le domaine nytuo.yo.fr continuera d'exister mais redirigera à cette
-        adresse.
-        <br />
-        Pour le launcher, une reconstruction de ce dernier avec React et la base
-        de données Firebase est prévue. Elle prendra un peu de temps pour
-        sortir. Pour les éventuelles nouveaux utilisateurs, veuillez-vous
-        connecter directement par l'interface du launcher qui reste
-        fonctionnelle.
-        <br />
-        Ce site est dorénavant, le domaine principal.
-        <br />
+        Important : Le site change de service de base de données et passe sous React. Les bases de données seront gérer par le service Google Firebase facilitant les choses pour tout le monde. L'ancienne base de données n'est plus accessible.
+        <br/>
+        Pour le launcher, une reconstruction de ce dernier avec React et la base de données Firebase est prévue. Elle prendra un peu de temps pour sortir. Pour les éventuelles nouveaux utilisateurs, veuillez-vous connecter directement par l'interface du launcher qui reste fonctionnelle.
+        <br/>
         -Merci, Nytuo, Arnaud BEUX
       </h2>
       <p>
@@ -34,7 +23,33 @@ function Hero() {
         Beta.nytuo.yo.fr | launcher.nytuo.yo.fr | nytuowebsite.wep.app |
         nytuo-launcher.web.app | nytuo.github.io
       </p>
-
+        <div className="slider" style={{width: "100%" }} ref={slider=>{this.slider = slider;}}>
+            <ul className="slides">
+                <li>
+                    <a href="sfo.html">
+                        <img src="../images/IMGSFO2.png"/>
+                    </a>
+                    <div className="caption right-align">
+                        <h3>Dernier jeu : ShootFighter Origins</h3>
+                        <h5 className="light grey-text text-lighten-3">Tuer des zombies par vagues en 2D</h5>
+                    </div>
+                </li>
+                <li><a href="sn.html">
+                        <img src="../images/IMGSN.png"/></a>
+                    <div class="caption center-align">
+                        <h3>SansNom Réédition</h3>
+                        <h5 class="light grey-text text-lighten-3">Mon premier jeu, enfin achevé.</h5>
+                    </div>
+                </li>
+                <li><a href="sgb.html">
+                        <img src="../images/SGB2.png"/></a>
+                    <div class="caption right-align">
+                        <h3>Super Geoffrey Bros</h3>
+                        <h5 class="light grey-text text-lighten-3">Une semaine, Un objectif, Un jeu</h5>
+                    </div>
+                </li>
+            </ul>
+        </div>
       <div class="cards-list">
         <div class="homeresize">
           <a href="/games">
@@ -120,4 +135,5 @@ function Hero() {
     </div>
   );
 }
-export default Hero;
+  }
+  
