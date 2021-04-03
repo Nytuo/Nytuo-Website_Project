@@ -22,4 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/src/components/pages/php
+public/.well-known
+public/BingSiteAuth.xml
+public/google15978c4324ab7cef.html
+src/Firebase.js
