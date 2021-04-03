@@ -28,7 +28,7 @@ function Login(props) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label for="mail">E-Mail</label>
+          <label for="mail">E-Mail (requis également pour mot de passe oublier)</label>
         </div>
       </div>
       {hasAccount ? (

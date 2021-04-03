@@ -22,7 +22,8 @@ class Navbar extends Component {
   }
   render() {
     return (
-      <nav className="navbar">
+      <div className="navbar-fixed">
+      <nav >
         <div className="nav-wrapper">
           <div className="logonav">
             <a href="/" className="">
@@ -42,13 +43,14 @@ class Navbar extends Component {
             <li>
               <div class="chip">
                 {firebase.auth().currentUser ? (
-                  <img
+                  firebase.auth().currentUser.photoURL && (<img
                     className="NcircleimgC"
                     src={firebase.auth().currentUser.photoURL}
                     alt="profile"
-                  />
+                  />)
+                  
                 ) : (
-                  <i class="material-icons left">account_circle</i>
+                  <img src="../images/default.png"/>
                 )}
 
                 {firebase.auth().currentUser
@@ -68,7 +70,7 @@ class Navbar extends Component {
                 <>
                   <a
                     class="waves-effect waves-light btn modal-trigger"
-                    data-target="modal1"
+                    data-target="Conmodal1"
                   >
                     <i class="material-icons left">login</i>
                     Formulaire de connexion
@@ -193,14 +195,15 @@ class Navbar extends Component {
           </li>
           <li>
             <div class="chip">
-              {firebase.auth().currentUser ? (
-                <img
+              {firebase.auth().currentUser && (
+                firebase.auth().currentUser.photoURL && (
+                  <img
                   className="NcircleimgC"
                   src={firebase.auth().currentUser.photoURL}
                   alt="profile"
                 />
-              ) : (
-                <></>
+                )
+                
               )}
 
               {firebase.auth().currentUser
@@ -220,7 +223,7 @@ class Navbar extends Component {
               <>
                 <a
                   class="waves-effect waves-light btn modal-trigger"
-                  data-target="modal1"
+                  data-target="Conmodal1"
                 >
                   Formulaire de connexion
                 </a>
@@ -229,6 +232,7 @@ class Navbar extends Component {
           </li>
         </ul>
       </nav>
+      </div>
     );
   }
 }

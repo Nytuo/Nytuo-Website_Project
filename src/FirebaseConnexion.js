@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import firebase from "./Firebase";
-import Modal from "./components/Modal";
+import ConModal from "./components/ConModal";
 
 function FirebaseConnexion() {
   const [User, setUser] = useState("");
@@ -53,6 +53,7 @@ function FirebaseConnexion() {
         });
         return credentials.user.updateProfile({
           displayName: pseudo,
+          photoURL: "../images/default.png"
         });
       })
       .catch((err) => {
@@ -80,33 +81,107 @@ function FirebaseConnexion() {
     });
   };
 
-  var provider = new firebase.auth.GoogleAuthProvider();
+  var GoogleProvider = new firebase.auth.GoogleAuthProvider();
+  firebase.auth().useDeviceLanguage();
   const GoogleAuth = () => {
     firebase
       .auth()
-      .signInWithPopup(provider)
+      .signInWithPopup(GoogleProvider)
       .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        // The signed-in user info.
         var user = result.user;
-        if (!db.ref("users/" + user.uid + "/games")) {
-          var dbco1 = db.ref("users");
+        var tmp = db.ref("users/"+user.uid + "/games");
+        tmp.on("value",(snapshot)=>{
+          const data = snapshot.data;
+          if (data == null) {
+            var dbco1 = db.ref("users");
           dbco1.child(user.uid).set({
             games: "",
           });
-        }
-
-        /*           var dbco2 = db.ref('users/'+user.uid)
-          dbco2.child("games") */
+          }
+        })
       })
       .catch((error) => {
-        // Handle Errors here.
         var errorMessage = error.message;
-        // The email of the user's account used.
-        // The firebase.auth.AuthCredential type that was used.
-        console.log(errorMessage);
+        alert(errorMessage);
       });
   };
+  var TwitterProvider = new firebase.auth.TwitterAuthProvider();
+  const TwitterAuth = () => {
+    firebase.auth().signInWithPopup(TwitterProvider).then((result) => {
+      var user = result.user;
+      var tmp = db.ref("users/"+user.uid + "/games");
+      tmp.on("value",(snapshot)=>{
+        const data = snapshot.data;
+        if (data == null) {
+          var dbco1 = db.ref("users");
+        dbco1.child(user.uid).set({
+          games: "",
+        });
+        }
+      })
+    }).catch((error) => {
+      var errorMessage = error.message;
+      alert(errorMessage);
+    })
+  }
+  var FaceBookProvider = new firebase.auth.FacebookAuthProvider();
+  const FaceBookAuth = () => {
+    firebase.auth().signInWithPopup(FaceBookProvider).then((result) =>{
+      var user = result.user;
+      var tmp = db.ref("users/"+user.uid + "/games");
+      tmp.on("value",(snapshot)=>{
+        const data = snapshot.data;
+        if (data == null) {
+          var dbco1 = db.ref("users");
+        dbco1.child(user.uid).set({
+          games: "",
+        });
+        }
+      })
+    }).catch((error) => {
+        var errorMessage = error.message;
+        alert(errorMessage);
+      })
+  }
+  var GitHubProvider = new firebase.auth.GithubAuthProvider();
+  const GithubAuth = () => {
+    firebase.auth().signInWithPopup(GitHubProvider).then((result) => {
+      var user = result.user;
+      var tmp = db.ref("users/"+user.uid + "/games");
+      tmp.on("value",(snapshot)=>{
+        const data = snapshot.data;
+        if (data == null) {
+          var dbco1 = db.ref("users");
+        dbco1.child(user.uid).set({
+          games: "",
+        });
+        }
+      })
+    }).catch((error) => {
+        var errorMessage = error.message;
+        alert(errorMessage);
+      })
+  }
+  var MSProvider = new firebase.auth.OAuthProvider('microsoft.com')
+  const MSAuth = () => {
+    firebase.auth().signInWithPopup(MSProvider).then((result) => {
+    var user = result.user;
+      var tmp = db.ref("users/"+user.uid + "/games");
+      tmp.on("value",(snapshot)=>{
+        const data = snapshot.data;
+        if (data == null) {
+          var dbco1 = db.ref("users");
+        dbco1.child(user.uid).set({
+          games: "",
+        });
+        }
+      })
+  }).catch((error) => {
+        var errorMessage = error.message;
+        alert(errorMessage);
+      })
+  }
+  
   const resetPassword = () => {
     firebase
       .auth()
@@ -126,8 +201,12 @@ function FirebaseConnexion() {
   }, []);
   return (
     <div>
-      <Modal
-        f={GoogleAuth}
+      <ConModal
+        Google={GoogleAuth}
+        Twitter={TwitterAuth}
+        Facebook={FaceBookAuth}
+        Github={GithubAuth}
+        Microsoft={MSAuth}
         id="1"
         email={email}
         setEmail={setEmail}

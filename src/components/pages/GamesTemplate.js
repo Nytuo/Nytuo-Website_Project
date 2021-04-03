@@ -34,6 +34,7 @@ function GamesTemplate(props) {
         <img
           alt=""
           src={"../images/Logo" + props.Name.toUpperCase() + ".png"}
+          className="IMGGames"
         />
       </div>
       <h1>{props.nGame}</h1>

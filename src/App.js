@@ -28,6 +28,7 @@ import React from "react";
 import Profile from "./components/pages/Profile";
 import FirebaseConnexion from "./FirebaseConnexion";
 import store from "./components/pages/store";
+import ModModal from "./components/ModModal";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
       <Router>
         <Navbar />
         <FirebaseConnexion />
+        <ModModal/>
         <Switch>
           <Route path="/" exact component={Home} />
 

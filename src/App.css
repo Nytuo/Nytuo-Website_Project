@@ -337,9 +337,13 @@ input{
     }
 
 }
-
+.IMGGames {
+    width:auto
+}
 @media only screen and (max-width:1233px) {
-
+.IMGames {
+    width: 100%;
+}
     .column {
 
         width: 100%;
@@ -364,7 +368,7 @@ input{
 
     .logonav {
 
-        width: 100%;
+        width: 60%;
 
     }
 

@@ -6,7 +6,11 @@ export default class ScreenShotsDisplayer extends Component {
   componentDidMount() {
     document.addEventListener("DOMContentLoaded", function () {
       var elems = document.querySelectorAll(".slider");
-      M.Slider.init(elems, { height: 650 });
+      if (window.innerWidth <= 1233) {
+        M.Slider.init(elems, { height: 150 });
+      } else {
+        M.Slider.init(elems, { height: 650 });
+      }
     });
   }
 
