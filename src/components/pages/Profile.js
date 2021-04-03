@@ -18,7 +18,6 @@ class Profile extends Component {
       if (user) {
         this.setState({ User: user });
         this.timeout = setTimeout(() => {
-          
           var fetchGames = db.ref("users/" + this.state.User.uid + "/games");
           fetchGames.on("value", (snapshot) => {
             const data = snapshot.val();
@@ -80,14 +79,16 @@ class Profile extends Component {
                       return profile.providerId;
                     })}{" "}
                   </p>
-                  {this.state.User.photoURL && (<div>
-                    <img
-                      alt=""
-                      className="NcircleimgC"
-                      src={this.state.User.photoURL}
-                    />
-                  </div>)}
-                  
+                  {this.state.User.photoURL && (
+                    <div>
+                      <img
+                        alt=""
+                        className="NcircleimgC"
+                        src={this.state.User.photoURL}
+                      />
+                    </div>
+                  )}
+
                   <p>Bienvenue, {this.state.User.displayName}</p>
                 </div>
               )}

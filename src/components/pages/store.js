@@ -24,16 +24,15 @@ class Profile extends Component {
         this.setState({ User: user });
         this.timeout = setTimeout(() => {
           var fetchGames = db.ref("users/" + this.state.User.uid + "/games");
-        fetchGames.on("value", (snapshot) => {
-          const data = snapshot.val();
-          const listOfGames = data;
-          this.setState({ gamestring: listOfGames });
-          this.Games = listOfGames.split(",");
-          this.setState({ stateLoading: false });
-          this.forceUpdate();
-        });
+          fetchGames.on("value", (snapshot) => {
+            const data = snapshot.val();
+            const listOfGames = data;
+            this.setState({ gamestring: listOfGames });
+            this.Games = listOfGames.split(",");
+            this.setState({ stateLoading: false });
+            this.forceUpdate();
+          });
         }, 1000);
-        
       } else {
         this.setState({ User: "" });
       }
@@ -87,16 +86,18 @@ class Profile extends Component {
                     {this.state.User.email}
                   </p>
                   {this.state.User.photoURL && (
-                  <div>
-                    <img
-                      className="NcircleimgC"
-                      alt="profile"
-                      src={this.state.User.photoURL}
-                    />
-                  </div>)}
+                    <div>
+                      <img
+                        className="NcircleimgC"
+                        alt="profile"
+                        src={this.state.User.photoURL}
+                      />
+                    </div>
+                  )}
                   <p>Bienvenue, {this.state.User.displayName}</p>
                 </div>
-              )}<br/>
+              )}
+              <br />
               <img
                 src="../images/Nytuo Store.png"
                 alt="Nytuo Store Logo"

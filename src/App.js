@@ -36,7 +36,7 @@ function App() {
       <Router>
         <Navbar />
         <FirebaseConnexion />
-        <ModModal/>
+        <ModModal />
         <Switch>
           <Route path="/" exact component={Home} />
 

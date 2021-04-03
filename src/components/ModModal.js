@@ -155,44 +155,41 @@ export default class ModModal extends Component {
           </div>
           <p>Modifier le mot de passe :</p>
           <div style={{ textAlign: "center" }}>
-          <button
-            className="btn waves-effect waves-light"
-            onClick={this.handlePassWordChange}
-          >
-            Envoyer l'e-mail !
-            <i class="material-icons right">send</i>
-          </button>
-          <p>Modifier le mail: </p>
-          <input
-            type="email"
-            id="SetEmail"
-            className="validate"
-            require
-            onChange={(e) => this.setState({ Email: e.target.value })}
-          />
-          <button
-            className="btn waves-effect waves-light"
-            onClick={this.handleChangeMail}
-          >
-            Envoyer
-            <i class="material-icons right">send</i>
-          </button>
+            <button
+              className="btn waves-effect waves-light"
+              onClick={this.handlePassWordChange}
+            >
+              Envoyer l'e-mail !<i class="material-icons right">send</i>
+            </button>
+            <p>Modifier le mail: </p>
+            <input
+              type="email"
+              id="SetEmail"
+              className="validate"
+              require
+              onChange={(e) => this.setState({ Email: e.target.value })}
+            />
+            <button
+              className="btn waves-effect waves-light"
+              onClick={this.handleChangeMail}
+            >
+              Envoyer
+              <i class="material-icons right">send</i>
+            </button>
           </div>
           <p>Envoyer l'email de vérification de l'adresse mail:</p>
           {this.state.User != null && (
             <div style={{ textAlign: "center" }}>
               {this.state.User.emailVerified ? (
                 <button className="btn waves-effect waves-light disabled">
-                  Envoyer l'e-mail !
-                  <i class="material-icons right">send</i>
+                  Envoyer l'e-mail !<i class="material-icons right">send</i>
                 </button>
               ) : (
                 <button
                   className="btn waves-effect waves-light"
                   onClick={this.handleVerifMail}
                 >
-                  Envoyer l'e-mail !
-                  <i class="material-icons right">send</i>
+                  Envoyer l'e-mail !<i class="material-icons right">send</i>
                 </button>
               )}
             </div>

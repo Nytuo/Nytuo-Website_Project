@@ -52,7 +52,7 @@ export default class ConModal extends Component {
           </button>
           <button
             className="oauth-container btn darken-4 white black-text"
-            style={{ margin: "5px"}}
+            style={{ margin: "5px" }}
             onClick={this.props.Twitter}
           >
             <div className="left">
@@ -67,7 +67,7 @@ export default class ConModal extends Component {
           </button>
           <button
             className="oauth-container btn darken-4 white black-text"
-            style={{ margin: "5px"}}
+            style={{ margin: "5px" }}
             onClick={this.props.Facebook}
           >
             <div className="left">
@@ -82,7 +82,7 @@ export default class ConModal extends Component {
           </button>
           <button
             className="oauth-container btn darken-4 white black-text"
-            style={{ margin: "5px"}}
+            style={{ margin: "5px" }}
             onClick={this.props.Github}
           >
             <div className="left">
@@ -97,7 +97,7 @@ export default class ConModal extends Component {
           </button>
           <button
             className="oauth-container btn darken-4 white black-text"
-            style={{ margin: "5px"}}
+            style={{ margin: "5px" }}
             onClick={this.props.Microsoft}
           >
             <div className="left">
@@ -110,10 +110,13 @@ export default class ConModal extends Component {
             </div>
             Se connecter avec Microsoft
           </button>
-          
         </div>
         <div class="modal-footer" style={{ textAlign: "center" }}>
-          <a href="#!" class="modal-close waves-effect waves-light btn" style={{ margin:"5px"}}>
+          <a
+            href="#!"
+            class="modal-close waves-effect waves-light btn"
+            style={{ margin: "5px" }}
+          >
             <i class="material-icons left">close</i>
             Fermer
           </a>
