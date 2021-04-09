@@ -91,7 +91,8 @@ function FirebaseConnexion() {
         var user = result.user;
         var tmp = db.ref("users/" + user.uid + "/games");
         tmp.on("value", (snapshot) => {
-          const data = snapshot.data;
+          const data = snapshot.val();
+          console.log(data)
           if (data == null) {
             var dbco1 = db.ref("users");
             dbco1.child(user.uid).set({
@@ -114,7 +115,7 @@ function FirebaseConnexion() {
         var user = result.user;
         var tmp = db.ref("users/" + user.uid + "/games");
         tmp.on("value", (snapshot) => {
-          const data = snapshot.data;
+          const data = snapshot.val();
           if (data == null) {
             var dbco1 = db.ref("users");
             dbco1.child(user.uid).set({
@@ -137,7 +138,7 @@ function FirebaseConnexion() {
         var user = result.user;
         var tmp = db.ref("users/" + user.uid + "/games");
         tmp.on("value", (snapshot) => {
-          const data = snapshot.data;
+          const data = snapshot.val();
           if (data == null) {
             var dbco1 = db.ref("users");
             dbco1.child(user.uid).set({
@@ -160,7 +161,7 @@ function FirebaseConnexion() {
         var user = result.user;
         var tmp = db.ref("users/" + user.uid + "/games");
         tmp.on("value", (snapshot) => {
-          const data = snapshot.data;
+          const data = snapshot.val();
           if (data == null) {
             var dbco1 = db.ref("users");
             dbco1.child(user.uid).set({
@@ -183,7 +184,7 @@ function FirebaseConnexion() {
         var user = result.user;
         var tmp = db.ref("users/" + user.uid + "/games");
         tmp.on("value", (snapshot) => {
-          const data = snapshot.data;
+          const data = snapshot.val();
           if (data == null) {
             var dbco1 = db.ref("users");
             dbco1.child(user.uid).set({
