@@ -6,7 +6,6 @@ export default class Help extends Component {
   componentDidMount() {
     M.Collapsible.init(this.collapsible, []);
     M.Collapsible.init(this.collapsible2, []);
-
   }
   render() {
     return (
@@ -312,30 +311,60 @@ export default class Help extends Component {
           </li>
         </ul>
         <h1>Générale :</h1>
-        <ul class="collapsible"
+        <ul
+          class="collapsible"
           ref={(collapsible2) => {
             this.collapsible2 = collapsible2;
-          }}>
+          }}
+        >
           <li>
             <div class="collapsible-header">Comptes</div>
             <div class="collapsible-body">
               <span>
                 <p>
-                  <strong>Intro et avertissement:</strong><br/>
-                  Depuis la dernière mise à jour en date du 09/04/2021 pour le launcher et de quelques jours plus tot pour le site internet, le systeme de compte est maintenant gérer par Google Firebase, permettant la connexion avec des services comme Google, Github, Twitter, Microsoft ou encore Facebook et bien sûre toujours avec la combinaison mail/ mot de passe.
-                  <br/>La connexion est gérer par FireBase, tout est sécuriser. Pour plus d'informations, aller directement sur le site de Google Firebase ou poser votre question dans la rubrique FeedBack.<br/>
-                  Vous pouvez bien sûre aller consulter le project du site sur <a href="https://github.com/Nytuo/Nytuo-Website_Project">GitHub</a>.<br/>
-                  <strong>Connexion au compte dans le Nytuo-Launcher:</strong><br/>
-                  1.Quand la page de connexion apparait, connecter vous !
-                  2.Un message apparaitera après vous être connecté. Vous allez devoir fermer tout fenêtre du Launcher et relancer ce dernier.
-                  3.La connexion s'effectue tout seul automatiquement et le launcher continu vers la page principale.
-                  Si jamais vous abandonnez la connexion (vous quittez le launcher avant/sans de vous être connecté), le prochain lancement vous aurez un message qui vous demandera de fermer les fenêtre et de redémarrer le launcher.
-                  En cas d'erreur envoyer moi un feedback.
-                  <strong>Déconnexion du compte sur le Launcher</strong><br/>
-                  Connecter dans le launcher depuis n'importe qu'elle page cliquer dans la bar de navigation à gauche sur 'se déconnecter'.
-                  Sur Windows, un CMD se lance (tout est automatique) et au bout de 5 secondes, apres fermeture du launcher, il vous déconnecte en supprimant toutes traces de votre compte dans le Launcher.
-                  Sur Linux, cela est un peu différent, vous devrez ouvrir un Terminal et mettre les commandes dans l'ordre : <strong>cd ~/snap/nytuo-launcher/x1/.config</strong> et <strong>rm -rf Nytuo-Launcher</strong>.
-                  Vous pouvez alors redémarrer le launcher et vous Connectez.
+                  <strong>Intro et avertissement:</strong>
+                  <br />
+                  Depuis la dernière mise à jour en date du 09/04/2021 pour le
+                  launcher et de quelques jours plus tot pour le site internet,
+                  le systeme de compte est maintenant gérer par Google Firebase,
+                  permettant la connexion avec des services comme Google,
+                  Github, Twitter, Microsoft ou encore Facebook et bien sûre
+                  toujours avec la combinaison mail/ mot de passe.
+                  <br />
+                  La connexion est gérer par FireBase, tout est sécuriser. Pour
+                  plus d'informations, aller directement sur le site de Google
+                  Firebase ou poser votre question dans la rubrique FeedBack.
+                  <br />
+                  Vous pouvez bien sûre aller consulter le project du site sur{" "}
+                  <a href="https://github.com/Nytuo/Nytuo-Website_Project">
+                    GitHub
+                  </a>
+                  .<br />
+                  <strong>Connexion au compte dans le Nytuo-Launcher:</strong>
+                  <br />
+                  1.Quand la page de connexion apparait, connecter vous ! 2.Un
+                  message apparaitera après vous être connecté. Vous allez
+                  devoir fermer tout fenêtre du Launcher et relancer ce dernier.
+                  3.La connexion s'effectue tout seul automatiquement et le
+                  launcher continu vers la page principale. Si jamais vous
+                  abandonnez la connexion (vous quittez le launcher avant/sans
+                  de vous être connecté), le prochain lancement vous aurez un
+                  message qui vous demandera de fermer les fenêtre et de
+                  redémarrer le launcher. En cas d'erreur envoyer moi un
+                  feedback.
+                  <strong>Déconnexion du compte sur le Launcher</strong>
+                  <br />
+                  Connecter dans le launcher depuis n'importe qu'elle page
+                  cliquer dans la bar de navigation à gauche sur 'se
+                  déconnecter'. Sur Windows, un CMD se lance (tout est
+                  automatique) et au bout de 5 secondes, apres fermeture du
+                  launcher, il vous déconnecte en supprimant toutes traces de
+                  votre compte dans le Launcher. Sur Linux, cela est un peu
+                  différent, vous devrez ouvrir un Terminal et mettre les
+                  commandes dans l'ordre :{" "}
+                  <strong>cd ~/snap/nytuo-launcher/x1/.config</strong> et{" "}
+                  <strong>rm -rf Nytuo-Launcher</strong>. Vous pouvez alors
+                  redémarrer le launcher et vous Connectez.
                 </p>
               </span>
             </div>
