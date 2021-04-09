@@ -24,7 +24,7 @@ class Profile extends Component {
             const data = snapshot.val();
             const listOfGames = data;
             this.Games = listOfGames.split(",");
-            console.log(this.Games)
+            console.log(this.Games);
 
             this.setState({ stateLoading: false });
             this.forceUpdate();
