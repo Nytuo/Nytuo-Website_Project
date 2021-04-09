@@ -114,6 +114,40 @@ export default class NytuoLauncher extends Component {
           }}
         >
           <li>
+            <div class="collapsible-header">2021.04.09</div>
+            <div class="collapsible-body">
+              <span>
+                <p>
+                  <span class="new">new</span>Adding the Firebase connexion form
+                </p>
+                <p>
+                <span class="new">new</span>Adding a custom toolbar
+
+                </p>
+                <p>
+                <span class="enhanced">Enhanced</span>Modifying Animation
+
+                </p>
+                <p>
+                <span class="fixed">Removed</span>Removing some dependencies
+
+                </p>
+                <p>
+                <span class="enhanced">Upgraded</span>Upgrading dependencies
+
+                </p>
+                <p>
+                <span class="enhanced">Enhanced</span>Changing not connected profile image
+
+                </p>
+                <p>
+                <span class="enhanced">Enhanced</span>Changing logout system with a cookies cleaner (Batch file in Windows and manual terminal commands on Linux)
+
+                </p>
+              </span>
+            </div>
+          </li>
+          <li>
             <div class="collapsible-header">2021.02.06</div>
             <div class="collapsible-body">
               <span>
