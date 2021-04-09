@@ -310,51 +310,30 @@ export default class Help extends Component {
           </li>
         </ul>
         <h1>Générale :</h1>
-        <ul class="collapsible">
+        <ul class="collapsible"
+          ref={(collapsible) => {
+            this.collapsible = collapsible;
+          }}>
           <li>
             <div class="collapsible-header">Comptes</div>
             <div class="collapsible-body">
               <span>
                 <p>
-                  Depuis la mise à jour 2.8.2 du launcher, un compte est
-                  nécessaire pour accéder aux pages des jeux sur ce dernier.
-                  Cela me permet de gérer d'éventuelles jeux payant, de
-                  m'entrainer à gérer des bases de données et à apprendre le
-                  language 'PHP', et me permet d'inclure dans mes jeux un nom
-                  d'utilisateur customisé. Pour créé un compte, ce qui est
-                  gratuit, aller sur la page profile du site ou ouvrer le Nytuo
-                  Launcher. Cliquer sur 'créé un compte' à coté de 'se
-                  connecter' et renseigner les champs requis. Noter que le mot
-                  de passe doit-etre facile a retenir en cas de reconnexion mais
-                  doit aussi etre unique a ce site en cas de hack de la base de
-                  donnée; il doit également être assez complexe pour ne pas etre
-                  deviner. Pour vous connecter, cela ce fait sur la page profile
-                  du site. Si vous perdez votre mot de passe, un systeme de mail
-                  a était mis au point, vous receverez un mail avec un lien de
-                  réinitialisation de mot de passe votre compte.
-                  <br />
-                  Note: Je n'ai moi-même pas accès a vos mot de passes car ils
-                  sont cryptés dans la base de données.
-                  <br />
-                  Une fois connecté, rien ne vous empeche de pourvoir changer
-                  votre mot de passe de la même manière.Ainsi que votre nom
-                  d'utilisateur. Vous ne pouvez pas modifier votre Identifiant
-                  Unique, ni changer de mail (sauf cas dûment justifier, en me
-                  contactant par la catégorie 'FeedBack du site'). Dans votre
-                  profile, vous pouvez voir les jeux posséder sur votre compte
-                  et pouvez en activer un à l'aide d'une clé qui vous sera
-                  envoyé par mail si besoin (dans le cadre de jeux payant, les
-                  jeux gratuits seront automatiquement activés). Votre compte
-                  peut-être également utilisé dans le Nytuo Launcher pour que
-                  vous puissiez retrouver votre Nom d'Utilisateur dans les jeux
-                  et accéder à vos jeux.Toutes les fonctionnalités du site lié
-                  aux comptes sont partagés avec le launcher et sont également
-                  disponible sur ce dernier. Si vous cochez l'option 'se
-                  souvenir de moi', le mot de passe est stocké dans un cookie (
-                  chiffré ), ainsi que votre nom d'utilisateur, pour vous
-                  permettre une reconnexion plus simple. Sur le Launcher, votre
-                  mot de passe est stocké dans un fichier txt sur votre machine,
-                  il n'est cependant pas sécurisé.
+                  <strong>Intro et avertissement:</strong><br/>
+                  Depuis la dernière mise à jour en date du 09/04/2021 pour le launcher et de quelques jours plus tot pour le site internet, le systeme de compte est maintenant gérer par Google Firebase, permettant la connexion avec des services comme Google, Github, Twitter, Microsoft ou encore Facebook et bien sûre toujours avec la combinaison mail/ mot de passe.
+                  <br/>La connexion est gérer par FireBase, tout est sécuriser. Pour plus d'informations, aller directement sur le site de Google Firebase ou poser votre question dans la rubrique FeedBack.<br/>
+                  Vous pouvez bien sûre aller consulter le project du site sur <a href="https://github.com/Nytuo/Nytuo-Website_Project">GitHub</a>.<br/>
+                  <strong>Connexion au compte dans le Nytuo-Launcher:</strong><br/>
+                  1.Quand la page de connexion apparait, connecter vous !
+                  2.Un message apparaitera après vous être connecté. Vous allez devoir fermer tout fenêtre du Launcher et relancer ce dernier.
+                  3.La connexion s'effectue tout seul automatiquement et le launcher continu vers la page principale.
+                  Si jamais vous abandonnez la connexion (vous quittez le launcher avant/sans de vous être connecté), le prochain lancement vous aurez un message qui vous demandera de fermer les fenêtre et de redémarrer le launcher.
+                  En cas d'erreur envoyer moi un feedback.
+                  <strong>Déconnexion du compte sur le Launcher</strong><br/>
+                  Connecter dans le launcher depuis n'importe qu'elle page cliquer dans la bar de navigation à gauche sur 'se déconnecter'.
+                  Sur Windows, un CMD se lance (tout est automatique) et au bout de 5 secondes, apres fermeture du launcher, il vous déconnecte en supprimant toutes traces de votre compte dans le Launcher.
+                  Sur Linux, cela est un peu différent, vous devrez ouvrir un Terminal et mettre les commandes dans l'ordre : <strong>cd ~/snap/nytuo-launcher/x1/.config</strong> et <strong>rm -rf Nytuo-Launcher</strong>.
+                  Vous pouvez alors redémarrer le launcher et vous Connectez.
                 </p>
               </span>
             </div>

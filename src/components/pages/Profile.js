@@ -19,10 +19,13 @@ class Profile extends Component {
         this.setState({ User: user });
         this.timeout = setTimeout(() => {
           var fetchGames = db.ref("users/" + this.state.User.uid + "/games");
+          console.log(fetchGames);
           fetchGames.on("value", (snapshot) => {
             const data = snapshot.val();
             const listOfGames = data;
             this.Games = listOfGames.split(",");
+            console.log(this.Games)
+
             this.setState({ stateLoading: false });
             this.forceUpdate();
           });

@@ -22,6 +22,7 @@ class Navbar extends Component {
   }
   render() {
     return (
+      <>
       <div className="navbar-fixed">
         <nav>
           <div className="nav-wrapper">
@@ -163,6 +164,8 @@ class Navbar extends Component {
               </li>
             </ul>
           </div>
+        </nav>
+      </div>
           <ul
             className="sidenav"
             id="mobile-demo"
@@ -230,8 +233,7 @@ class Navbar extends Component {
               )}
             </li>
           </ul>
-        </nav>
-      </div>
+        </>
     );
   }
 }
