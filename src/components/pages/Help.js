@@ -5,6 +5,8 @@ import Footer from "../Footer";
 export default class Help extends Component {
   componentDidMount() {
     M.Collapsible.init(this.collapsible, []);
+    M.Collapsible.init(this.collapsible2, []);
+
   }
   render() {
     return (
@@ -311,8 +313,8 @@ export default class Help extends Component {
         </ul>
         <h1>Générale :</h1>
         <ul class="collapsible"
-          ref={(collapsible) => {
-            this.collapsible = collapsible;
+          ref={(collapsible2) => {
+            this.collapsible2 = collapsible2;
           }}>
           <li>
             <div class="collapsible-header">Comptes</div>
