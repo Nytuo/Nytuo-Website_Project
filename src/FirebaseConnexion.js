@@ -92,7 +92,7 @@ function FirebaseConnexion() {
         var tmp = db.ref("users/" + user.uid + "/games");
         tmp.on("value", (snapshot) => {
           const data = snapshot.val();
-          console.log(data)
+          console.log(data);
           if (data == null) {
             var dbco1 = db.ref("users");
             dbco1.child(user.uid).set({
