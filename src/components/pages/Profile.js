@@ -3,6 +3,7 @@ import firebase from "../../Firebase";
 import { ButtonA } from "../ButtonA";
 import { ButtonOC } from "../ButtonOC";
 import LoaderMultiColor from "../LoaderMultiColor";
+import Footer from "../Footer";
 
 class Profile extends Component {
   constructor(props) {
@@ -74,7 +75,7 @@ class Profile extends Component {
                     )}
                   </p>
                   <p>
-                    Vous êtes connecté avec :{" "}
+                    Vous êtes connecté avec :
                     {this.state.User.providerData.map((profile) => {
                       if (profile.providerId == "password") {
                         return "Nytuo Account (Firebase password)";
@@ -101,15 +102,16 @@ class Profile extends Component {
                 <LoaderMultiColor />
               ) : (
                 <div>
-                  {firebase.auth().currentUser.providerData.map((userInfo) => {
-                    if (userInfo.providerId !== "google.com") {
+                  {this.state.User.providerData.map((userInfo) => {
+                    if (userInfo.providerId === "password") {
                       return (
                         <div style={{ textAlign: "center" }}>
                           <a
-                            class="waves-effect waves-light btn modal-trigger"
-                            data-target="Modmodal"
+                            className="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#Modmodal1"
                           >
-                            <i class="material-icons left">edit</i>
+
                             Personalisation
                           </a>
                         </div>
@@ -117,9 +119,11 @@ class Profile extends Component {
                     } else {
                       return "";
                     }
-                  })}
+                  })} <h1>Jeux activer sur votre compte:</h1>
                 </div>
+
               )}
+
               <div class="cards-list">
                 {this.state.stateLoading == true ? (
                   <LoaderMultiColor />
@@ -130,33 +134,22 @@ class Profile extends Component {
                         case "SGB":
                           return (
                             <div class="homeresize">
-                              <div class="card">
-                                <a href="/superGeoffreyBros">
-                                  <div class="card-image">
-                                    <img alt="" src={"../images/SGB2.png"} />
-                                    <span class="card-title">
-                                      Super Geoffrey Bros
-                                    </span>
-                                  </div>
-                                </a>
-                                <div class="card-content">
-                                  <ButtonA link={"nytuo://launchid/sgb"}>
-                                    <i class="material-icons left">
-                                      play_arrow
-                                    </i>
-                                    Jouer
-                                  </ButtonA>
+                              <div className="card">
+                                <img src="../images/SGB2.png" alt="..."/>
+                                <div className="card-body">
+                                  <h5 className="card-title">Super Geoffrey Bros</h5>
+                                  <a href="/superGeoffreyBros" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+                                  <a href="nytuo://launchid/sgb" className="btn btn-primary">Lancer le jeu</a>
                                   <ButtonOC
-                                    link={() => {
-                                      this.setState(
-                                        { currentclickedbtn: "SGB" },
-                                        function () {
-                                          this.handleDeleteGamefromDB();
-                                        }
-                                      );
-                                    }}
+                                      link={() => {
+                                        this.setState(
+                                            { currentclickedbtn: "SGB" },
+                                            function () {
+                                              this.handleDeleteGamefromDB();
+                                            }
+                                        );
+                                      }}
                                   >
-                                    <i class="material-icons left">delete</i>
                                     Retirer de la bibliothèque
                                   </ButtonOC>
                                 </div>
@@ -165,396 +158,289 @@ class Profile extends Component {
                           );
                         case "SFO":
                           return (
-                            <div class="homeresize">
-                              <div class="card">
-                                <a href="/shootFighterOrigins">
-                                  <div class="card-image">
-                                    <img alt="" src={"../images/IMGSFO2.png"} />
-                                    <span class="card-title">
-                                      ShootFighter Origins
-                                    </span>
+                              <div className="homeresize">
+                                <div className="card">
+                                  <img src="../images/IMGSFO2.png" alt="..."/>
+                                  <div className="card-body">
+                                    <h5 className="card-title">ShootFighter Origins</h5>
+                                    <a href="/shootFighterOrigins" className="btn btn-primary"
+                                       style={{margin: "5px"}}>Voir</a>
+                                    <a href="nytuo://launchid/sfo" className="btn btn-primary">Lancer le jeu</a>
+                                    <ButtonOC
+                                        link={() => {
+                                          this.setState(
+                                              {currentclickedbtn: "SFO"},
+                                              function () {
+                                                this.handleDeleteGamefromDB();
+                                              }
+                                          );
+                                        }}
+                                    >
+                                      Retirer de la bibliothèque
+                                    </ButtonOC>
                                   </div>
-                                </a>
-                                <div class="card-content">
-                                  <ButtonA link={"nytuo://launchid/sfo"}>
-                                    <i class="material-icons left">
-                                      play_arrow
-                                    </i>
-                                    Jouer
-                                  </ButtonA>
-                                  <ButtonOC
-                                    link={() => {
-                                      this.setState(
-                                        { currentclickedbtn: "SFO" },
-                                        function () {
-                                          this.handleDeleteGamefromDB();
-                                        }
-                                      );
-                                    }}
-                                  >
-                                    <i class="material-icons left">delete</i>
-                                    Retirer de la bibliothèque
-                                  </ButtonOC>
                                 </div>
                               </div>
-                            </div>
                           );
                         case "SF":
                           return (
-                            <div class="homeresize">
-                              <div class="card">
-                                <a href="/shootFighter">
-                                  <div class="card-image">
-                                    <img alt="" src={"../images/IMGSF.png"} />
-                                    <span class="card-title">ShootFighter</span>
+                              <div className="homeresize">
+                                <div className="card">
+                                  <img src="../images/IMGSF.png" alt="..."/>
+                                  <div className="card-body">
+                                    <h5 className="card-title">ShootFighter</h5>
+                                    <a href="/shootFighter" className="btn btn-primary"
+                                       style={{margin: "5px"}}>Voir</a>
+                                    <a href="nytuo://launchid/sf" className="btn btn-primary">Lancer le jeu</a>
+                                    <ButtonOC
+                                        link={() => {
+                                          this.setState(
+                                              {currentclickedbtn: "SF"},
+                                              function () {
+                                                this.handleDeleteGamefromDB();
+                                              }
+                                          );
+                                        }}
+                                    >
+                                      Retirer de la bibliothèque
+                                    </ButtonOC>
                                   </div>
-                                </a>
-                                <div class="card-content">
-                                  <ButtonA link={"nytuo://launchid/sf"}>
-                                    <i class="material-icons left">
-                                      play_arrow
-                                    </i>
-                                    Jouer
-                                  </ButtonA>
-                                  <ButtonOC
-                                    link={() => {
-                                      this.setState(
-                                        { currentclickedbtn: "SF" },
-                                        function () {
-                                          this.handleDeleteGamefromDB();
-                                        }
-                                      );
-                                    }}
-                                  >
-                                    <i class="material-icons left">delete</i>
-                                    Retirer de la bibliothèque
-                                  </ButtonOC>
                                 </div>
                               </div>
-                            </div>
                           );
                         case "AE":
                           return (
-                            <div class="homeresize">
-                              <div class="card">
-                                <a href="/asteroidEscape">
-                                  <div class="card-image">
-                                    <img alt="" src={"../images/IMGAE.png"} />
-                                    <span class="card-title">
-                                      AsteroidEscape
-                                    </span>
+                              <div className="homeresize">
+                                <div className="card">
+                                  <img src="../images/IMGAE.png" alt="..."/>
+                                  <div className="card-body">
+                                    <h5 className="card-title">AsteroidEscape</h5>
+                                    <a href="/asteroidEscape" className="btn btn-primary"
+                                       style={{margin: "5px"}}>Voir</a>
+                                    <a href="nytuo://launchid/ae" className="btn btn-primary">Lancer le jeu</a>
+                                    <ButtonOC
+                                        link={() => {
+                                          this.setState(
+                                              {currentclickedbtn: "AE"},
+                                              function () {
+                                                this.handleDeleteGamefromDB();
+                                              }
+                                          );
+                                        }}
+                                    >
+                                      Retirer de la bibliothèque
+                                    </ButtonOC>
                                   </div>
-                                </a>
-                                <div class="card-content">
-                                  <ButtonA link={"nytuo://launchid/ae"}>
-                                    <i class="material-icons left">
-                                      play_arrow
-                                    </i>
-                                    Jouer
-                                  </ButtonA>
-                                  <ButtonOC
-                                    link={() => {
-                                      this.setState(
-                                        { currentclickedbtn: "AE" },
-                                        function () {
-                                          this.handleDeleteGamefromDB();
-                                        }
-                                      );
-                                    }}
-                                  >
-                                    <i class="material-icons left">delete</i>
-                                    Retirer de la bibliothèque
-                                  </ButtonOC>
                                 </div>
                               </div>
-                            </div>
                           );
                         case "FWD":
                           return (
-                            <div class="homeresize">
-                              <div class="card">
-                                <a href="/fireWallDefender">
-                                  <div class="card-image">
-                                    <img alt="" src={"../images/IMGFWD.png"} />
-                                    <span class="card-title">
-                                      FireWall Defender
-                                    </span>
+                              <div className="homeresize">
+                                <div className="card">
+                                  <img src="../images/IMGFWD.png" alt="..."/>
+                                  <div className="card-body">
+                                    <h5 className="card-title">FireWall Defender</h5>
+                                    <a href="/fireWallDefender" className="btn btn-primary"
+                                       style={{margin: "5px"}}>Voir</a>
+                                    <a href="nytuo://launchid/fwd" className="btn btn-primary">Lancer le jeu</a>
+                                    <ButtonOC
+                                        link={() => {
+                                          this.setState(
+                                              {currentclickedbtn: "FWD"},
+                                              function () {
+                                                this.handleDeleteGamefromDB();
+                                              }
+                                          );
+                                        }}
+                                    >
+                                      Retirer de la bibliothèque
+                                    </ButtonOC>
                                   </div>
-                                </a>
-                                <div class="card-content">
-                                  <ButtonA link={"nytuo://launchid/fwd"}>
-                                    <i class="material-icons left">
-                                      play_arrow
-                                    </i>
-                                    Jouer
-                                  </ButtonA>
-                                  <ButtonOC
-                                    link={() => {
-                                      this.setState(
-                                        { currentclickedbtn: "FWD" },
-                                        function () {
-                                          this.handleDeleteGamefromDB();
-                                        }
-                                      );
-                                    }}
-                                  >
-                                    <i class="material-icons left">delete</i>
-                                    Retirer de la bibliothèque
-                                  </ButtonOC>
                                 </div>
                               </div>
-                            </div>
                           );
                         case "LA":
                           return (
-                            <div class="homeresize">
-                              <div class="card">
-                                <a href="/lutinAdventure">
-                                  <div class="card-image">
-                                    <img alt="" src={"../images/IMGLA.png"} />
-                                    <span class="card-title">
-                                      Lutin Adventure
-                                    </span>
+                              <div className="homeresize">
+                                <div className="card">
+                                  <img src="../images/IMGLA.png" alt="..."/>
+                                  <div className="card-body">
+                                    <h5 className="card-title">Lutin Adventure</h5>
+                                    <a href="/lutinAdventure" className="btn btn-primary"
+                                       style={{margin: "5px"}}>Voir</a>
+                                    <a href="nytuo://launchid/la" className="btn btn-primary">Lancer le jeu</a>
+                                    <ButtonOC
+                                        link={() => {
+                                          this.setState(
+                                              {currentclickedbtn: "LA"},
+                                              function () {
+                                                this.handleDeleteGamefromDB();
+                                              }
+                                          );
+                                        }}
+                                    >
+                                      Retirer de la bibliothèque
+                                    </ButtonOC>
                                   </div>
-                                </a>
-                                <div class="card-content">
-                                  <ButtonA link={"nytuo://launchid/la"}>
-                                    <i class="material-icons left">
-                                      play_arrow
-                                    </i>
-                                    Jouer
-                                  </ButtonA>
-                                  <ButtonOC
-                                    link={() => {
-                                      this.setState(
-                                        { currentclickedbtn: "LA" },
-                                        function () {
-                                          this.handleDeleteGamefromDB();
-                                        }
-                                      );
-                                    }}
-                                  >
-                                    <i class="material-icons left">delete</i>
-                                    Retirer de la bibliothèque
-                                  </ButtonOC>
                                 </div>
                               </div>
-                            </div>
                           );
                         case "LAATIM":
                           return (
-                            <div class="homeresize">
-                              <div class="card">
-                                <a href="/legendAdventureAndTheInfernalMaze">
-                                  <div class="card-image">
-                                    <img
-                                      alt=""
-                                      src={"../images/IMGLAATIM.png"}
-                                    />
-                                    <span class="card-title">
-                                      Legend Adventure And The Infernal Maze
-                                    </span>
+                              <div className="homeresize">
+                                <div className="card">
+                                  <img src="../images/IMGLAATIM.png" alt="..."/>
+                                  <div className="card-body">
+                                    <h5 className="card-title">Legend Adventure And The Infernal Maze</h5>
+                                    <a href="/legendAdventureAndTheInfernalMaze" className="btn btn-primary"
+                                       style={{margin: "5px"}}>Voir</a>
+                                    <a href="nytuo://launchid/laatim" className="btn btn-primary">Lancer le jeu</a>
+                                    <ButtonOC
+                                        link={() => {
+                                          this.setState(
+                                              {currentclickedbtn: "LAATIM"},
+                                              function () {
+                                                this.handleDeleteGamefromDB();
+                                              }
+                                          );
+                                        }}
+                                    >
+                                      Retirer de la bibliothèque
+                                    </ButtonOC>
                                   </div>
-                                </a>
-                                <div class="card-content">
-                                  <ButtonA link={"nytuo://launchid/laatim"}>
-                                    <i class="material-icons left">
-                                      play_arrow
-                                    </i>
-                                    Jouer
-                                  </ButtonA>
-                                  <ButtonOC
-                                    link={() => {
-                                      this.setState(
-                                        { currentclickedbtn: "LAATIM" },
-                                        function () {
-                                          this.handleDeleteGamefromDB();
-                                        }
-                                      );
-                                    }}
-                                  >
-                                    <i class="material-icons left">delete</i>
-                                    Retirer de la bibliothèque
-                                  </ButtonOC>
                                 </div>
                               </div>
-                            </div>
                           );
                         case "SNRE":
                           return (
-                            <div class="homeresize">
-                              <div class="card">
-                                <a href="/sansNomReedition">
-                                  <div class="card-image">
-                                    <img alt="" src={"../images/IMGSN.png"} />
-                                    <span class="card-title">
-                                      Sans Nom Réédition
-                                    </span>
+                              <div className="homeresize">
+                                <div className="card">
+                                  <img src="../images/IMGSN.png" alt="..."/>
+                                  <div className="card-body">
+                                    <h5 className="card-title">Sans Nom Réédition</h5>
+                                    <a href="/sansNomReedition" className="btn btn-primary"
+                                       style={{margin: "5px"}}>Voir</a>
+                                    <a href="nytuo://launchid/sn" className="btn btn-primary">Lancer le jeu</a>
+                                    <ButtonOC
+                                        link={() => {
+                                          this.setState(
+                                              {currentclickedbtn: "SNRE"},
+                                              function () {
+                                                this.handleDeleteGamefromDB();
+                                              }
+                                          );
+                                        }}
+                                    >
+                                      Retirer de la bibliothèque
+                                    </ButtonOC>
                                   </div>
-                                </a>
-                                <div class="card-content">
-                                  <ButtonA link={"nytuo://launchid/sn"}>
-                                    <i class="material-icons left">
-                                      play_arrow
-                                    </i>
-                                    Jouer
-                                  </ButtonA>
-                                  <ButtonOC
-                                    link={() => {
-                                      this.setState(
-                                        { currentclickedbtn: "SNRE" },
-                                        function () {
-                                          this.handleDeleteGamefromDB();
-                                        }
-                                      );
-                                    }}
-                                  >
-                                    <i class="material-icons left">delete</i>
-                                    Retirer de la bibliothèque
-                                  </ButtonOC>
                                 </div>
                               </div>
-                            </div>
                           );
                         case "TB":
                           return (
-                            <div class="homeresize">
-                              <div class="card">
-                                <a href="/tanksBattle">
-                                  <div class="card-image">
-                                    <img alt="" src={"../images/IMGTB.png"} />
-                                    <span class="card-title">TanksBattle</span>
+                              <div className="homeresize">
+                                <div className="card">
+                                  <img src="../images/IMGTB.png" alt="..."/>
+                                  <div className="card-body">
+                                    <h5 className="card-title">TanksBattle</h5>
+                                    <a href="/tanksBattle" className="btn btn-primary"
+                                       style={{margin: "5px"}}>Voir</a>
+                                    <a href="nytuo://launchid/tb" className="btn btn-primary">Lancer le jeu</a>
+                                    <ButtonOC
+                                        link={() => {
+                                          this.setState(
+                                              {currentclickedbtn: "TB"},
+                                              function () {
+                                                this.handleDeleteGamefromDB();
+                                              }
+                                          );
+                                        }}
+                                    >
+                                      Retirer de la bibliothèque
+                                    </ButtonOC>
                                   </div>
-                                </a>
-                                <div class="card-content">
-                                  <ButtonA link={"nytuo://launchid/tb"}>
-                                    <i class="material-icons left">
-                                      play_arrow
-                                    </i>
-                                    Jouer
-                                  </ButtonA>
-                                  <ButtonOC
-                                    link={() => {
-                                      this.setState(
-                                        { currentclickedbtn: "TB" },
-                                        function () {
-                                          this.handleDeleteGamefromDB();
-                                        }
-                                      );
-                                    }}
-                                  >
-                                    <i class="material-icons left">delete</i>
-                                    Retirer de la bibliothèque
-                                  </ButtonOC>
                                 </div>
                               </div>
-                            </div>
                           );
                         case "TTD":
                           return (
-                            <div class="homeresize">
-                              <div class="card">
-                                <a href="/theTardisDefender">
-                                  <div class="card-image">
-                                    <img alt="" src={"../images/IMGTTD.png"} />
-                                    <span class="card-title">
-                                      The Tardis Defender
-                                    </span>
+                              <div className="homeresize">
+                                <div className="card">
+                                  <img src="../images/IMGTTD.png" alt="..."/>
+                                  <div className="card-body">
+                                    <h5 className="card-title">The Tardis Defender</h5>
+                                    <a href="/theTardisDefender" className="btn btn-primary"
+                                       style={{margin: "5px"}}>Voir</a>
+                                    <a href="nytuo://launchid/ttd" className="btn btn-primary">Lancer le jeu</a>
+                                    <ButtonOC
+                                        link={() => {
+                                          this.setState(
+                                              {currentclickedbtn: "TTD"},
+                                              function () {
+                                                this.handleDeleteGamefromDB();
+                                              }
+                                          );
+                                        }}
+                                    >
+                                      Retirer de la bibliothèque
+                                    </ButtonOC>
                                   </div>
-                                </a>
-                                <div class="card-content">
-                                  <ButtonA link={"nytuo://launchid/ttd"}>
-                                    <i class="material-icons left">
-                                      play_arrow
-                                    </i>
-                                    Jouer
-                                  </ButtonA>
-                                  <ButtonOC
-                                    link={() => {
-                                      this.setState(
-                                        { currentclickedbtn: "TTD" },
-                                        function () {
-                                          this.handleDeleteGamefromDB();
-                                        }
-                                      );
-                                    }}
-                                  >
-                                    <i class="material-icons left">delete</i>
-                                    Retirer de la bibliothèque
-                                  </ButtonOC>
                                 </div>
                               </div>
-                            </div>
                           );
                         case "VITF":
                           return (
-                            <div class="homeresize">
-                              <div class="card">
-                                <a href="/vincentInTheForest">
-                                  <div class="card-image">
-                                    <img alt="" src={"../images/IMGVITF.png"} />
-                                    <span class="card-title">
-                                      Vincent In The Forest
-                                    </span>
+                              <div className="homeresize">
+                                <div className="card">
+                                  <img src="../images/IMGVITF.png" alt="..."/>
+                                  <div className="card-body">
+                                    <h5 className="card-title">Vincent In The Forest</h5>
+                                    <a href="/vincentInTheForest" className="btn btn-primary"
+                                       style={{margin: "5px"}}>Voir</a>
+                                    <a href="nytuo://launchid/vitf" className="btn btn-primary">Lancer le jeu</a>
+                                    <ButtonOC
+                                        link={() => {
+                                          this.setState(
+                                              {currentclickedbtn: "VITF"},
+                                              function () {
+                                                this.handleDeleteGamefromDB();
+                                              }
+                                          );
+                                        }}
+                                    >
+                                      Retirer de la bibliothèque
+                                    </ButtonOC>
                                   </div>
-                                </a>
-                                <div class="card-content">
-                                  <ButtonA link={"nytuo://launchid/vitf"}>
-                                    <i class="material-icons left">
-                                      play_arrow
-                                    </i>
-                                    Jouer
-                                  </ButtonA>
-                                  <ButtonOC
-                                    link={() => {
-                                      this.setState(
-                                        { currentclickedbtn: "VITF" },
-                                        function () {
-                                          this.handleDeleteGamefromDB();
-                                        }
-                                      );
-                                    }}
-                                  >
-                                    <i class="material-icons left">delete</i>
-                                    Retirer de la bibliothèque
-                                  </ButtonOC>
                                 </div>
                               </div>
-                            </div>
                           );
                         case "WR":
                           return (
-                            <div class="homeresize">
-                              <div class="card">
-                                <a href="/winRun">
-                                  <div class="card-image">
-                                    <img alt="" src={"../images/IMGWR.png"} />
-                                    <span class="card-title">WinRun</span>
+                              <div className="homeresize">
+                                <div className="card">
+                                  <img src="../images/IMGWR.png" alt="..."/>
+                                  <div className="card-body">
+                                    <h5 className="card-title">WinRun</h5>
+                                    <a href="/winRun" className="btn btn-primary"
+                                       style={{margin: "5px"}}>Voir</a>
+                                    <a href="nytuo://launchid/wr" className="btn btn-primary">Lancer le jeu</a>
+                                    <ButtonOC
+                                        link={() => {
+                                          this.setState(
+                                              {currentclickedbtn: "WR"},
+                                              function () {
+                                                this.handleDeleteGamefromDB();
+                                              }
+                                          );
+                                        }}
+                                    >
+                                      Retirer de la bibliothèque
+                                    </ButtonOC>
                                   </div>
-                                </a>
-                                <div class="card-content">
-                                  <ButtonA link={"nytuo://launchid/wr"}>
-                                    <i class="material-icons left">
-                                      play_arrow
-                                    </i>
-                                    Jouer
-                                  </ButtonA>
-                                  <ButtonOC
-                                    link={() => {
-                                      this.setState(
-                                        { currentclickedbtn: "WR" },
-                                        function () {
-                                          this.handleDeleteGamefromDB();
-                                        }
-                                      );
-                                    }}
-                                  >
-                                    <i class="material-icons left">delete</i>
-                                    Retirer de la bibliothèque
-                                  </ButtonOC>
                                 </div>
                               </div>
-                            </div>
                           );
                         default:
                           return (
@@ -571,8 +457,9 @@ class Profile extends Component {
           <div className="spaceX2">
             <p>Connecte toi pour voir les jeux que tu possèdes !</p>
           </div>
-        )}
+        )}<Footer />
       </div>
+
     );
   }
 }

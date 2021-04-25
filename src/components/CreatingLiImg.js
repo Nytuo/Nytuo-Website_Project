@@ -5,9 +5,11 @@ export const SSD = ({ rm, src }) => {
     return <></>;
   } else {
     return (
-      <li>
-        <img class="responsive-img" alt="" src={"../images/" + src + ".png"} />
-      </li>
+      <>
+        <div className="carousel-item">
+        <img className="d-block w-100" alt="" src={"../images/" + src + ".png"} />
+        </div>
+      </>
     );
   }
 };

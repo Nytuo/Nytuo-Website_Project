@@ -17,64 +17,37 @@ function Login(props) {
   } = props;
   return (
     <>
-      <div className="row">
-        <div className="input-field col s12">
-          <input
-            type="email"
-            className="validate"
-            autoFocus
-            id="mail"
-            require
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <label for="mail">
-            E-Mail (requis également pour mot de passe oublier)
-          </label>
-        </div>
+      <div className="form-floating mb-3">
+        <input type="email" className="form-control" id="mail" required placeholder="name@example.com" value={email}
+               onChange={(e) => setEmail(e.target.value)}/>
+          <label htmlFor="floatingInput">Email (même pour mot de passe oublier)</label>
       </div>
+      <div className="form-floating mb-3">
+        <input type="password" className="form-control" id="pwd" required placeholder="Password" value={password}
+               onChange={(e) => setPassword(e.target.value)}/>
+          <label htmlFor="floatingPassword">Mot de passe</label>
+      </div>
+
+
       {hasAccount ? (
         ""
       ) : (
-        <div className="row">
-          <div className="input-field col s12">
-            <input
-              type="text"
-              id="pseudo"
-              className="validate"
-              require
-              value={pseudo}
-              onChange={(e) => setPseudo(e.target.value)}
-            />
-            <label for="pseudo">Pseudo</label>
+          <div className="form-floating mb-3">
+              <input type="text" className="form-control" id="pseudo" required placeholder="Pseudo" value={pseudo}
+                     onChange={(e) => setPseudo(e.target.value)}/>
+              <label htmlFor="floatingPseudo">Pseudo</label>
           </div>
-        </div>
       )}
-      <div className="row">
-        <div className="input-field col s12">
-          <input
-            type="password"
-            id="pwd"
-            className="validate"
-            require
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <label for="pwd">Mot de passe</label>
-        </div>
-      </div>
       <div>
         {hasAccount ? (
           <div style={{ textAlign: "center" }}>
-            <p>{emailError}</p>
-            <p>{passwordError}</p>
-            <button
-              className="btn waves-effect waves-light"
-              onClick={handleLogin}
-            >
-              <i class="material-icons left">login</i>
-              Se connecter
-            </button>
+            <p style={{ color: "red" }}>{emailError}</p>
+            <p style={{ color: "red"}}>{passwordError}</p>
+            <div className="d-grid gap-2 mx-auto">
+              <button className="btn btn-primary" type="button" onClick={handleLogin}>
+                Se connecter</button>
+            </div>
+
             <p>
               Pas encore de compte ?{" "}
               <span
@@ -87,13 +60,12 @@ function Login(props) {
           </div>
         ) : (
           <div style={{ textAlign: "center" }}>
-            <button
-              className="btn waves-effect waves-light"
-              onClick={handleSignUp}
-            >
-              <i class="material-icons left">login</i>
-              S'inscrire
-            </button>
+              <div className="d-grid gap-2 mx-auto">
+                  <button className="btn btn-primary" type="button" onClick={handleSignUp}>
+                      S'inscrire
+                  </button>
+              </div>
+
             <p>
               Vous avez déjà un compte ?{" "}
               <span

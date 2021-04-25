@@ -12,10 +12,10 @@ export const ButtonStore = ({
     return (
       <a
         onClick={link}
-        className="waves-effect waves-light btn disabled"
+        className="btn-primary btn disabled"
         style={{ backgroundColor: bgcolor, color: colori, margin: "5px" }}
       >
-        <i class="material-icons right">{ico}</i>
+
         {children}
       </a>
     );
@@ -23,10 +23,10 @@ export const ButtonStore = ({
     return (
       <a
         onClick={link}
-        className="waves-effect waves-light btn"
+        className="btn-primary btn"
         style={{ backgroundColor: bgcolor, color: colori, margin: "5px" }}
       >
-        <i class="material-icons right">{ico}</i>
+
         {children}
       </a>
     );

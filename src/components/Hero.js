@@ -1,160 +1,137 @@
-import React, { Component, useEffect } from "react";
+import React, {Component, useEffect} from "react";
 import "../App.css";
-import M from "materialize-css";
 
 export default class Hero extends Component {
-  componentDidMount() {
-    M.Slider.init(this.slider, { height: 650 });
-  }
-  render() {
-    return (
-      <div className="hero-container">
-        <h1 className="blanc">Welcome to a new Universe</h1>
-        <h2>
-          Important : Le site change de service de base de données et passe sous
-          React. Les bases de données seront gérer par le service Google
-          Firebase facilitant les choses pour tout le monde. L'ancienne base de
-          données n'est plus accessible.
-          <br />
-          Pour le launcher, une reconstruction de ce dernier avec React et la
-          base de données Firebase est prévue. Elle prendra un peu de temps pour
-          sortir. Pour les éventuelles nouveaux utilisateurs, veuillez-vous
-          connecter directement par l'interface du launcher qui reste
-          fonctionnelle.
-          <br />
-          -Merci, Nytuo, Arnaud BEUX
-        </h2>
-        <p>
-          Domaines faisant parties de l'Univers Nytuo : nytuo.yo.fr |
-          Beta.nytuo.yo.fr | launcher.nytuo.yo.fr | nytuowebsite.wep.app |
-          nytuo-launcher.web.app | nytuo.github.io
-        </p>
-        <div
-          className="slider"
-          style={{ width: "100%" }}
-          ref={(slider) => {
-            this.slider = slider;
-          }}
-        >
-          <ul className="slides">
-            <li>
-              <a href="sfo.html">
-                <img src="../images/IMGSFO2.png" />
-              </a>
-              <div className="caption right-align">
-                <h3>Dernier jeu : ShootFighter Origins</h3>
-                <h5 className="light grey-text text-lighten-3">
-                  Tuer des zombies par vagues en 2D
-                </h5>
-              </div>
-            </li>
-            <li>
-              <a href="sn.html">
-                <img src="../images/IMGSN.png" />
-              </a>
-              <div class="caption center-align">
-                <h3>SansNom Réédition</h3>
-                <h5 class="light grey-text text-lighten-3">
-                  Mon premier jeu, enfin achevé.
-                </h5>
-              </div>
-            </li>
-            <li>
-              <a href="sgb.html">
-                <img src="../images/SGB2.png" />
-              </a>
-              <div class="caption right-align">
-                <h3>Super Geoffrey Bros</h3>
-                <h5 class="light grey-text text-lighten-3">
-                  Une semaine, Un objectif, Un jeu
-                </h5>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="cards-list">
-          <div class="homeresize">
-            <a href="/games">
-              <div class="card">
-                <div class="card-image">
-                  <img alt="" src="../images/Nytuo games.png" />
-                  <span class="card-title">Jeux</span>
+    componentDidMount() {
+    }
+
+    render() {
+        return (
+
+            <div className="hero-container">
+                <h1 className="blanc">Welcome to a new Universe</h1>
+
+                <div style={{width: '50%'}}>
+                <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                className="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                    </div>
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
+                            <a href="/shootFighterOrigins"><img src="../images/IMGSFO2.png" className="d-block w-100" alt="..."/></a>
+                                <div className="carousel-caption d-none d-md-block">
+                                    <h5>Dernier jeu : ShootFighter Origins</h5>
+                                    <p>Tuer des zombies par vagues en 2D</p>
+                                </div>
+                        </div>
+                        <div className="carousel-item">
+                            <a href="/sansNomReedition"><img src="../images/IMGSN.png" className="d-block w-100" alt="..."/></a>
+                                <div className="carousel-caption d-none d-md-block">
+                                    <h5>SansNom Réédition</h5>
+                                    <p>Mon premier jeu, enfin achevé.</p>
+                                </div>
+                        </div>
+                        <div className="carousel-item">
+                            <a href="/superGeoffreyBros"><img src="../images/SGB2.png" className="d-block w-100" alt="..."/></a>
+                                <div className="carousel-caption d-none d-md-block">
+                                    <h5>Super Geoffrey Bros</h5>
+                                    <p>Une semaine, Un objectif, Un jeu</p>
+                                </div>
+                        </div>
+                    </div>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Précedent</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Suivant</span>
+                    </button>
                 </div>
-                <div class="card-content">
-                  <p>Aller à la page des jeux</p>
+            </div>
+                <div class="cards-list">
+                    <div className="homeresize">
+                        <div className="card">
+                            <div className="card-header">
+                                Jeux
+                            </div>
+                            <div className="card-body">
+                                <h5 className="card-title">Aller à la page des jeux</h5>
+                                <p className="card-text">Voir tout les jeux de Nytuo</p>
+                                <a href="/games" className="btn btn-primary">Voir</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="homeresize">
+
+                    <div className="card">
+                        <div className="card-header">
+                            Logiciels
+                        </div>
+                        <div className="card-body">
+                            <h5 className="card-title">Aller à la page des Logiciels</h5>
+                            <p className="card-text">Tout les logiciels de Nytuo</p>
+                            <a href="/softwares" className="btn btn-primary">Voir</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div className="homeresize">
+
+                    <div className="card">
+                        <div className="card-header">
+                            Nytuo Launcher
+                        </div>
+                        <div className="card-body">
+                            <h5 className="card-title">Aller à la page du Nytuo Launcher</h5>
+                            <p className="card-text">Voir le Nytuo-Launcher</p>
+                            <a href="/nytuo-launcher" className="btn btn-primary">Voir</a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="homeresize">
-            <a href="/softwares">
-              <div class="card">
-                <div class="card-image">
-                  <img alt="" src="../images/Nytuo softwares.png" />
-                  <span class="card-title">Logiciels</span>
                 </div>
-                <div class="card-content">
-                  <p>Aller à la page des Logiciels</p>
+                <div className="cards-list">
+                    <div className="homeresize">
+
+                    <div className="card">
+                        <img src="../images/IMGSFO2.png" alt="..."/>
+                        <div className="card-body">
+                            <h5 className="card-title">ShootFighter Origins</h5>
+                            <p className="card-text">Aller à la page du dernier jeu en date</p>
+                            <a href="/shootFighterOrigins" className="btn btn-primary">Voir</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div className="homeresize">
+
+                    <div className="card">
+                        <img src="../images/IMGLAATIM.png" alt="..."/>
+                        <div className="card-body">
+                            <h5 className="card-title">Meilleur jeu</h5>
+                            <p className="card-text">Aller à la page du meilleur jeu (selon Itch.io et Gamejolt)</p>
+                            <a href="/legendAdventureAndTheInfernalMaze" className="btn btn-primary">Voir</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div className="homeresize">
+
+                    <div className="card">
+                        <img src="../images/SGB2.png" alt="..."/>
+                        <div className="card-body">
+                            <h5 className="card-title">Selection de l'éditeur</h5>
+                            <p className="card-text">Aller à la page du jeu selectionner par l'editeur (moi)</p>
+                            <a href="/superGeoffreyBros" className="btn btn-primary">Voir</a>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="homeresize">
-            <a href="/nytuo-launcher">
-              <div class="card">
-                <div class="card-image">
-                  <img alt="" src="../images/LogoLauncher.png" />
-                  <span class="card-title">Nytuo Launcher</span>
-                </div>
-                <div class="card-content">
-                  <p>Aller à la page du Nytuo Launcher</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="homeresize">
-            <a href="/shootFighterOrigins">
-              <div class="card">
-                <div class="card-image">
-                  <img alt="" src="../images/IMGSFO2.png" />
-                  <span class="card-title">ShootFighter Origins</span>
-                </div>
-                <div class="card-content">
-                  <p>Aller à la page du dernier jeu en date</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="homeresize">
-            <a href="/legendAdventureAndTheInfernalMaze">
-              <div class="card">
-                <div class="card-image">
-                  <img alt="" src="../images/IMGLAATIM.png" />
-                  <span class="card-title">Meilleur jeu</span>
-                </div>
-                <div class="card-content">
-                  <p>
-                    Aller à la page du meilleur jeu (selon Itch.io et Gamejolt)
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="homeresize">
-            <a href="/superGeoffreyBros">
-              <div class="card">
-                <div class="card-image">
-                  <img alt="" src="../images/SGB2.png" />
-                  <span class="card-title">Selection de l'éditeur</span>
-                </div>
-                <div class="card-content">
-                  <p>Aller à la page du jeu selectionner par l'editeur (moi)</p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    );
-  }
+            </div>
+        );
+    }
 }

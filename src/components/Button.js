@@ -5,7 +5,7 @@ export const Button = ({ children, colori, bgcolor, link }) => {
   return (
     <Link to={link} className="btn-mobile">
       <a
-        className="waves-effect waves-light btn"
+        className="btn-primary btn"
         style={{ backgroundColor: bgcolor, color: colori, margin: "5px" }}
       >
         {children}

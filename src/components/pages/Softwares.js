@@ -16,20 +16,18 @@ function Softwares() {
         <h1>Mes Logiciels :</h1>
         <div className="cards-list">
           <div className="homeresize">
-            <a href="nytuo-launcher">
-              <div className="card">
-                <div className="card-image">
-                  <img alt="" src="../images/LogoLauncher.png" />
-                </div>
-                <div className="card-content">
-                  <p>Un simple launcher pour mes jeux</p>
-                </div>
+            <div className="card">
+              <img src="../images/LogoLauncher.png" alt="..."/>
+              <div className="card-body">
+                <h5 className="card-title">Nytuo-Launcher</h5>
+                <p className="card-text">Un simple launcher pour mes jeux</p>
+                <a href="/nytuo-launcher" className="btn btn-primary">Voir</a>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>
-      <Footer></Footer>
+      <Footer/>
     </div>
   );
 }

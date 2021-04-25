@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import M from "materialize-css";
 import "./navbar.css";
 import firebase from "../Firebase";
+import bootstrap from 'bootstrap'
 
 class Navbar extends Component {
   constructor(props) {
@@ -14,226 +14,121 @@ class Navbar extends Component {
     firebase.auth().signOut();
   };
   componentDidMount() {
-    M.Sidenav.init(this.sidenav, []);
-    document.addEventListener("DOMContentLoaded", function () {
-      var elems = document.querySelectorAll(".tooltipped");
-      M.Tooltip.init(elems, { outDuration: 50 });
-    });
+
   }
   render() {
     return (
       <>
-        <div className="navbar-fixed">
-          <nav>
-            <div className="nav-wrapper">
-              <div className="logonav">
-                <a href="/" className="">
-                  <img
-                    alt=""
-                    src="../images/256.png"
-                    className="logonav"
-                    title="Logo de Nytuo"
-                  />
-                </a>
-              </div>
 
-              <a data-target="mobile-demo" className="sidenav-trigger">
-                <i className="material-icons">menu</i>
-              </a>
-              <ul className="right hide-on-med-and-down">
-                <li>
-                  <div class="chip">
-                    {firebase.auth().currentUser ? (
-                      firebase.auth().currentUser.photoURL && (
-                        <img
+        <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+            <a className="navbar-brand" href="#">
+              <img src="../images/256.png" alt="" width="120" height="67.5"/>
+            </a>
+          <div className="container-fluid">
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <a className="nav-link" href="/">Accueil</a>
+                </li>
+                <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle" href="/games" id="navbarDropdownMenuLink" role="button"
+                     data-bs-toggle="dropdown" aria-expanded="false">
+                    Jeux
+                  </a>
+                  <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a className="dropdown-item" href="/shootFighterOrigins">ShootFighter Origins</a></li>
+                    <li><a className="dropdown-item" href="/legendAdventureAndTheInfernalMaze">Legend Adventure And The Infernal Maze</a></li>
+                    <li><a className="dropdown-item" href="/superGeoffreyBros">Super Geoffrey Bros</a></li>
+                    <li><a className="dropdown-item" href="/shootFighter">ShootFighter</a></li>
+                    <li><a className="dropdown-item" href="/lutinAdventure">Lutin Adventure</a></li>
+                    <li><a className="dropdown-item" href="/vincentInTheForest">Vincent In The Forest</a></li>
+                    <li><a className="dropdown-item" href="/theTardisDefender">The TARDIS Defender</a></li>
+                    <li><a className="dropdown-item" href="/fireWallDefender">FireWall Defender</a></li>
+                    <li><a className="dropdown-item" href="/tanksBattle">TanksBattle</a></li>
+                    <li><a className="dropdown-item" href="/winrun">WinRun</a></li>
+                    <li><a className="dropdown-item" href="/asteroidEscape">Asteroid Escape</a></li>
+                    <li><a className="dropdown-item" href="/sansNomReedition">SansNom Réédition</a></li>
+                    <li><a className="dropdown-item" href="/games">Tout voir</a></li>
+
+                  </ul>
+                </li>
+                <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle" href="/softwares" id="navbarDropdownMenuLink" role="button"
+                     data-bs-toggle="dropdown" aria-expanded="false">
+                    Logiciels
+                  </a>
+                  <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a className="dropdown-item" href="/nytuo-launcher">Nytuo-Launcher</a></li>
+                    <li><a className="dropdown-item" href="/softwares">Voir Tout</a></li>
+
+                  </ul>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="https://github.com/Nytuo">GitHub</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/profile">Profile</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/store">Boutique</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/feedback">FeedBack</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/about">A Propos</a>
+                </li>
+
+
+              </ul>
+<div style={{marginLeft:"auto"}}>
+              {firebase.auth().currentUser ? (
+                  firebase.auth().currentUser.photoURL && (
+                      <img
                           className="NcircleimgC"
+                          style={{height:'50px',width:'50px',margin: "5px" }}
                           src={firebase.auth().currentUser.photoURL}
                           alt="profile"
-                        />
-                      )
-                    ) : (
-                      <img src="../images/default.png" />
-                    )}
-
-                    {firebase.auth().currentUser
-                      ? firebase.auth().currentUser.displayName
-                      : "Non Connecter"}
-                  </div>
-                  {firebase.auth().currentUser ? (
-                    <a
-                      style={{ margin: "5px" }}
-                      className="btn waves-effect waves-light"
-                      onClick={this.handleLogOut}
-                    >
-                      <i class="material-icons left">logout</i>
-                      Se déconnecter
-                    </a>
-                  ) : (
-                    <>
-                      <a
-                        class="waves-effect waves-light btn modal-trigger"
-                        data-target="Conmodal1"
-                      >
-                        <i class="material-icons left">login</i>
-                        Formulaire de connexion
-                      </a>
-                    </>
-                  )}
-                </li>
-              </ul>
-              <ul id="nav-mobile" className="left hide-on-med-and-down">
-                <li>
-                  <a
-                    class="tooltipped"
-                    data-position="bottom"
-                    data-tooltip="Accueil"
-                    href="/"
-                  >
-                    <i class="material-icons left">home</i>Accueil
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="tooltipped"
-                    data-position="bottom"
-                    data-tooltip="Jeux"
-                    href="/games"
-                  >
-                    <i class="material-icons left">sports_esports</i>Jeux
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="tooltipped"
-                    data-position="bottom"
-                    data-tooltip="Logiciels"
-                    href="/softwares"
-                  >
-                    <i class="material-icons left">wysiwyg</i>Logiciels
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="tooltipped"
-                    data-position="bottom"
-                    data-tooltip="Launch GitHub"
-                    href="https://github.com/Nytuo"
-                  >
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="tooltipped"
-                    data-position="bottom"
-                    data-tooltip="Profile"
-                    href="/profile"
-                  >
-                    <i class="material-icons left">contact_page</i>Profile
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="tooltipped"
-                    data-position="bottom"
-                    data-tooltip="Boutique"
-                    href="/store"
-                  >
-                    <i class="material-icons left">local_grocery_store</i>
-                    Boutique
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="tooltipped"
-                    data-position="bottom"
-                    data-tooltip="FeedBack"
-                    href="/feedback"
-                  >
-                    <i class="material-icons left">feedback</i>Feedback
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="tooltipped"
-                    data-position="bottom"
-                    data-tooltip="A propos"
-                    href="/about"
-                  >
-                    <i class="material-icons left">info</i>A propos
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-        <ul
-          className="sidenav"
-          id="mobile-demo"
-          ref={(sidenav) => {
-            this.sidenav = sidenav;
-          }}
-        >
-          <li>
-            <a href="/">Accueil</a>
-          </li>
-          <li>
-            <a href="/games">Jeux</a>
-          </li>
-          <li>
-            <a href="/softwares">Logiciels</a>
-          </li>
-          <li>
-            <a href="https://github.com/Nytuo">GitHub</a>
-          </li>
-          <li>
-            <a href="/profile">Profile</a>
-          </li>
-          <li>
-            <a href="/store">Boutique</a>
-          </li>
-          <li>
-            <a href="/feedback">FeedBack</a>
-          </li>
-          <li>
-            <a href="/about">A Propos</a>
-          </li>
-          <li>
-            <div class="chip">
-              {firebase.auth().currentUser &&
-                firebase.auth().currentUser.photoURL && (
-                  <img
-                    className="NcircleimgC"
-                    src={firebase.auth().currentUser.photoURL}
-                    alt="profile"
-                  />
-                )}
+                      />
+                  )
+              ) : (
+                  <img src="../images/default.png" style={{height:'50px',width: "50px",margin: "5px" }}/>
+              )}
 
               {firebase.auth().currentUser
-                ? firebase.auth().currentUser.displayName
-                : "Non Connecter"}
-            </div>
-            <br />
-            {firebase.auth().currentUser ? (
-              <button
-                style={{ margin: "5px" }}
-                className="btn waves-effect waves-light"
-                onClick={this.handleLogOut}
-              >
-                Se déconnecter
-              </button>
-            ) : (
-              <>
-                <a
-                  class="waves-effect waves-light btn modal-trigger"
-                  data-target="Conmodal1"
-                >
-                  Formulaire de connexion
-                </a>
-              </>
-            )}
-          </li>
-        </ul>
+                  ? firebase.auth().currentUser.displayName
+                  : "Non Connecter"}
+              {firebase.auth().currentUser ? (
+                  <a
+                      style={{margin: "10px"}}
+                      className="btn btn-primary"
+                      href="#" role="button"
+                      onClick={this.handleLogOut}
+                  >
+
+                    Se déconnecter
+                  </a>
+              ) : (
+                  <>
+                    <a
+                        style={{margin: "10px"}}
+                        className="btn btn-primary"
+                        data-bs-toggle="modal" data-bs-target="#conmod"
+
+                    >
+
+                      Formulaire de connexion
+                    </a>
+                  </>
+              )}
+            </div></div>
+          </div>
+        </nav>
       </>
     );
   }

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import M from "materialize-css";
 import firebase, { storage } from "../Firebase";
 
 export default class ModModal extends Component {
@@ -23,7 +22,6 @@ export default class ModModal extends Component {
     });
   }
   componentDidMount() {
-    M.Modal.init(this.ModModal, []);
   }
   changePseudo = () => {
     this.state.User.updateProfile({
@@ -95,113 +93,99 @@ export default class ModModal extends Component {
   };
   render() {
     return (
-      <div
-        ref={(ModModal) => {
-          this.ModModal = ModModal;
-        }}
-        id="Modmodal"
-        class="modal"
-      >
-        <div class="modal-content">
-          <div class="row" style={{ textAlign: "center" }}>
-            <p>Changer le nom d'utilisateur:</p>
-            <input
-              type="text"
-              id="pseudo"
-              className="validate"
-              require
-              placeholder={this.state.Pseudo}
-              onChange={(e) => this.setState({ Pseudo: e.target.value })}
-            />
-            <button
-              className="btn waves-effect waves-light"
-              onClick={this.changePseudo}
-            >
-              <i class="material-icons right">cloud_upload</i>
-              Envoyer
-            </button>
-          </div>
-
-          <div class="row" style={{ textAlign: "center" }}>
-            <p>Changer la photo de profile:</p>
-            <div class="file-field input-field">
-              <div class="btn">
-                <span>Choisir une image de profile (PNG,JPG,JPEG,GIF)</span>
-
-                <input
-                  type="file"
-                  name="file"
-                  onChange={(e) => this.setState({ image: e.target.files[0] })}
-                />
+        <div className="modal fade" id="Modmodal1" tabIndex="-1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">Personalisation</h5>
+                <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
+              <div className="modal-body">
+                  <p>Changer le nom d'utilisateur:</p>
+                  <div className="form-floating mb-3">
+                    <input type="text" className="form-control" id="pseudo" required placeholder="Pseudo"
+                           onChange={(e) => this.setState({ Pseudo: e.target.value })}/>
+                      <label htmlFor="pseudo">Pseudo</label>
+                  </div>                  <div className="row">
 
-              <div class="file-path-wrapper">
-                <input class="file-path validate" type="text" />
+              <button
+                      className="btn btn-primary"
+                      onClick={this.changePseudo}
+                  >
+
+                    Envoyer
+              </button></div>
+                <br/>
+
+                  <p>Changer la photo de profile:</p>
+                  <div className="mb-3">
+                    <label htmlFor="formFile" className="form-label">Choisir une image de profile (PNG,JPG,JPEG,GIF)</label>
+                    <input className="form-control" name="file" type="file" id="formFile" onChange={(e) => this.setState({ image: e.target.files[0] })}/>
+                  </div>
+                  <div className="row">
+
+                  <button
+                      class="btn btn-primary"
+                      onClick={this.handleUploadPP}
+                  >
+                    Envoyer
+
+                  </button></div><br/>
+                  {this.state.loadingUp && (
+                      <p style={{color:"red"}}>
+                        Veuillez patienter pendant la modification, la page se
+                        rafraichira à la fin de celui-ci
+                      </p>
+                  )}
+
+                <p>Modifier le mot de passe :</p>
+                <div style={{ textAlign: "center" }}>
+                  <div className="row">
+                  <button
+                      className="btn btn-primary"
+                      onClick={this.handlePassWordChange}
+                  >
+                    Envoyer l'e-mail !
+                  </button></div>
+                  <br/>
+                  <p>Modifier le mail: </p>
+                  <div className="form-floating mb-3">
+                    <input type="email" className="form-control" id="SetEmail" required placeholder="Email"
+                           onChange={(e) => this.setState({ Email: e.target.value })}/>
+                    <label htmlFor="SetEmail">Email</label>
+                  </div><div className="row">
+                  <button
+                      className="btn btn-primary"
+                      onClick={this.handleChangeMail}
+                  >
+                    Envoyer
+
+                  </button></div><br/>
+                </div>
+                <p>Envoyer l'email de vérification de l'adresse mail:</p>
+                {this.state.User != null && (
+                    <div style={{ textAlign: "center" }}>
+                      {this.state.User.emailVerified ? (
+                          <div className="row">
+                          <button className="btn btn-primary disabled">
+                            Envoyer l'e-mail !
+                          </button></div>
+                      ) : (
+                          <div className="row">
+                          <button
+                              className="btn btn-primary"
+                              onClick={this.handleVerifMail}
+                          >
+                            Envoyer l'e-mail !
+                          </button></div>
+                      )}
+                    </div>
+                )}
               </div>
             </div>
-            <button
-              class="btn waves-effect waves-light"
-              onClick={this.handleUploadPP}
-            >
-              Envoyer
-              <i class="material-icons right">cloud_upload</i>
-            </button>
-            {this.state.loadingUp && (
-              <p>
-                Veuillez patienter pendant la modification, la page se
-                rafraichira à la fin de celui-ci
-              </p>
-            )}
           </div>
-          <p>Modifier le mot de passe :</p>
-          <div style={{ textAlign: "center" }}>
-            <button
-              className="btn waves-effect waves-light"
-              onClick={this.handlePassWordChange}
-            >
-              Envoyer l'e-mail !<i class="material-icons right">send</i>
-            </button>
-            <p>Modifier le mail: </p>
-            <input
-              type="email"
-              id="SetEmail"
-              className="validate"
-              require
-              onChange={(e) => this.setState({ Email: e.target.value })}
-            />
-            <button
-              className="btn waves-effect waves-light"
-              onClick={this.handleChangeMail}
-            >
-              Envoyer
-              <i class="material-icons right">send</i>
-            </button>
-          </div>
-          <p>Envoyer l'email de vérification de l'adresse mail:</p>
-          {this.state.User != null && (
-            <div style={{ textAlign: "center" }}>
-              {this.state.User.emailVerified ? (
-                <button className="btn waves-effect waves-light disabled">
-                  Envoyer l'e-mail !<i class="material-icons right">send</i>
-                </button>
-              ) : (
-                <button
-                  className="btn waves-effect waves-light"
-                  onClick={this.handleVerifMail}
-                >
-                  Envoyer l'e-mail !<i class="material-icons right">send</i>
-                </button>
-              )}
-            </div>
-          )}
         </div>
-        <div class="modal-footer" style={{ textAlign: "center" }}>
-          <a href="#!" class="modal-close waves-effect waves-light btn">
-            <i class="material-icons left">close</i>
-            Fermer
-          </a>
-        </div>
-      </div>
     );
   }
 }

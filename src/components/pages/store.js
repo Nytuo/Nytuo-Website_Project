@@ -112,13 +112,12 @@ class Profile extends Component {
                   <div class="cards-list">
                     <div class="homeresize">
                       <div class="card">
-                        <a href="/shootFighterOrigins">
-                          <div class="card-image">
-                            <img alt="" src="../images/IMGSFO2.png" />
-                            <span class="card-title">ShootFighter Origins</span>
-                          </div>
-                        </a>
-                        <div class="card-content">
+                        <img alt="" src="../images/IMGSFO2.png" />
+                        <div className="card-body">
+
+                        <h5 className="card-title">ShootFighter Origins</h5>
+                        <a href="/shootFighterOrigins" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+
                           {this.Games.map((game) => {
                             if (game === "SFO") {
                               SFOO = true;
@@ -147,24 +146,19 @@ class Profile extends Component {
                                 );
                               }}
                             >
-                              Vérouiller
+                              Déverrouiller
                             </ButtonStore>
                           )}
-                        </div>
                       </div>
                     </div>
-
+                    </div>
                     <div class="homeresize">
                       <div class="card">
-                        <a href="/legendAdventureAndTheInfernalMaze">
-                          <div class="card-image">
-                            <img alt="" src="../images/IMGLAATIM.png" />
-                            <span class="card-title">
-                              Legend Adventure and the Infernal Maze
-                            </span>
-                          </div>
-                        </a>
-                        <div class="card-content">
+                        <img alt="" src="../images/IMGLAATIM.png" />
+                        <div className="card-body">
+
+                          <h5 className="card-title">Lutin Adventure And The Infernal Maze</h5>
+                          <a href="/legendAdventureAndTheInfernalMaze" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
                           {this.Games.map((game) => {
                             if (game === "LAATIM") {
                               LAATIMO = true;
@@ -193,7 +187,7 @@ class Profile extends Component {
                                 );
                               }}
                             >
-                              Vérouiller
+                              Déverrouiller
                             </ButtonStore>
                           )}
                         </div>
@@ -202,13 +196,11 @@ class Profile extends Component {
 
                     <div class="homeresize">
                       <div class="card">
-                        <a href="/superGeoffreyBros">
-                          <div class="card-image">
-                            <img alt="" src="../images/SGB2.png" />
-                            <span class="card-title">Super Geoffrey Bros</span>
-                          </div>
-                        </a>
-                        <div class="card-content">
+                        <img alt="" src="../images/SGB2.png" />
+                        <div className="card-body">
+                          <h5 className="card-title">Super Geoffrey Bros</h5>
+                          <a href="/superGeoffreyBros" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+
                           {this.Games.map((game) => {
                             if (game === "SGB") {
                               SGBO = true;
@@ -237,7 +229,7 @@ class Profile extends Component {
                                 );
                               }}
                             >
-                              Vérouiller
+                              Déverrouiller
                             </ButtonStore>
                           )}
                         </div>
@@ -246,13 +238,10 @@ class Profile extends Component {
 
                     <div class="homeresize">
                       <div class="card">
-                        <a href="/shootFighter">
-                          <div class="card-image">
-                            <img alt="" src="../images/IMGSF.png" />
-                            <span class="card-title">ShootFighter</span>
-                          </div>
-                        </a>
-                        <div class="card-content">
+                        <img alt="" src="../images/IMGSF.png" />
+                        <div className="card-body">
+                          <h5 className="card-title">ShootFighter</h5>
+                          <a href="/shootFighter" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
                           {this.Games.map((game) => {
                             if (game === "SF") {
                               SFO = true;
@@ -281,7 +270,7 @@ class Profile extends Component {
                                 );
                               }}
                             >
-                              Vérouiller
+                              Déverrouiller
                             </ButtonStore>
                           )}
                         </div>
@@ -290,13 +279,11 @@ class Profile extends Component {
 
                     <div class="homeresize">
                       <div class="card">
-                        <a href="/lutinAdventure">
-                          <div class="card-image">
-                            <img alt="" src="../images/IMGLA.png" />
-                            <span class="card-title">Lutin Adventure</span>
-                          </div>
-                        </a>
-                        <div class="card-content">
+                        <img alt="" src="../images/IMGLA.png" />
+
+                        <div className="card-body">
+                          <h5 className="card-title">Lutin Adventure</h5>
+                          <a href="/lutinAdventure" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
                           {this.Games.map((game) => {
                             if (game === "LA") {
                               LAO = true;
@@ -325,7 +312,7 @@ class Profile extends Component {
                                 );
                               }}
                             >
-                              Vérouiller
+                              Déverrouiller
                             </ButtonStore>
                           )}
                         </div>
@@ -334,16 +321,10 @@ class Profile extends Component {
 
                     <div class="homeresize">
                       <div class="card">
-                        {" "}
-                        <a href="/vincentInTheForest">
-                          <div class="card-image">
-                            <img alt="" src="../images/IMGVITF.png" />
-                            <span class="card-title">
-                              Vincent In The Forest
-                            </span>
-                          </div>
-                        </a>
-                        <div class="card-content">
+                        <img alt="" src="../images/IMGVITF.png" />
+                        <div className="card-body">
+                          <h5 className="card-title">Vincent In The Forest</h5>
+                          <a href="/vincentInTheForest" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
                           {this.Games.map((game) => {
                             if (game === "VITF") {
                               VITFO = true;
@@ -372,7 +353,7 @@ class Profile extends Component {
                                 );
                               }}
                             >
-                              Vérouiller
+                              Déverrouiller
                             </ButtonStore>
                           )}
                         </div>
@@ -381,13 +362,10 @@ class Profile extends Component {
 
                     <div class="homeresize">
                       <div class="card">
-                        <a href="/theTardisDefender">
-                          <div class="card-image">
-                            <img alt="" src="../images/IMGTTD.png" />
-                            <span class="card-title">The TARDIS Defender</span>
-                          </div>
-                        </a>
-                        <div class="card-content">
+                        <img alt="" src="../images/IMGTTD.png" />
+                        <div className="card-body">
+                          <h5 className="card-title">The TARDIS Defender</h5>
+                          <a href="/theTardisDefender" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
                           {this.Games.map((game) => {
                             if (game === "TTD") {
                               TTDO = true;
@@ -416,7 +394,7 @@ class Profile extends Component {
                                 );
                               }}
                             >
-                              Vérouiller
+                              Déverrouiller
                             </ButtonStore>
                           )}
                         </div>
@@ -425,14 +403,11 @@ class Profile extends Component {
 
                     <div class="homeresize">
                       <div class="card">
-                        {" "}
-                        <a href="/fireWallDefender">
-                          <div class="card-image">
-                            <img alt="" src="../images/IMGFWD.png" />
-                            <span class="card-title">Firewall Defender</span>
-                          </div>
-                        </a>
-                        <div class="card-content">
+                        <img alt="" src="../images/IMGFWD.png" />
+
+                        <div className="card-body">
+                          <h5 className="card-title">Firewall Defender</h5>
+                          <a href="/fireWallDefender" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
                           {this.Games.map((game) => {
                             if (game === "FWD") {
                               FWDO = true;
@@ -461,7 +436,7 @@ class Profile extends Component {
                                 );
                               }}
                             >
-                              Vérouiller
+                              Déverrouiller
                             </ButtonStore>
                           )}
                         </div>
@@ -470,13 +445,11 @@ class Profile extends Component {
 
                     <div class="homeresize">
                       <div class="card">
-                        <a href="/tanksBattle">
-                          <div class="card-image">
-                            <img alt="" src="../images/IMGTB.png" />
-                            <span class="card-title">TanksBattle</span>
-                          </div>
-                        </a>
-                        <div class="card-content">
+                        <img alt="" src="../images/IMGTB.png" />
+
+                        <div className="card-body">
+                          <h5 className="card-title">TanksBattle</h5>
+                          <a href="/tanksBattle" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
                           {this.Games.map((game) => {
                             if (game === "TB") {
                               TBO = true;
@@ -505,7 +478,7 @@ class Profile extends Component {
                                 );
                               }}
                             >
-                              Vérouiller
+                              Déverrouiller
                             </ButtonStore>
                           )}
                         </div>
@@ -514,13 +487,11 @@ class Profile extends Component {
 
                     <div class="homeresize">
                       <div class="card">
-                        <a href="/winrun">
-                          <div class="card-image">
-                            <img alt="" src="../images/IMGWR.png" />
-                            <span class="card-title">WinRun</span>
-                          </div>
-                        </a>
-                        <div class="card-content">
+                        <img alt="" src="../images/IMGWR.png" />
+
+                        <div className="card-body">
+                          <h5 className="card-title">WinRun</h5>
+                          <a href="/winrun" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
                           {this.Games.map((game) => {
                             if (game === "WR") {
                               WRO = true;
@@ -549,7 +520,7 @@ class Profile extends Component {
                                 );
                               }}
                             >
-                              Vérouiller
+                              Déverrouiller
                             </ButtonStore>
                           )}
                         </div>
@@ -558,13 +529,11 @@ class Profile extends Component {
 
                     <div class="homeresize">
                       <div class="card">
-                        <a href="/asteroidEscape">
-                          <div class="card-image">
-                            <img alt="" src="../images/IMGAE.png" />
-                            <span class="card-title">AsteroidEscape</span>
-                          </div>
-                        </a>
-                        <div class="card-content">
+                        <img alt="" src="../images/IMGAE.png" />
+
+                        <div className="card-body">
+                          <h5 className="card-title">AsteroidEscape</h5>
+                          <a href="/asteroidEscape" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
                           {this.Games.map((game) => {
                             if (game === "AE") {
                               AEO = true;
@@ -593,7 +562,7 @@ class Profile extends Component {
                                 );
                               }}
                             >
-                              Vérouiller
+                              Déverrouiller
                             </ButtonStore>
                           )}
                         </div>
@@ -602,13 +571,11 @@ class Profile extends Component {
 
                     <div class="homeresize">
                       <div class="card">
-                        <a href="/sansNomReedition">
-                          <div class="card-image">
-                            <img alt="" src="../images/IMGSN.png" />
-                            <span class="card-title">Sans Nom Réédition</span>
-                          </div>
-                        </a>
-                        <div class="card-content">
+                        <img alt="" src="../images/IMGSN.png" />
+
+                        <div className="card-body">
+                          <h5 className="card-title">Sans Nom Réédition</h5>
+                          <a href="/sansNomReedition" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
                           {this.Games.map((game) => {
                             if (game === "SNRE") {
                               SNREO = true;
@@ -637,7 +604,7 @@ class Profile extends Component {
                                 );
                               }}
                             >
-                              Vérouiller
+                              Déverrouiller
                             </ButtonStore>
                           )}
                         </div>

@@ -4,7 +4,6 @@ import "./App.css";
 import Home from "./components/pages/Home";
 import NoMatch from "./components/pages/404";
 import About from "./components/pages/About";
-import "./materialize.css";
 import WR from "./components/pages/WR";
 import GamesPage from "./components/pages/GamesPage";
 import Feedback from "./components/pages/Feedback";
@@ -29,6 +28,7 @@ import Profile from "./components/pages/Profile";
 import FirebaseConnexion from "./FirebaseConnexion";
 import store from "./components/pages/store";
 import ModModal from "./components/ModModal";
+import './bootstrap.css';
 
 function App() {
   return (

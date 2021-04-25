@@ -5,6 +5,7 @@ import ScreenShotsDisplayer from "../ScreenShotsDisplayer";
 import { ButtonA } from "../ButtonA";
 import Footer from "../Footer";
 
+
 function GamesTemplate(props) {
   useEffect(() => {
     if (props.android === "") {
@@ -45,6 +46,7 @@ function GamesTemplate(props) {
       <h1>Informations :</h1>
       <ShowTxt txt={props.info} />
       <h1>Captures d'écran :</h1>
+        <div className="hero-container" >
       <ScreenShotsDisplayer
         i1={props.i1}
         i2={props.i2}
@@ -66,34 +68,29 @@ function GamesTemplate(props) {
         rm8={props.rm8}
         rm9={props.rm9}
         rm10={props.rm10}
-      />
+      /></div><br/>
+
       <h1 id="videodiv">Vidéo :</h1>
-      <div id="videoiframe" className="video-container">
-        <iframe
-          src={props.video}
-          title="video from YT"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;"
-          allowfullscreen
-        ></iframe>
-      </div>
+        <div className="ratio ratio-16x9" style={{textAlign: "center"}} id="videoiframe">
+            <iframe src={props.video} allowFullScreen/>
+        </div>
+        <br/>
       <h1>Téléchargements :</h1>
       <div id="SNC">
         <h2>SansNom Classic:</h2>
         <div style={{ textAlign: "center" }}>
           <ButtonA link="http://uploads.ungrounded.net/alternate/1035000/1035158_alternate_39079_r3.zip/?f1478359414">
-            <i class="material-icons right">launch</i>
             Jouer sur Newgrounds
           </ButtonA>
+
           <ButtonA link="http://www.kongregate.com/games/Nytuo/sansnom-alpha-2">
-            <i class="material-icons right">launch</i>
             Jouer sur Kongregate
           </ButtonA>
         </div>
         <h2>SansNom Réédition:</h2>
       </div>
       <div style={{ textAlign: "center" }}>
-        <div class="row">
+        <div class="row2">
           <div class="column2" id="itchdiv">
             <a href={props.itch}>
               <img
@@ -141,6 +138,7 @@ function GamesTemplate(props) {
           </div>
         </div>
       </div>
+        <h1>Pourquoi utiliser le Nytuo-Launcher ?</h1>
       <ShowTxt txt="Le Nytuo Launcher est un lanceur pour les jeux de Nytuo. Il est fait maison. Il permet de télécharger, mettre à jour, lancer et supprimer les jeux de Nytuo." />
       <ShowTxt
         txt="Le Nytuo Launcher apporte des fonctionnalités comme les succès (achievements, pour les
@@ -151,15 +149,14 @@ function GamesTemplate(props) {
         mise à jour (pas vraiment à chaque mise à jour mais régulièrement)"
       />
       <p>
-        Intéressés ?<a href="nytuo_launcher.html"> Voyez en plus ici.</a>
+        Intéressés ?<a href="/nytuo-launcher"> Voyez en plus ici.</a>
       </p>
       <ShowTxt txt="Vous avez déjà le Nytuo Launcher ou le jeu d'installer ? Aller plus vite:" />
       <div style={{ textAlign: "center" }}>
         <ButtonA link="nytuo://">
-          <i class="material-icons right">launch</i>Ouvrir le Nytuo Launcher
+         Ouvrir le Nytuo Launcher
         </ButtonA>
         <ButtonA link={"nytuo://launchid/" + props.Name}>
-          <i class="material-icons right">launch</i>
           Ouvrir le jeu avec le Nytuo Launcher
         </ButtonA>
       </div>
