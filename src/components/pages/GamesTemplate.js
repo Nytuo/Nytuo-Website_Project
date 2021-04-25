@@ -5,7 +5,6 @@ import ScreenShotsDisplayer from "../ScreenShotsDisplayer";
 import { ButtonA } from "../ButtonA";
 import Footer from "../Footer";
 
-
 function GamesTemplate(props) {
   useEffect(() => {
     if (props.android === "") {
@@ -46,35 +45,41 @@ function GamesTemplate(props) {
       <h1>Informations :</h1>
       <ShowTxt txt={props.info} />
       <h1>Captures d'écran :</h1>
-        <div className="hero-container" >
-      <ScreenShotsDisplayer
-        i1={props.i1}
-        i2={props.i2}
-        i3={props.i3}
-        i4={props.i4}
-        i5={props.i5}
-        i6={props.i6}
-        i7={props.i7}
-        i8={props.i8}
-        i9={props.i9}
-        i10={props.i10}
-        rm1={props.rm1}
-        rm2={props.rm2}
-        rm3={props.rm3}
-        rm4={props.rm4}
-        rm5={props.rm5}
-        rm6={props.rm6}
-        rm7={props.rm7}
-        rm8={props.rm8}
-        rm9={props.rm9}
-        rm10={props.rm10}
-      /></div><br/>
+      <div className="hero-container">
+        <ScreenShotsDisplayer
+          i1={props.i1}
+          i2={props.i2}
+          i3={props.i3}
+          i4={props.i4}
+          i5={props.i5}
+          i6={props.i6}
+          i7={props.i7}
+          i8={props.i8}
+          i9={props.i9}
+          i10={props.i10}
+          rm1={props.rm1}
+          rm2={props.rm2}
+          rm3={props.rm3}
+          rm4={props.rm4}
+          rm5={props.rm5}
+          rm6={props.rm6}
+          rm7={props.rm7}
+          rm8={props.rm8}
+          rm9={props.rm9}
+          rm10={props.rm10}
+        />
+      </div>
+      <br />
 
       <h1 id="videodiv">Vidéo :</h1>
-        <div className="ratio ratio-16x9" style={{textAlign: "center"}} id="videoiframe">
-            <iframe src={props.video} allowFullScreen/>
-        </div>
-        <br/>
+      <div
+        className="ratio ratio-16x9"
+        style={{ textAlign: "center" }}
+        id="videoiframe"
+      >
+        <iframe src={props.video} allowFullScreen />
+      </div>
+      <br />
       <h1>Téléchargements :</h1>
       <div id="SNC">
         <h2>SansNom Classic:</h2>
@@ -138,7 +143,7 @@ function GamesTemplate(props) {
           </div>
         </div>
       </div>
-        <h1>Pourquoi utiliser le Nytuo-Launcher ?</h1>
+      <h1>Pourquoi utiliser le Nytuo-Launcher ?</h1>
       <ShowTxt txt="Le Nytuo Launcher est un lanceur pour les jeux de Nytuo. Il est fait maison. Il permet de télécharger, mettre à jour, lancer et supprimer les jeux de Nytuo." />
       <ShowTxt
         txt="Le Nytuo Launcher apporte des fonctionnalités comme les succès (achievements, pour les
@@ -153,9 +158,7 @@ function GamesTemplate(props) {
       </p>
       <ShowTxt txt="Vous avez déjà le Nytuo Launcher ou le jeu d'installer ? Aller plus vite:" />
       <div style={{ textAlign: "center" }}>
-        <ButtonA link="nytuo://">
-         Ouvrir le Nytuo Launcher
-        </ButtonA>
+        <ButtonA link="nytuo://">Ouvrir le Nytuo Launcher</ButtonA>
         <ButtonA link={"nytuo://launchid/" + props.Name}>
           Ouvrir le jeu avec le Nytuo Launcher
         </ButtonA>

@@ -7,7 +7,11 @@ export const SSD = ({ rm, src }) => {
     return (
       <>
         <div className="carousel-item">
-        <img className="d-block w-100" alt="" src={"../images/" + src + ".png"} />
+          <img
+            className="d-block w-100"
+            alt=""
+            src={"../images/" + src + ".png"}
+          />
         </div>
       </>
     );

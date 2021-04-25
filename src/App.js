@@ -28,7 +28,7 @@ import Profile from "./components/pages/Profile";
 import FirebaseConnexion from "./FirebaseConnexion";
 import store from "./components/pages/store";
 import ModModal from "./components/ModModal";
-import './bootstrap.css';
+import "./bootstrap.css";
 
 function App() {
   return (

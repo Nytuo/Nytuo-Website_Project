@@ -114,9 +114,14 @@ class Profile extends Component {
                       <div class="card">
                         <img alt="" src="../images/IMGSFO2.png" />
                         <div className="card-body">
-
-                        <h5 className="card-title">ShootFighter Origins</h5>
-                        <a href="/shootFighterOrigins" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+                          <h5 className="card-title">ShootFighter Origins</h5>
+                          <a
+                            href="/shootFighterOrigins"
+                            className="btn btn-primary"
+                            style={{ margin: "5px" }}
+                          >
+                            Voir
+                          </a>
 
                           {this.Games.map((game) => {
                             if (game === "SFO") {
@@ -149,16 +154,23 @@ class Profile extends Component {
                               Déverrouiller
                             </ButtonStore>
                           )}
+                        </div>
                       </div>
-                    </div>
                     </div>
                     <div class="homeresize">
                       <div class="card">
                         <img alt="" src="../images/IMGLAATIM.png" />
                         <div className="card-body">
-
-                          <h5 className="card-title">Lutin Adventure And The Infernal Maze</h5>
-                          <a href="/legendAdventureAndTheInfernalMaze" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+                          <h5 className="card-title">
+                            Lutin Adventure And The Infernal Maze
+                          </h5>
+                          <a
+                            href="/legendAdventureAndTheInfernalMaze"
+                            className="btn btn-primary"
+                            style={{ margin: "5px" }}
+                          >
+                            Voir
+                          </a>
                           {this.Games.map((game) => {
                             if (game === "LAATIM") {
                               LAATIMO = true;
@@ -199,7 +211,13 @@ class Profile extends Component {
                         <img alt="" src="../images/SGB2.png" />
                         <div className="card-body">
                           <h5 className="card-title">Super Geoffrey Bros</h5>
-                          <a href="/superGeoffreyBros" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+                          <a
+                            href="/superGeoffreyBros"
+                            className="btn btn-primary"
+                            style={{ margin: "5px" }}
+                          >
+                            Voir
+                          </a>
 
                           {this.Games.map((game) => {
                             if (game === "SGB") {
@@ -241,7 +259,13 @@ class Profile extends Component {
                         <img alt="" src="../images/IMGSF.png" />
                         <div className="card-body">
                           <h5 className="card-title">ShootFighter</h5>
-                          <a href="/shootFighter" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+                          <a
+                            href="/shootFighter"
+                            className="btn btn-primary"
+                            style={{ margin: "5px" }}
+                          >
+                            Voir
+                          </a>
                           {this.Games.map((game) => {
                             if (game === "SF") {
                               SFO = true;
@@ -283,7 +307,13 @@ class Profile extends Component {
 
                         <div className="card-body">
                           <h5 className="card-title">Lutin Adventure</h5>
-                          <a href="/lutinAdventure" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+                          <a
+                            href="/lutinAdventure"
+                            className="btn btn-primary"
+                            style={{ margin: "5px" }}
+                          >
+                            Voir
+                          </a>
                           {this.Games.map((game) => {
                             if (game === "LA") {
                               LAO = true;
@@ -324,7 +354,13 @@ class Profile extends Component {
                         <img alt="" src="../images/IMGVITF.png" />
                         <div className="card-body">
                           <h5 className="card-title">Vincent In The Forest</h5>
-                          <a href="/vincentInTheForest" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+                          <a
+                            href="/vincentInTheForest"
+                            className="btn btn-primary"
+                            style={{ margin: "5px" }}
+                          >
+                            Voir
+                          </a>
                           {this.Games.map((game) => {
                             if (game === "VITF") {
                               VITFO = true;
@@ -365,7 +401,13 @@ class Profile extends Component {
                         <img alt="" src="../images/IMGTTD.png" />
                         <div className="card-body">
                           <h5 className="card-title">The TARDIS Defender</h5>
-                          <a href="/theTardisDefender" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+                          <a
+                            href="/theTardisDefender"
+                            className="btn btn-primary"
+                            style={{ margin: "5px" }}
+                          >
+                            Voir
+                          </a>
                           {this.Games.map((game) => {
                             if (game === "TTD") {
                               TTDO = true;
@@ -407,7 +449,13 @@ class Profile extends Component {
 
                         <div className="card-body">
                           <h5 className="card-title">Firewall Defender</h5>
-                          <a href="/fireWallDefender" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+                          <a
+                            href="/fireWallDefender"
+                            className="btn btn-primary"
+                            style={{ margin: "5px" }}
+                          >
+                            Voir
+                          </a>
                           {this.Games.map((game) => {
                             if (game === "FWD") {
                               FWDO = true;
@@ -449,7 +497,13 @@ class Profile extends Component {
 
                         <div className="card-body">
                           <h5 className="card-title">TanksBattle</h5>
-                          <a href="/tanksBattle" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+                          <a
+                            href="/tanksBattle"
+                            className="btn btn-primary"
+                            style={{ margin: "5px" }}
+                          >
+                            Voir
+                          </a>
                           {this.Games.map((game) => {
                             if (game === "TB") {
                               TBO = true;
@@ -491,7 +545,13 @@ class Profile extends Component {
 
                         <div className="card-body">
                           <h5 className="card-title">WinRun</h5>
-                          <a href="/winrun" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+                          <a
+                            href="/winrun"
+                            className="btn btn-primary"
+                            style={{ margin: "5px" }}
+                          >
+                            Voir
+                          </a>
                           {this.Games.map((game) => {
                             if (game === "WR") {
                               WRO = true;
@@ -533,7 +593,13 @@ class Profile extends Component {
 
                         <div className="card-body">
                           <h5 className="card-title">AsteroidEscape</h5>
-                          <a href="/asteroidEscape" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+                          <a
+                            href="/asteroidEscape"
+                            className="btn btn-primary"
+                            style={{ margin: "5px" }}
+                          >
+                            Voir
+                          </a>
                           {this.Games.map((game) => {
                             if (game === "AE") {
                               AEO = true;
@@ -575,7 +641,13 @@ class Profile extends Component {
 
                         <div className="card-body">
                           <h5 className="card-title">Sans Nom Réédition</h5>
-                          <a href="/sansNomReedition" className="btn btn-primary" style={{margin: "5px"}}>Voir</a>
+                          <a
+                            href="/sansNomReedition"
+                            className="btn btn-primary"
+                            style={{ margin: "5px" }}
+                          >
+                            Voir
+                          </a>
                           {this.Games.map((game) => {
                             if (game === "SNRE") {
                               SNREO = true;

@@ -7,8 +7,7 @@ function Home() {
   return (
     <div className="HeroShadow">
       <Hero />
-        <Footer></Footer>
-
+      <Footer></Footer>
     </div>
   );
 }

@@ -15,7 +15,6 @@ export const ButtonStore = ({
         className="btn-primary btn disabled"
         style={{ backgroundColor: bgcolor, color: colori, margin: "5px" }}
       >
-
         {children}
       </a>
     );
@@ -26,7 +25,6 @@ export const ButtonStore = ({
         className="btn-primary btn"
         style={{ backgroundColor: bgcolor, color: colori, margin: "5px" }}
       >
-
         {children}
       </a>
     );

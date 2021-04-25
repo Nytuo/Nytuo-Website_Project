@@ -9,14 +9,16 @@ function Footer() {
           <h2>Liens utiles :</h2>
           <a style={{ color: "whitesmoke" }} href="https://gamejolt.com/@Nytuo">
             Voir les jeux sur Gamejolt
-          </a><br/>
+          </a>
+          <br />
           <a style={{ color: "whitesmoke" }} href="/">
-          Aller à l'accueil
-        </a><br/>
+            Aller à l'accueil
+          </a>
+          <br />
           <a style={{ color: "whitesmoke" }} href="https://nytuo.itch.io">
             Voir les jeux sur Itch.io
-          </a><br/>
-
+          </a>
+          <br />
         </div>
 
         <div className="col">
@@ -26,8 +28,8 @@ function Footer() {
           </a>
           <br />
           <a
-              style={{ color: "whitesmoke" }}
-              href="https://github.com/Nytuo/Nytuo-Launcher"
+            style={{ color: "whitesmoke" }}
+            href="https://github.com/Nytuo/Nytuo-Launcher"
           >
             GitHub
           </a>
@@ -54,17 +56,15 @@ function Footer() {
           <br />
         </div>
       </div>
-      <br/>
+      <br />
       <p className="txtfoot">
         Website of Nytuo, Host by PlanetHoster WorldLite. Made with React{" "}
-        {React.version}. Created by Nytuo (BEUX Arnaud) using BootStrap components.
-        All Rights Reserved. &#169; 2021        <br/>
+        {React.version}. Created by Nytuo (BEUX Arnaud) using BootStrap
+        components. All Rights Reserved. &#169; 2021 <br />
         Domaines faisant parties de l'Univers Nytuo : nytuo.yo.fr |
         Beta.nytuo.yo.fr | launcher.nytuo.yo.fr | nytuowebsite.wep.app |
         nytuo-launcher.web.app | nytuo.github.io
       </p>
-
-
     </div>
   );
 }
