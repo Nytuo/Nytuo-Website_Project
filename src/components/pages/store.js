@@ -113,13 +113,15 @@ class Profile extends Component {
                   <div class="cards-list">
                     <div className="homeresize">
                       <div className="card">
-                        <img alt="" src="../images/IMGSFTW.png"/>
+                        <img alt="" src="../images/IMGSFTW.png" />
                         <div className="card-body">
-                          <h5 className="card-title">ShootFighter Total Warfare</h5>
+                          <h5 className="card-title">
+                            ShootFighter Total Warfare
+                          </h5>
                           <a
-                              href="/shootFighterTotalWarfare"
-                              className="btn btn-primary"
-                              style={{margin: "5px"}}
+                            href="/shootFighterTotalWarfare"
+                            className="btn btn-primary"
+                            style={{ margin: "5px" }}
                           >
                             Voir
                           </a>
@@ -128,32 +130,32 @@ class Profile extends Component {
                             if (game === "SFTW") {
                               SFTWO = true;
                               return (
-                                  <ButtonStore
-                                      ico="check_circle"
-                                      disabled="disabled"
-                                  >
-                                    Déverrouiller
-                                  </ButtonStore>
+                                <ButtonStore
+                                  ico="check_circle"
+                                  disabled="disabled"
+                                >
+                                  Déverrouiller
+                                </ButtonStore>
                               );
                             } else {
                               return "";
                             }
                           })}
                           {SFTWO === false && (
-                              <ButtonStore
-                                  ico="shop"
-                                  link={() => {
-                                    this.setState(
-                                        {currentclickedbtn: "SFTW"},
-                                        function () {
-                                          console.log(this.state.currentclickedbtn);
-                                          this.handleClickBtn();
-                                        }
-                                    );
-                                  }}
-                              >
-                                Déverrouiller
-                              </ButtonStore>
+                            <ButtonStore
+                              ico="shop"
+                              link={() => {
+                                this.setState(
+                                  { currentclickedbtn: "SFTW" },
+                                  function () {
+                                    console.log(this.state.currentclickedbtn);
+                                    this.handleClickBtn();
+                                  }
+                                );
+                              }}
+                            >
+                              Déverrouiller
+                            </ButtonStore>
                           )}
                         </div>
                       </div>

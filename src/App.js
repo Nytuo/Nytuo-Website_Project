@@ -61,7 +61,7 @@ function App() {
           <Route path="/superGeoffreyBros" component={SGB} />
           <Route path="/sansNomReedition" component={SNRE} />
           <Route path="/tanksBattle" component={TB} />
-          <Route path="/shootFighterTotalWarfare" component={SFTW}/>
+          <Route path="/shootFighterTotalWarfare" component={SFTW} />
           <Route path="/store" component={store} />
           <Route path="/profile" component={Profile} />
           <Route path="*" component={NoMatch} />

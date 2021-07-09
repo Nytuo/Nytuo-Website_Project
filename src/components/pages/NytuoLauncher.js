@@ -33,11 +33,19 @@ export default class NytuoLauncher extends Component {
         </p>
         <h1>Informations :</h1>
         <p>
-          Plateformes : Windows(x64) (.exe et .zip), Linux(x64) (.deb / .appimage / .snap et .zip), Pas de version x86 ou ARM (Les jeux sont disponible uniquement en x64) et pas de version MACOSX (Parceque c'est comme ça).
+          Plateformes : Windows(x64) (.exe et .zip), Linux(x64) (.deb /
+          .appimage / .snap et .zip), Pas de version x86 ou ARM (Les jeux sont
+          disponible uniquement en x64) et pas de version MACOSX (Parceque c'est
+          comme ça).
           <br />
-          Languages : Français, Anglais et Espagnol (Si vous voulez d'autres langues, je peux les ajouter si vous le demander directement sur la page GitHub du projet)
+          Languages : Français, Anglais et Espagnol (Si vous voulez d'autres
+          langues, je peux les ajouter si vous le demander directement sur la
+          page GitHub du projet)
           <br />
-          La connexion ou la création à un compte Nytuo / Google / Microsoft / Twitter / GitHub / Facebook (même que sur le site) est fortement recommandé bien que l'utilisation en mode Anonyme ne necessite pas de compte (fonctionnalités et personalisations limités).
+          La connexion ou la création à un compte Nytuo / Google / Microsoft /
+          Twitter / GitHub / Facebook (même que sur le site) est fortement
+          recommandé bien que l'utilisation en mode Anonyme ne necessite pas de
+          compte (fonctionnalités et personalisations limités).
         </p>{" "}
         <div className="hero-container">
           <ScreenShotsDisplayer

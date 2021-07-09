@@ -17,8 +17,14 @@ class Navbar extends Component {
   render() {
     return (
       <>
-        <nav className="navbar sticky-top navbar-expand-lg navbar-dark" style={{backgroundColor: "#262626"}}>
-          <a className="navbar-brand animate__animated animate__backInDown" href="#">
+        <nav
+          className="navbar sticky-top navbar-expand-lg navbar-dark"
+          style={{ backgroundColor: "#262626" }}
+        >
+          <a
+            className="navbar-brand animate__animated animate__backInDown"
+            href="#"
+          >
             <img src="../images/256.png" alt="" width="120" height="67.5" />
           </a>
           <div className="container-fluid">
@@ -36,7 +42,10 @@ class Navbar extends Component {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link animate__animated animate__backInDown" href="/">
+                  <a
+                    className="nav-link animate__animated animate__backInDown"
+                    href="/"
+                  >
                     Accueil
                   </a>
                 </li>
@@ -56,7 +65,10 @@ class Navbar extends Component {
                     aria-labelledby="navbarDropdownMenuLink"
                   >
                     <li>
-                      <a className="dropdown-item" href="/shootFighterTotalWarfare">
+                      <a
+                        className="dropdown-item"
+                        href="/shootFighterTotalWarfare"
+                      >
                         ShootFighter Total Warfare
                       </a>
                     </li>
@@ -183,7 +195,10 @@ class Navbar extends Component {
                   </a>
                 </li>
               </ul>
-              <div style={{ marginLeft: "auto" }} className="animate__animated animate__backInDown">
+              <div
+                style={{ marginLeft: "auto" }}
+                className="animate__animated animate__backInDown"
+              >
                 {firebase.auth().currentUser ? (
                   firebase.auth().currentUser.photoURL && (
                     <img

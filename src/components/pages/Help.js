@@ -38,15 +38,26 @@ export default class Help extends Component {
             >
               <div className="accordion-body">
                 Le Nytuo Launcher est souvent détecter par les antivirus comme
-                un virus car il modifie les dossiers et les fichiers du
-                Launcher et télécharge depuis internet. De plus, le Nytuo-Launcher n'étant pas signer les systemes d'exploitation(Windows, Linux), Antivirus et navigateurs internet
-                vous signalerons que le launcher est suceptible d'être une menace. Ce n'est pas le cas, l'entiereté du projet est open-source et consultable sur Github.
-                Le projet est créé directement sur GitHub. Vous pouvez vérifier les fichiers avec Virus Total qui
-                permet l’analyse sur plusieurs base de données antivirus (lien par fichier disponible <a href={"https://github.com/Nytuo/Nytuo-Launcher/releases/latest"}>ici</a>). Si vous souhaiter
-                utilisé le launcher mais que votre antivirus le détecte, il faut
-                restauré les fichiers en quarantaine et mettre le dossier
-                générale en exclusion d’analyse et de lancement. Paramètres
-                différents entre les antivirus.
+                un virus car il modifie les dossiers et les fichiers du Launcher
+                et télécharge depuis internet. De plus, le Nytuo-Launcher
+                n'étant pas signer les systemes d'exploitation(Windows, Linux),
+                Antivirus et navigateurs internet vous signalerons que le
+                launcher est suceptible d'être une menace. Ce n'est pas le cas,
+                l'entiereté du projet est open-source et consultable sur Github.
+                Le projet est créé directement sur GitHub. Vous pouvez vérifier
+                les fichiers avec Virus Total qui permet l’analyse sur plusieurs
+                base de données antivirus (lien par fichier disponible{" "}
+                <a
+                  href={
+                    "https://github.com/Nytuo/Nytuo-Launcher/releases/latest"
+                  }
+                >
+                  ici
+                </a>
+                ). Si vous souhaiter utilisé le launcher mais que votre
+                antivirus le détecte, il faut restauré les fichiers en
+                quarantaine et mettre le dossier générale en exclusion d’analyse
+                et de lancement. Paramètres différents entre les antivirus.
               </div>
             </div>
           </div>
@@ -129,31 +140,37 @@ export default class Help extends Component {
                   Une connexion en tant qu'anonyme est disponible et non recommander.
                   La connexion de compte tiers et Nytuo est rendu possible grâce à Google Firebase. Le tout est sécurisé.
                 </p>*/}
-                <a href={"https://github.com/Nytuo/Nytuo-Launcher#installation-"}>https://github.com/Nytuo/Nytuo-Launcher#installation-</a>
+                <a
+                  href={"https://github.com/Nytuo/Nytuo-Launcher#installation-"}
+                >
+                  https://github.com/Nytuo/Nytuo-Launcher#installation-
+                </a>
               </div>
             </div>
           </div>
           <div className="accordion-item">
             <h2 className="accordion-header" id="flush-heading11">
               <button
-                  className="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapse11"
-                  aria-expanded="false"
-                  aria-controls="flush-collapse11"
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapse11"
+                aria-expanded="false"
+                aria-controls="flush-collapse11"
               >
                 Déconnexion
               </button>
             </h2>
             <div
-                id="flush-collapse11"
-                className="accordion-collapse collapse"
-                aria-labelledby="flush-heading11"
-                data-bs-parent="#accordionFlushExample"
+              id="flush-collapse11"
+              className="accordion-collapse collapse"
+              aria-labelledby="flush-heading11"
+              data-bs-parent="#accordionFlushExample"
             >
               <div className="accordion-body">
-                <a href={"https://github.com/Nytuo/Nytuo-Launcher#logout"}>https://github.com/Nytuo/Nytuo-Launcher#logout</a>
+                <a href={"https://github.com/Nytuo/Nytuo-Launcher#logout"}>
+                  https://github.com/Nytuo/Nytuo-Launcher#logout
+                </a>
               </div>
             </div>
           </div>
@@ -271,7 +288,9 @@ export default class Help extends Component {
                   le guide pour mettre à jour le launcher en mode portable se
                   trouve dans la section "portable".
                 </p>*/}
-              <a href={"https://github.com/Nytuo/Nytuo-Launcher#update"}>https://github.com/Nytuo/Nytuo-Launcher#update</a>
+                <a href={"https://github.com/Nytuo/Nytuo-Launcher#update"}>
+                  https://github.com/Nytuo/Nytuo-Launcher#update
+                </a>
               </div>
             </div>
           </div>
@@ -324,14 +343,20 @@ export default class Help extends Component {
                   ligne concernant l'emplacement du dossier des jeux.Fermer le
                   launcher et aller à cette emplacement et supprimer-le.
                   <br />
-                  I/A/ Pour ceux qui ont le .appimage:<br/>
-                  Supprimer le .appimage du Nytuo Launcher<br/>
-                  I/B/ Pour ceux qui ont le .deb<br/>
-                  Déinstaller le comme toute autre application en .deb (dans la liste des logiciels installer dans la logiteque)<br/>
-                  I/C/ Pour ceux qui ont le .snap:<br/>
-                  Ouvrez un terminal et taper:<br/>
+                  I/A/ Pour ceux qui ont le .appimage:
+                  <br />
+                  Supprimer le .appimage du Nytuo Launcher
+                  <br />
+                  I/B/ Pour ceux qui ont le .deb
+                  <br />
+                  Déinstaller le comme toute autre application en .deb (dans la
+                  liste des logiciels installer dans la logiteque)
+                  <br />
+                  I/C/ Pour ceux qui ont le .snap:
+                  <br />
+                  Ouvrez un terminal et taper:
+                  <br />
                   <strong>snap remove nytuo-launcher</strong>
-
                   <br />
                   II/Supprimer dans le dossier "Documents", le dossier
                   "nytuolauncher_data".
@@ -398,7 +423,10 @@ export default class Help extends Component {
                 </p>
                 <p>
                   IV/Par la suite vous avez juste, dans le dossier
-                  "Nytuo-Launcher" a lancé le "Nytuo-Launcher.exe", pour Windows et "Nytuo-Launcher" sous Linux (A noter que vous devrez peut-être coché la case "Executer en tant que programme" dans les propriétés rubrique "Permissions".
+                  "Nytuo-Launcher" a lancé le "Nytuo-Launcher.exe", pour Windows
+                  et "Nytuo-Launcher" sous Linux (A noter que vous devrez
+                  peut-être coché la case "Executer en tant que programme" dans
+                  les propriétés rubrique "Permissions".
                 </p>
                 <p>
                   Pour les mises à jour, supprimer le contenu du dossier
@@ -539,7 +567,8 @@ export default class Help extends Component {
                   de vous être connecté), le prochain lancement vous aurez un
                   message qui vous demandera de fermer les fenêtre et de
                   redémarrer le launcher. En cas d'erreur envoyer moi un
-                  feedback.<br/>
+                  feedback.
+                  <br />
                   <strong>Déconnexion du compte sur le Launcher</strong>
                   <br />
                   Connecter dans le launcher depuis n'importe qu'elle page

@@ -152,8 +152,29 @@ export default class ConModal extends Component {
                     onClick={this.props.Microsoft}
                   >
                     <div className="left">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="90" height="20" viewBox="0 0 400.746 220.695"><path d="M104.868 104.868H0V0h104.868v104.868z" fill="white"/><path d="M220.654 104.868H115.788V0h104.866v104.868z" fill="white"/><path d="M104.865 220.695H0V115.828h104.865v104.867z" fill="white"/><path d="M220.654 220.695H115.788V115.828h104.866v104.867z" fill="white"/></svg>
-
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="90"
+                        height="20"
+                        viewBox="0 0 400.746 220.695"
+                      >
+                        <path
+                          d="M104.868 104.868H0V0h104.868v104.868z"
+                          fill="white"
+                        />
+                        <path
+                          d="M220.654 104.868H115.788V0h104.866v104.868z"
+                          fill="white"
+                        />
+                        <path
+                          d="M104.865 220.695H0V115.828h104.865v104.867z"
+                          fill="white"
+                        />
+                        <path
+                          d="M220.654 220.695H115.788V115.828h104.866v104.867z"
+                          fill="white"
+                        />
+                      </svg>
                     </div>
                     Se connecter avec Microsoft
                   </button>
