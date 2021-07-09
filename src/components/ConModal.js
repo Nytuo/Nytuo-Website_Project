@@ -17,7 +17,7 @@ export default class ConModal extends Component {
     return (
       <>
         <div
-          className="modal fade"
+          className="modal animate__animated animate__bounceIn"
           id="conmod"
           tabIndex="-1"
           aria-labelledby="exampleModalLabel"
@@ -152,19 +152,8 @@ export default class ConModal extends Component {
                     onClick={this.props.Microsoft}
                   >
                     <div className="left">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        fill="white"
-                        className="bi bi-github"
-                        viewBox="0 0 16 16"
-                      ></svg>
-                      <img
-                        alt="Microsoft Logo"
-                        width="20px"
-                        src="../images/msico.png"
-                      />
+                      <svg xmlns="http://www.w3.org/2000/svg" width="90" height="20" viewBox="0 0 400.746 220.695"><path d="M104.868 104.868H0V0h104.868v104.868z" fill="white"/><path d="M220.654 104.868H115.788V0h104.866v104.868z" fill="white"/><path d="M104.865 220.695H0V115.828h104.865v104.867z" fill="white"/><path d="M220.654 220.695H115.788V115.828h104.866v104.867z" fill="white"/></svg>
+
                     </div>
                     Se connecter avec Microsoft
                   </button>

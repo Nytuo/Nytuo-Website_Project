@@ -41,7 +41,7 @@ a {
 
   text-align: center;
 }
-@media only screen and (max-width:1233){
+@media only screen and (max-width:1233px){
   .logonav {
     margin-top: 5px;
     z-index: 1;

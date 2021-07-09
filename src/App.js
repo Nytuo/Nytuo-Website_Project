@@ -23,6 +23,7 @@ import SFO from "./components/pages/SFO";
 import SGB from "./components/pages/SGB";
 import SNRE from "./components/pages/SN";
 import TB from "./components/pages/TB";
+import SFTW from "./components/pages/SFTW";
 import React from "react";
 import Profile from "./components/pages/Profile";
 import FirebaseConnexion from "./FirebaseConnexion";
@@ -60,6 +61,7 @@ function App() {
           <Route path="/superGeoffreyBros" component={SGB} />
           <Route path="/sansNomReedition" component={SNRE} />
           <Route path="/tanksBattle" component={TB} />
+          <Route path="/shootFighterTotalWarfare" component={SFTW}/>
           <Route path="/store" component={store} />
           <Route path="/profile" component={Profile} />
           <Route path="*" component={NoMatch} />

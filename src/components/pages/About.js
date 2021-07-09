@@ -9,7 +9,7 @@ function About() {
       <div className="spaceX2"></div>
       <h1>A Propos :</h1>
       <p>
-        Je suis Nytuo (Arnaud BEUX), j’ai 17 ans et je créé des jeux pour
+        Je suis Nytuo (Arnaud BEUX), j’ai 18 ans et je créé des jeux pour
         m’amuser depuis 2016 !<br />
         Je me débrouille seul pour créé mes jeux (sauf contre-indication).Plus
         tard j’aimerai travailler dans les jeux vidéo…

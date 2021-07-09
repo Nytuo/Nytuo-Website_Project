@@ -93,7 +93,7 @@ export default class ModModal extends Component {
   render() {
     return (
       <div
-        className="modal fade"
+        className="modal animate__animated animate__bounceIn"
         id="Modmodal1"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"

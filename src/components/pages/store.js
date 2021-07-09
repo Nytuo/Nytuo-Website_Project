@@ -71,6 +71,7 @@ class Profile extends Component {
     var TBO = false;
     var WRO = false;
     var AEO = false;
+    var SFTWO = false;
     return (
       <div>
         <meta name="robots" content="noindex"></meta>
@@ -110,6 +111,53 @@ class Profile extends Component {
                   <LoaderMultiColor />
                 ) : (
                   <div class="cards-list">
+                    <div className="homeresize">
+                      <div className="card">
+                        <img alt="" src="../images/IMGSFTW.png"/>
+                        <div className="card-body">
+                          <h5 className="card-title">ShootFighter Total Warfare</h5>
+                          <a
+                              href="/shootFighterTotalWarfare"
+                              className="btn btn-primary"
+                              style={{margin: "5px"}}
+                          >
+                            Voir
+                          </a>
+
+                          {this.Games.map((game) => {
+                            if (game === "SFTW") {
+                              SFTWO = true;
+                              return (
+                                  <ButtonStore
+                                      ico="check_circle"
+                                      disabled="disabled"
+                                  >
+                                    Déverrouiller
+                                  </ButtonStore>
+                              );
+                            } else {
+                              return "";
+                            }
+                          })}
+                          {SFTWO === false && (
+                              <ButtonStore
+                                  ico="shop"
+                                  link={() => {
+                                    this.setState(
+                                        {currentclickedbtn: "SFTW"},
+                                        function () {
+                                          console.log(this.state.currentclickedbtn);
+                                          this.handleClickBtn();
+                                        }
+                                    );
+                                  }}
+                              >
+                                Déverrouiller
+                              </ButtonStore>
+                          )}
+                        </div>
+                      </div>
+                    </div>
                     <div class="homeresize">
                       <div class="card">
                         <img alt="" src="../images/IMGSFO2.png" />

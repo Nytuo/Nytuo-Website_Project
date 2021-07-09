@@ -11,6 +11,20 @@ function GamesPage() {
         <h1>Mes jeux :</h1>
 
         <div class="cards-list">
+          <div className="homeresize">
+            <div className="card">
+              <img src="../images/logoSFTW.png" alt="..."/>
+              <div className="card-body">
+                <h5 className="card-title">ShootFighter TotalWarfare</h5>
+                <p className="card-text">
+                  Multijoueurs FFA, TDM et Zombies
+                </p>
+                <a href="/shootFighterTotalWarfare" className="btn btn-primary">
+                  Voir
+                </a>
+              </div>
+            </div>
+          </div>
           <div class="homeresize">
             <div className="card">
               <img src="../images/IMGSFO2.png" alt="..." />

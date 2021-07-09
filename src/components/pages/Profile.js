@@ -578,6 +578,42 @@ class Profile extends Component {
                               </div>
                             </div>
                           );
+                        case "SFTW":
+                          return (
+                              <div className="homeresize">
+                                <div className="card">
+                                  <img src="../images/IMGSFTW.png" alt="..." />
+                                  <div className="card-body">
+                                    <h5 className="card-title">ShootFighter Total Warfare</h5>
+                                    <a
+                                        href="/shootFighterTotalWarfare"
+                                        className="btn btn-primary"
+                                        style={{ margin: "5px" }}
+                                    >
+                                      Voir
+                                    </a>
+                                    <a
+                                        href="nytuo://launchid/sftw"
+                                        className="btn btn-primary"
+                                    >
+                                      Lancer le jeu
+                                    </a>
+                                    <ButtonOC
+                                        link={() => {
+                                          this.setState(
+                                              { currentclickedbtn: "SFTW" },
+                                              function () {
+                                                this.handleDeleteGamefromDB();
+                                              }
+                                          );
+                                        }}
+                                    >
+                                      Retirer de la bibliothèque
+                                    </ButtonOC>
+                                  </div>
+                                </div>
+                              </div>
+                          );
                         default:
                           return (
                             <p>Va dans la boutique pour activer des jeux !</p>

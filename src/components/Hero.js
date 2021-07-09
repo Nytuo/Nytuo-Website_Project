@@ -36,7 +36,14 @@ export default class Hero extends Component {
                 data-bs-slide-to="2"
                 aria-label="Slide 3"
               ></button>
+              <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+              ></button>
             </div>
+
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <a href="/shootFighterOrigins">
@@ -51,6 +58,19 @@ export default class Hero extends Component {
                   <p>Tuer des zombies par vagues en 2D</p>
                 </div>
               </div>
+              <div className="carousel-item">
+              <a href="/shootFighterTotalWarfare">
+                <img
+                    src="../images/IMGSFTW.png"
+                    className="d-block w-100"
+                    alt="..."
+                />
+              </a>
+              <div className="carousel-caption d-none d-md-block">
+                <h5>En développement : ShootFighter TotalWarfare</h5>
+                <p>Multijoueurs FFA, TDM et Zombies</p>
+              </div>
+            </div>
               <div className="carousel-item">
                 <a href="/sansNomReedition">
                   <img
