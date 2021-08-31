@@ -12,7 +12,6 @@ export default class NytuoLauncher extends Component {
         <div style={{ textAlign: "center", paddingTop: "100px" }}>
           <img src="../images/LogoLauncher.png" alt="" />
         </div>
-        
         <p style={{ textAlign: "center" }}></p>
         <h1>Vous avez déjà le Nytuo Launcher? Lancer le d'ici:</h1>
         <div style={{ textAlign: "center" }}>

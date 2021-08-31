@@ -42,7 +42,7 @@ export default class Hero extends Component {
                 data-bs-slide-to="3"
                 aria-label="Slide 4"
               ></button>
-                            <button
+              <button
                 type="button"
                 data-bs-target="#carouselExampleCaptions"
                 data-bs-slide-to="4"
@@ -51,7 +51,7 @@ export default class Hero extends Component {
             </div>
 
             <div className="carousel-inner">
-            <div className="carousel-item active">
+              <div className="carousel-item active">
                 <a href="/cosmic-comics">
                   <img
                     src="../images/LogoBig_cc.png"
