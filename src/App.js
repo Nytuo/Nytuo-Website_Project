@@ -24,6 +24,7 @@ import SGB from "./components/pages/SGB";
 import SNRE from "./components/pages/SN";
 import TB from "./components/pages/TB";
 import SFTW from "./components/pages/SFTW";
+import CC from "./components/pages/cosmiccomics";
 import React from "react";
 import Profile from "./components/pages/Profile";
 import FirebaseConnexion from "./FirebaseConnexion";
@@ -48,6 +49,7 @@ function App() {
           <Route path="/feedback" component={Feedback} />
           <Route path="/softwares" component={Softwares} />
           <Route path="/nytuo-launcher" component={NytuoLauncher} />
+          <Route path="/cosmic-comics" component={CC} />
           <Route path="/TAC" component={TermsAndConditions} />
           <Route path="/privacy" component={Privacy} />
           <Route path="/help" component={Help} />

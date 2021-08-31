@@ -12,12 +12,13 @@ export default class NytuoLauncher extends Component {
         <div style={{ textAlign: "center", paddingTop: "100px" }}>
           <img src="../images/LogoLauncher.png" alt="" />
         </div>
-        <h1>Description :</h1>
+        
         <p style={{ textAlign: "center" }}></p>
         <h1>Vous avez déjà le Nytuo Launcher? Lancer le d'ici:</h1>
         <div style={{ textAlign: "center" }}>
           <ButtonA link="nytuo://">Ouvrir le Nytuo Launcher</ButtonA>
         </div>
+        <h1>Description :</h1>
         <p>
           Le Nytuo Launcher est un lanceur pour les jeux de Nytuo. Il est fait
           maison. Il permet de télécharger, mettre à jour, lancer et supprimer

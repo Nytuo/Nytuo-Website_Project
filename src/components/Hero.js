@@ -42,10 +42,29 @@ export default class Hero extends Component {
                 data-bs-slide-to="3"
                 aria-label="Slide 4"
               ></button>
+                            <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="4"
+                aria-label="Slide 5"
+              ></button>
             </div>
 
             <div className="carousel-inner">
-              <div className="carousel-item active">
+            <div className="carousel-item active">
+                <a href="/cosmic-comics">
+                  <img
+                    src="../images/LogoBig_cc.png"
+                    className="d-block w-100"
+                    alt="..."
+                  />
+                </a>
+                <div className="carousel-caption d-none d-md-block">
+                  <h5>Cosmic Comics</h5>
+                  <p>Lis tes manga et Comics sur ordinateur</p>
+                </div>
+              </div>
+              <div className="carousel-item">
                 <a href="/shootFighterOrigins">
                   <img
                     src="../images/IMGSFO2.png"
@@ -149,9 +168,24 @@ export default class Hero extends Component {
               </div>
             </div>
           </div>
+        </div>
+        <div className="cards-list">
           <div className="homeresize">
             <div className="card">
-              <div className="card-header">Nytuo Launcher</div>
+              <img src="../images/LogoBig_cc.png" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">Cosmic Comics</h5>
+                <p className="card-text">Voir Cosmic-Comics</p>
+                <a href="/cosmic-comics" className="btn btn-primary">
+                  Voir
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="homeresize">
+            <div className="card">
+              <img src="../images/LogoLauncher.png" alt="..." />
+
               <div className="card-body">
                 <h5 className="card-title">
                   Aller à la page du Nytuo Launcher
@@ -163,8 +197,7 @@ export default class Hero extends Component {
               </div>
             </div>
           </div>
-        </div>
-        <div className="cards-list">
+
           <div className="homeresize">
             <div className="card">
               <img src="../images/IMGSFO2.png" alt="..." />

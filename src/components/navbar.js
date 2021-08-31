@@ -61,10 +61,10 @@ class Navbar extends Component {
                     Jeux
                   </a>
                   <ul
-                    className="dropdown-menu animate__animated animate__backInDown"
+                    className="dropdown-menu"
                     aria-labelledby="navbarDropdownMenuLink"
                   >
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
                       <a
                         className="dropdown-item"
                         href="/shootFighterTotalWarfare"
@@ -72,12 +72,12 @@ class Navbar extends Component {
                         ShootFighter Total Warfare
                       </a>
                     </li>
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
                       <a className="dropdown-item" href="/shootFighterOrigins">
                         ShootFighter Origins
                       </a>
                     </li>
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
                       <a
                         className="dropdown-item"
                         href="/legendAdventureAndTheInfernalMaze"
@@ -85,57 +85,57 @@ class Navbar extends Component {
                         Legend Adventure And The Infernal Maze
                       </a>
                     </li>
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
                       <a className="dropdown-item" href="/superGeoffreyBros">
                         Super Geoffrey Bros
                       </a>
                     </li>
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
                       <a className="dropdown-item" href="/shootFighter">
                         ShootFighter
                       </a>
                     </li>
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
                       <a className="dropdown-item" href="/lutinAdventure">
                         Lutin Adventure
                       </a>
                     </li>
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
                       <a className="dropdown-item" href="/vincentInTheForest">
                         Vincent In The Forest
                       </a>
                     </li>
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
                       <a className="dropdown-item" href="/theTardisDefender">
                         The TARDIS Defender
                       </a>
                     </li>
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
                       <a className="dropdown-item" href="/fireWallDefender">
                         FireWall Defender
                       </a>
                     </li>
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
                       <a className="dropdown-item" href="/tanksBattle">
                         TanksBattle
                       </a>
                     </li>
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
                       <a className="dropdown-item" href="/winrun">
                         WinRun
                       </a>
                     </li>
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
                       <a className="dropdown-item" href="/asteroidEscape">
                         Asteroid Escape
                       </a>
                     </li>
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
                       <a className="dropdown-item" href="/sansNomReedition">
                         SansNom Réédition
                       </a>
                     </li>
-                    <li className="animate__animated animate__backInDown">
+                    <li className="animate__animated animate__bounceIn">
                       <a className="dropdown-item" href="/games">
                         Tout voir
                       </a>
@@ -154,15 +154,20 @@ class Navbar extends Component {
                     Logiciels
                   </a>
                   <ul
-                    className="dropdown-menu animate__animated animate__backInDown"
+                    className="dropdown-menu"
                     aria-labelledby="navbarDropdownMenuLink"
                   >
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
                       <a className="dropdown-item" href="/nytuo-launcher">
                         Nytuo-Launcher
                       </a>
                     </li>
-                    <li>
+                    <li className="animate__animated animate__bounceIn">
+                      <a className="dropdown-item" href="/cosmic-comics">
+                        Cosmic-Comics
+                      </a>
+                    </li>
+                    <li className="animate__animated animate__bounceIn">
                       <a className="dropdown-item" href="/softwares">
                         Voir Tout
                       </a>

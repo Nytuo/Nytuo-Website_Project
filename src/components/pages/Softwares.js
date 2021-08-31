@@ -27,6 +27,18 @@ function Softwares() {
               </div>
             </div>
           </div>
+          <div className="homeresize">
+            <div className="card">
+              <img src="../images/LogoBig_cc.png" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">Cosmic Comics</h5>
+                <p className="card-text">Lisez vos comics et manga</p>
+                <a href="/cosmic-comics" className="btn btn-primary">
+                  Voir
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
