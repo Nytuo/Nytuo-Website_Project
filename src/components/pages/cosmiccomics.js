@@ -10,7 +10,11 @@ export default class CC extends Component {
       <div>
         <meta name="robots" content="noindex"></meta>
         <div style={{ textAlign: "center", paddingTop: "100px" }}>
-          <img src="../images/LogoStretch_cc.png" alt="" />
+          <img
+            src="../images/LogoStretch_cc.png"
+            alt=""
+            style={{ width: "90%", height: "auto" }}
+          />
         </div>
         <p style={{ textAlign: "center" }}></p>
         <h1>Vous avez déjà Cosmic-Comics? Lancer d'ici:</h1>
@@ -60,6 +64,37 @@ export default class CC extends Component {
         </div>
         <div style={{ paddingTop: "50px" }}></div>
         <div style={{ textAlign: "center" }}>
+          <div class="column3" id="githubdiv">
+            <a href="https://github.com/Nytuo/CosmicComics/releases/latest">
+              <img
+                alt=""
+                src="../images/available_github.png"
+                style={{ width: "284px", height: "auto" }}
+              />
+            </a>
+          </div>
+          <div class="column3" id="snapdiv">
+            <a href="https://snapcraft.io/cosmiccomics">
+              <img
+                alt="Get it from the Snap Store"
+                src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg"
+                style={{ width: "284px", height: "auto" }}
+              />
+            </a>
+          </div>
+          <div class="column3" id="msdiv">
+            <a href="//www.microsoft.com/store/apps/9NFN9CG8TGP7?cid=storebadge&ocid=badge">
+              <img
+                src="https://developer.microsoft.com/store/badges/images/French_get-it-from-MS.png"
+                alt="French badge"
+                style={{ width: "284px", height: "auto" }}
+              />
+            </a>
+          </div>
+        </div>
+        <div style={{ paddingTop: "120px" }}></div>
+        <br/>
+        <div style={{ textAlign: "center" }}>
           <ButtonA link="https://github.com/Nytuo/CosmicComics/releases/latest">
             Télécharger sur GITHUB
           </ButtonA>
@@ -67,7 +102,7 @@ export default class CC extends Component {
             Voir le code sur GITHUB
           </ButtonA>
           <div style={{ paddingTop: "5px" }}></div>
-        </div>
+        </div><br/>
         <h1>Fonctionnalités:</h1>
         <p>
           - Lis les CBR, CBZ, CB7, CBT, ZIP, RAR, 7z, TAR, Folder qui
@@ -118,6 +153,7 @@ export default class CC extends Component {
             Voir
           </ButtonA>
         </p>
+
         <Footer />
       </div>
     );
