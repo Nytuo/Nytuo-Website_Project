@@ -93,7 +93,7 @@ export default class CC extends Component {
           </div>
         </div>
         <div style={{ paddingTop: "120px" }}></div>
-        <br/>
+        <br />
         <div style={{ textAlign: "center" }}>
           <ButtonA link="https://github.com/Nytuo/CosmicComics/releases/latest">
             Télécharger sur GITHUB
@@ -102,7 +102,8 @@ export default class CC extends Component {
             Voir le code sur GITHUB
           </ButtonA>
           <div style={{ paddingTop: "5px" }}></div>
-        </div><br/>
+        </div>
+        <br />
         <h1>Fonctionnalités:</h1>
         <p>
           - Lis les CBR, CBZ, CB7, CBT, ZIP, RAR, 7z, TAR, Folder qui
